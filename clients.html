@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storehaus 고객사 현황</title>
+<style>
+  :root{
+    --bg:#F4F1EA; --card:#FDFCF9; --ink:#2B2620; --sub:#6B6257;
+    --rule:#E3DBCC; --accent:#C2571B; --amber:#9A6B00; --green:#3D6B35;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:'Apple SD Gothic Neo','Pretendard',-apple-system,sans-serif; line-height:1.62; font-size:15px;}
+  .wrap{max-width:960px; margin:0 auto; padding:56px 32px 96px;}
+  header.hero{border-bottom:3px solid var(--ink); padding-bottom:28px; margin-bottom:32px;}
+  .kicker{font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:14px;}
+  h1{font-family:Georgia,serif; font-size:44px; line-height:1.15; font-weight:400; margin-bottom:14px;}
+  .hero p.lede{font-size:17px; color:var(--sub); max-width:720px;}
+  .hero .meta{margin-top:18px; font-size:13px; color:var(--sub);}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:40px;}
+  .stat{background:var(--card); border:1px solid var(--rule); padding:16px 20px;}
+  .stat b{display:block; font-family:Georgia,serif; font-size:26px; font-weight:400;}
+  .stat span{font-size:12px; color:var(--sub); letter-spacing:.06em;}
+  .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .client{background:var(--card); border:1px solid var(--rule); border-top:3px solid var(--accent); padding:22px 24px;}
+  .client .head{display:flex; align-items:baseline; gap:10px;}
+  .client h2{font-family:Georgia,serif; font-size:23px; font-weight:400;}
+  .client .en{font-size:12px; color:var(--sub); letter-spacing:.08em;}
+  .chip{margin-left:auto; flex:none; font-size:11px; font-weight:800; letter-spacing:.1em; padding:2px 9px; border-radius:3px;}
+  .chip.paid{background:#E2E9DC; color:var(--green);}
+  .chip.nego{background:#F1E7CE; color:var(--amber);}
+  .chip.free{background:#EDE4D3; color:#7A5A18;}
+  dt{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--sub); font-weight:700; margin-top:14px;}
+  dd{font-size:14px; margin-top:2px;}
+  footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--rule); font-size:12px; color:var(--sub);}
+  @media(max-width:760px){ .cards{grid-template-columns:1fr;} .stats{grid-template-columns:repeat(2,1fr);} h1{font-size:34px;} }
+  @media print{ body{background:#fff;} .wrap{padding:20px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Storehaus &middot; Client Status</div>
+  <h1>고객사 현황</h1>
+  <p class="lede">Storehaus가 지금 함께하고 있는 브랜드 6곳과 각 계약 구조.</p>
+  <div class="meta">2026-08-18 기준</div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>6</b><span>고객사</span></div>
+  <div class="stat"><b>약 4,200억원</b><span>고객사 합산 연매출</span></div>
+  <div class="stat"><b>2</b><span>유료 계약</span></div>
+  <div class="stat"><b>2</b><span>유료 협의 중</span></div>
+</div>
+
+<div class="cards">
+
+  <div class="client">
+    <div class="head"><h2>이너시아</h2><span class="en">Inertia</span><span class="chip free">영업 교환</span></div>
+    <dl>
+      <dt>소개</dt><dd>연매출 450억원 규모의 생리대 브랜드</dd>
+      <dt>도와주는 일</dt><dd>메타 광고 분석 + 틱톡샵 전체 대행</dd>
+      <dt>계약 구조</dt><dd>무료 서비스 제공, 대신 이너시아 측에서 영업 지원 (지금까지 미샤, 휩드 소개받음)</dd>
+    </dl>
+  </div>
+
+  <div class="client">
+    <div class="head"><h2>미샤</h2><span class="en">MISSHA</span><span class="chip free">무료 PoC</span></div>
+    <dl>
+      <dt>소개</dt><dd>연매출 3천억원 규모의 국내 대표 뷰티 브랜드</dd>
+      <dt>도와주는 일</dt><dd>경쟁사 및 자사 마케팅 성과 분석</dd>
+      <dt>계약 구조</dt><dd>무료 PoC</dd>
+    </dl>
+  </div>
+
+  <div class="client">
+    <div class="head"><h2>휩드</h2><span class="chip paid">유료</span></div>
+    <dl>
+      <dt>소개</dt><dd>연매출 300억원 규모의 비건 스킨케어 브랜드</dd>
+      <dt>도와주는 일</dt><dd>틱톡샵 전체 대행</dd>
+      <dt>계약 구조</dt><dd>월 고정비 100만원 + 틱톡샵 전체 매출 4% 수수료</dd>
+    </dl>
+  </div>
+
+  <div class="client">
+    <div class="head"><h2>린클</h2><span class="chip nego">협의 중</span></div>
+    <dl>
+      <dt>소개</dt><dd>연매출 350억원 규모의 음식물처리기 브랜드</dd>
+      <dt>도와주는 일</dt><dd>메타 광고 분석 + 틱톡샵 전체 대행 (11월 오픈 예정)</dd>
+      <dt>계약 구조</dt><dd>월 고정비 (협의 중) + 틱톡샵 전체 매출 X% 수수료 (11월부터)</dd>
+    </dl>
+  </div>
+
+  <div class="client">
+    <div class="head"><h2>원데이즈유</h2><span class="chip nego">협의 중</span></div>
+    <dl>
+      <dt>소개</dt><dd>연매출 100억원 규모의 뷰티 브랜드</dd>
+      <dt>도와주는 일</dt><dd>틱톡샵 전체 대행</dd>
+      <dt>계약 구조</dt><dd>월 고정비 + 틱톡샵 전체 매출 % 수수료 (협의 중)</dd>
+    </dl>
+  </div>
+
+  <div class="client">
+    <div class="head"><h2>루미네</h2><span class="en">Ruminae</span><span class="chip paid">유료</span></div>
+    <dl>
+      <dt>소개</dt><dd>미국에서 연 2억원 매출을 내는 소규모 속눈썹 세럼 브랜드</dd>
+      <dt>도와주는 일</dt><dd>틱톡샵 전체 대행</dd>
+      <dt>계약 구조</dt><dd>틱톡샵 전체 매출 5% + 틱톡샵 전체 정산금액 20% 수수료</dd>
+    </dl>
+  </div>
+
+</div>
+
+<footer>Storehaus &middot; 2026-08-18 기준</footer>
+
+</div>
+</body>
+</html>
