@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>틱톡샵 셀러 액션 맵</title>
+<style>
+  :root{
+    --bg:#F4F1EA; --card:#FDFCF9; --ink:#2B2620; --sub:#6B6257;
+    --rule:#E3DBCC; --accent:#C2571B; --amber:#9A6B00; --green:#3D6B35;
+    --tag-exec:#EDE4D3; --tag-metric:#E8E0EF; --tag-judge:#E2E9DC;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:'Apple SD Gothic Neo','Pretendard',-apple-system,sans-serif; line-height:1.62; font-size:15px;}
+  .wrap{max-width:1100px; margin:0 auto; padding:56px 32px 96px;}
+  .serif{font-family:Georgia,'Times New Roman','Apple SD Gothic Neo',serif;}
+  header.hero{border-bottom:3px solid var(--ink); padding-bottom:28px; margin-bottom:36px;}
+  .kicker{font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:14px;}
+  h1{font-family:Georgia,serif; font-size:44px; line-height:1.15; font-weight:400; margin-bottom:14px;}
+  .hero p.lede{font-size:17px; color:var(--sub); max-width:760px;}
+  .hero .meta{margin-top:18px; font-size:13px; color:var(--sub);}
+  h2.domain{font-family:Georgia,serif; font-size:28px; font-weight:400; margin:0 0 4px;}
+  h3{font-family:Georgia,serif; font-size:19px; font-weight:600; margin:26px 0 10px;}
+  section{margin-bottom:56px;}
+  .dnum{display:inline-block; font-family:Georgia,serif; font-style:italic; font-size:15px; color:var(--accent); margin-right:10px;}
+  .domain-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:12px;}
+  .domain-head .count{margin-left:auto; font-size:12px; color:var(--sub); letter-spacing:.08em;}
+  .intro{color:var(--sub); max-width:860px; margin-bottom:6px;}
+  .keyq{font-size:13.5px; margin:8px 0 18px; color:var(--ink);}
+  .keyq b{color:var(--accent); font-weight:700; letter-spacing:.06em; font-size:12px;}
+  /* TOC */
+  .toc{display:grid; grid-template-columns:repeat(2,1fr); gap:10px 28px; background:var(--card); border:1px solid var(--rule); padding:22px 26px; margin-bottom:48px;}
+  .toc a{color:var(--ink); text-decoration:none; display:flex; gap:10px; align-items:baseline; font-size:14px; padding:2px 0;}
+  .toc a:hover{color:var(--accent);}
+  .toc .n{font-family:Georgia,serif; font-style:italic; color:var(--accent); width:26px; flex:none;}
+  .toc .c{margin-left:auto; color:var(--sub); font-size:12px;}
+  /* primer cards */
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0;}
+  .pcard{background:var(--card); border:1px solid var(--rule); padding:18px 20px;}
+  .pcard h4{font-family:Georgia,serif; font-size:16px; margin-bottom:6px;}
+  .pcard p{font-size:13.5px; color:var(--sub);}
+  .pcard .tag{font-size:11px; letter-spacing:.14em; color:var(--accent); font-weight:700; display:block; margin-bottom:6px;}
+  .flow{display:flex; align-items:stretch; gap:0; margin:20px 0 8px; flex-wrap:wrap;}
+  .fstep{background:var(--card); border:1px solid var(--rule); padding:12px 16px; font-size:13.5px; position:relative; flex:1; min-width:130px; text-align:center;}
+  .fstep b{display:block; font-size:14px;}
+  .fstep span{color:var(--sub); font-size:12px;}
+  .farrow{align-self:center; padding:0 8px; color:var(--accent); font-size:18px;}
+  .sidenote{display:flex; gap:14px; margin-top:10px;}
+  .sidenote div{flex:1; font-size:12.5px; color:var(--sub); border-left:3px solid var(--rule); padding-left:12px;}
+  .sidenote b{color:var(--ink);}
+  .gloss{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .gchip{background:var(--card); border:1px solid var(--rule); padding:7px 12px; font-size:12.5px;}
+  .gchip b{color:var(--accent);}
+  /* verification framework */
+  .layers{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:16px 0;}
+  .layer{background:var(--card); border-top:3px solid var(--accent); border-left:1px solid var(--rule); border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:18px 20px;}
+  .layer .lnum{font-family:Georgia,serif; font-style:italic; color:var(--accent); font-size:14px;}
+  .layer h4{font-size:15.5px; margin:4px 0 6px;}
+  .layer p{font-size:13px; color:var(--sub);}
+  .traps{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:14px;}
+  .trap{background:#F0E9DB; border:1px solid var(--rule); padding:14px 18px; font-size:13.5px;}
+  .trap b{display:block; margin-bottom:3px;}
+  .trap span{color:var(--sub); font-size:13px;}
+  /* action tables */
+  table.actions{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--rule); table-layout:fixed;}
+  .actions th{font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; text-align:left; color:var(--sub); font-weight:700; padding:10px 14px; border-bottom:2px solid var(--ink); background:#F0EBDF;}
+  .actions td{padding:14px; border-bottom:1px solid var(--rule); vertical-align:top; font-size:13.5px;}
+  .actions tr:last-child td{border-bottom:none;}
+  .actions td.act{width:19%;}
+  .actions td.what{width:24%; color:var(--sub);}
+  .actions td.steps-td{width:27%;}
+  .actions td.verify{width:30%;}
+  .aid{font-family:Georgia,serif; font-style:italic; color:var(--accent); font-size:13px; display:block;}
+  .aname{font-weight:700; font-size:14.5px; display:block; margin:1px 0 6px;}
+  .loc{display:inline-block; font-size:11px; color:var(--sub); background:var(--bg); border:1px solid var(--rule); padding:1px 7px; border-radius:9px; margin:1px 2px 0 0;}
+  ol.steps{padding-left:18px; display:flex; flex-direction:column; gap:3px;}
+  ol.steps li{font-size:13px;}
+  .v-row{display:block; margin-bottom:7px; font-size:13px;}
+  .v-row:last-child{margin-bottom:0;}
+  .v-tag{display:inline-block; font-size:10.5px; font-weight:800; letter-spacing:.1em; padding:1px 7px; border-radius:3px; margin-right:6px; vertical-align:1px;}
+  .v-tag.e{background:var(--tag-exec); color:#7A5A18;}
+  .v-tag.m{background:var(--tag-metric); color:#5B4380;}
+  .v-tag.j{background:var(--tag-judge); color:var(--green);}
+  .note{background:#F0E9DB; border-left:3px solid var(--accent); padding:12px 16px; font-size:13.5px; margin:14px 0; color:var(--ink);}
+  .note b{color:var(--accent);}
+  /* appendix tables */
+  table.plain{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--rule);}
+  .plain th{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; text-align:left; color:var(--sub); padding:9px 13px; border-bottom:2px solid var(--ink); background:#F0EBDF;}
+  .plain td{padding:10px 13px; border-bottom:1px solid var(--rule); font-size:13.5px; vertical-align:top;}
+  .plain tr:last-child td{border-bottom:none;}
+  .plain td b.term{color:var(--accent);}
+  footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--rule); font-size:12px; color:var(--sub);}
+  @media(max-width:900px){
+    .grid3,.layers{grid-template-columns:1fr;}
+    .toc{grid-template-columns:1fr;}
+    .traps{grid-template-columns:1fr;}
+    table.actions{display:block; overflow-x:auto;}
+    .actions td{min-width:190px;}
+  }
+  @media print{ body{background:#fff;} .wrap{padding:20px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">TikTok Shop Seller Playbook</div>
+  <h1>틱톡샵 셀러 액션 맵</h1>
+  <p class="lede">계정 개설부터 정산까지, 틱톡샵 판매자가 실행할 수 있는 모든 액션을 10개 도메인 · 67개 액션으로 구조화했다. 각 액션마다 실행 확인 방법, 성과 지표, 잘했는지 판정하는 기준을 함께 적었다. 틱톡샵을 처음 보는 사람도 이 문서 하나로 전체 그림을 잡을 수 있도록 썼다.</p>
+  <div class="meta">미국(US) 샵 기준 · Seller Center 메뉴명은 한글 병기 · 2026-08 작성</div>
+</header>
+
+<nav class="toc">
+  <a href="#primer"><span class="n">&nbsp;</span>틱톡샵 3분 이해 <span class="c">입문</span></a>
+  <a href="#frame"><span class="n">&nbsp;</span>성과 검증 공통 프레임 <span class="c">3층 검증 + 4대 함정</span></a>
+  <a href="#d0"><span class="n">D0</span>입점과 계정 <span class="c">8 액션</span></a>
+  <a href="#d1"><span class="n">D1</span>상품 (리스팅) <span class="c">9 액션</span></a>
+  <a href="#d2"><span class="n">D2</span>주문과 물류 <span class="c">7 액션</span></a>
+  <a href="#d3"><span class="n">D3</span>프로모션 <span class="c">7 액션</span></a>
+  <a href="#d4"><span class="n">D4</span>콘텐츠 (오가닉) <span class="c">6 액션</span></a>
+  <a href="#d5"><span class="n">D5</span>어필리에이트 <span class="c">8 액션</span></a>
+  <a href="#d6"><span class="n">D6</span>유료 광고 (GMV Max) <span class="c">6 액션</span></a>
+  <a href="#d7"><span class="n">D7</span>CS와 평판 <span class="c">5 액션</span></a>
+  <a href="#d8"><span class="n">D8</span>데이터와 정산 <span class="c">5 액션</span></a>
+  <a href="#d9"><span class="n">D9</span>샵 건강과 거버넌스 <span class="c">6 액션</span></a>
+  <a href="#apxa"><span class="n">A</span>핵심 지표 사전 <span class="c">부록</span></a>
+  <a href="#apxb"><span class="n">B</span>플랫폼 관리선 예시 <span class="c">부록</span></a>
+  <a href="#apxc"><span class="n">C</span>Seller Center 메뉴 매핑 <span class="c">부록</span></a>
+</nav>
+
+<section id="primer">
+  <div class="domain-head"><h2 class="domain">틱톡샵 3분 이해</h2></div>
+  <p class="intro">틱톡샵은 틱톡 앱 안에 내장된 쇼핑몰이다. 아마존과의 결정적 차이 하나: 고객이 검색해서 찾아오는 것이 아니라, 영상을 보다가 산다. 그래서 운영의 무게중심이 리스팅과 검색이 아니라 콘텐츠와 크리에이터에 있다. 판매자는 Seller Center(seller-us.tiktok.com)라는 관리자 콘솔에서 거의 모든 것을 실행한다.</p>
+
+  <h3>상품이 팔리는 세 개의 지면</h3>
+  <div class="grid3">
+    <div class="pcard"><span class="tag">지면 1</span><h4>피드 영상</h4><p>영상에 "노란 바구니"(상품 앵커)가 붙고, 시청자가 눌러서 바로 구매한다. 미국 틱톡샵 매출의 최대 경로. 대부분은 셀러 본인이 아니라 커미션을 받는 크리에이터가 만든 영상이다(업계 추정 70% 이상이 어필리에이트 경유).</p></div>
+    <div class="pcard"><span class="tag">지면 2</span><h4>라이브 방송</h4><p>실시간 방송에 상품을 핀으로 걸고 판다. 중국에서는 지배적이지만 미국에서는 아직 비중이 작다. 투입 대비 효율을 따져서 운영한다.</p></div>
+    <div class="pcard"><span class="tag">지면 3</span><h4>샵 탭 · 검색</h4><p>앱 하단의 "Shop" 탭과 검색 결과. 아마존처럼 목적 구매가 일어나는 몰형 지면으로, 플랫폼이 키우고 있는 성장 영역이다.</p></div>
+  </div>
+
+  <h3>돈이 도는 순서</h3>
+  <div class="flow">
+    <div class="fstep"><b>상품 준비</b><span>D0 · D1</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep"><b>트래픽 만들기</b><span>콘텐츠 D4 · 크리에이터 D5 · 광고 D6</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep"><b>전환</b><span>가격 D1 · 프로모션 D3 · 평판 D7</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep"><b>주문 · 배송</b><span>D2</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep"><b>정산</b><span>D8</span></div>
+  </div>
+  <div class="sidenote">
+    <div><b>매출 공식.</b> GMV = 트래픽 × 전환율 × 객단가. 어떤 액션이든 이 세 항 중 하나를 움직여야 매출이 움직인다.</div>
+    <div><b>면허 조건.</b> 배송 지표 · 응대 지표 · 정책 준수(D2 · D7 · D9)는 매출을 만들지 않지만, 무너지면 노출 제한과 계정 정지로 전부를 잃는다. 샵 건강 점수가 이것을 종합한다.</div>
+  </div>
+
+  <h3>처음 보는 용어 8개</h3>
+  <div class="gloss">
+    <span class="gchip"><b>GMV</b> 총 거래액. 틱톡샵의 기본 매출 단위</span>
+    <span class="gchip"><b>노란 바구니</b> 영상 · 라이브에 붙는 상품 구매 버튼(앵커)</span>
+    <span class="gchip"><b>쇼케이스</b> 틱톡 계정 프로필에 생기는 상품 진열 탭</span>
+    <span class="gchip"><b>어필리에이트</b> 크리에이터에게 판매 커미션을 걸고 대신 팔게 하는 제도</span>
+    <span class="gchip"><b>GPM</b> 조회수 1,000당 GMV. 콘텐츠 커머스의 핵심 효율 지표</span>
+    <span class="gchip"><b>FBT</b> Fulfilled by TikTok. 틱톡 창고에 재고를 맡기는 위탁 물류</span>
+    <span class="gchip"><b>Spark 코드</b> 크리에이터 게시물을 광고 소재로 쓰게 해주는 승인 코드</span>
+    <span class="gchip"><b>Compass</b> Seller Center 안의 데이터 분석 화면(데이터 나침반)</span>
+  </div>
+</section>
+
+<section id="frame">
+  <div class="domain-head"><h2 class="domain">성과 검증 공통 프레임</h2></div>
+  <p class="intro">아래 67개 액션의 성과 검증은 전부 같은 3층 구조를 따른다. 층을 건너뛰면 "했다"와 "잘했다"가 섞인다.</p>
+  <div class="layers">
+    <div class="layer"><span class="lnum">층 1</span><h4>실행 검증 · 즉시</h4><p>액션이 의도대로 반영됐는가. 상태값으로 확인한다: 승인됨, Live 상태, 설정값 일치. 예: 상품을 등록했는데 심사 반려면 실행부터 실패다.</p></div>
+    <div class="layer"><span class="lnum">층 2</span><h4>지표 검증 · 해당 지표의 창</h4><p>효과가 숫자로 났는가. 액션마다 1차 지표 1~2개를 정해 두고, 어느 화면에서 보는지까지 못박는다. 지표 없는 액션은 판정 불가능한 액션이다.</p></div>
+    <div class="layer"><span class="lnum">층 3</span><h4>판정 · 기준선 대비</h4><p>숫자가 좋아 보여도 "무엇 대비"가 없으면 판정이 아니다. 기준선 3종: 시간 비교(직전 동기간), 내부 비교(계정 평균 · 다른 SKU), 반사실(이 액션이 없었어도 그랬을까).</p></div>
+  </div>
+  <h3>판정을 망치는 4대 함정</h3>
+  <div class="traps">
+    <div class="trap"><b>① 혼합 ROI</b><span>GMV Max 광고의 ROI는 광고 없이도 팔렸을 오가닉 주문까지 합산한 값이다(2~3배 부풀려 보이는 것이 보통). 광고를 켜기 전 오가닉 기준선과 비교한 증분으로만 판정한다.</span></div>
+    <div class="trap"><b>② 프로모션 당겨오기</b><span>할인 기간 매출의 일부는 어차피 샀을 고객과 기다렸다 사는 고객이다. 프로모션 직전 · 직후 창까지 포함해서 순증분을 본다.</span></div>
+    <div class="trap"><b>③ 소표본 성급 판정</b><span>리뷰 5개로 평점을, 영상 1편으로 포맷을 판정하지 않는다. 포맷 비교는 편당 최소 3편, 지표는 최소 7일 창.</span></div>
+    <div class="trap"><b>④ 시즌 · 캠페인 교란</b><span>블랙프라이데이 주간을 전주와 비교하면 모든 액션이 성공으로 보인다. 비교는 항상 같은 조건의 기간끼리.</span></div>
+  </div>
+</section>
+
+<section id="d0">
+  <div class="domain-head"><span class="dnum serif">D0</span><h2 class="domain">입점과 계정</h2><span class="count">8 액션</span></div>
+  <p class="intro">틱톡샵에 판매자로 등록하고 팔 수 있는 상태를 만드는 단계. 여기서의 실수(서류 불일치, 잘못된 진입 경로)는 뒤 단계 전부를 지연시킨다.</p>
+  <p class="keyq"><b>핵심 질문</b> 어떤 자격으로 들어가서, 언제부터 팔 수 있는 상태가 되는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">0.1</span><span class="aname">판매자 유형 · 진입 경로 결정</span><span class="loc">가입 전</span></td>
+      <td class="what">미국 법인으로 직접 들어갈지(로컬 셀러), 한국 사업자로 들어갈지(크로스보더), 운영 대행을 쓸지 정하는 구조 결정. 유형에 따라 판매 가능 카테고리와 물류 옵션이 달라진다.</td>
+      <td class="steps-td"><ol class="steps"><li>미국 법인(EIN) 보유 여부 확인</li><li>로컬 셀러 vs 크로스보더(초청 · 조건부) vs 대행(TSP) 비교</li><li>목표 카테고리의 유형별 제약 확인</li><li>경로 확정과 필요 서류 목록화</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>선택 경로와 근거가 문서로 남음</span>
+        <span class="v-row"><span class="v-tag m">지표</span>구조 결정이라 직접 지표 없음</span>
+        <span class="v-row"><span class="v-tag j">판정</span>이후 단계에서 경로 제약과 충돌 0건 (예: 크로스보더인데 목표 카테고리 판매 불가 같은 되돌림 없음)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.2</span><span class="aname">셀러 계정 생성과 서류 심사</span><span class="loc">가입 화면</span></td>
+      <td class="what">seller-us.tiktok.com에서 계정을 만들고 사업자 · 신분 증빙을 제출해 판매 자격 심사(KYC)를 받는다.</td>
+      <td class="steps-td"><ol class="steps"><li>계정 생성 (이메일 · 전화)</li><li>사업자 서류 업로드 (법인 서류, EIN)</li><li>대표자 신분증 제출</li><li>심사 대기, 반려 시 사유 확인 후 재제출</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>계정 상태 Approved</span>
+        <span class="v-row"><span class="v-tag m">지표</span>심사 소요일(통상 1~3영업일), 반려 횟수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>1회 통과. 반려 최다 원인은 서류 간 명의 · 주소 불일치이므로 제출 전 교차 대조</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.3</span><span class="aname">샵 기본 정보 설정</span><span class="loc">설정 Settings</span></td>
+      <td class="what">샵 이름 · 로고 · 출고지 · 반품지 주소를 등록한다. 반품지는 실제 수령 가능한 미국 주소여야 한다.</td>
+      <td class="steps-td"><ol class="steps"><li>샵 이름 설정 (상표 없는 브랜드명 표기 제한 주의)</li><li>로고 · 소개 등록</li><li>출고지 주소 등록</li><li>반품지(미국) 주소 등록</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>온보딩 체크리스트 100%, 미완료 항목 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>반품지 도착 테스트 1회 성공</span>
+        <span class="v-row"><span class="v-tag j">판정</span>첫 주문 · 첫 반품이 주소 문제 없이 처리됨</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.4</span><span class="aname">세금 정보와 정산 계좌 연결</span><span class="loc">재무 Finance</span> <span class="loc">설정</span></td>
+      <td class="what">세금 서류(미국 법인은 W-9)를 제출하고 정산금을 받을 계좌(미국 은행 또는 Payoneer류)를 연결한다. 이게 없으면 팔아도 돈을 못 받는다.</td>
+      <td class="steps-td"><ol class="steps"><li>세금 서류 제출</li><li>정산 계좌 연결과 인증</li><li>첫 정산 후 소액 인출 테스트</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>계좌 상태 Verified</span>
+        <span class="v-row"><span class="v-tag m">지표</span>첫 인출 성공까지 걸린 일수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>인출 실패 · 보류 0건</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.5</span><span class="aname">공식 틱톡 계정 연결</span><span class="loc">설정 › 연결 계정</span></td>
+      <td class="what">브랜드의 틱톡 계정을 샵에 묶는다. 연결되면 프로필에 쇼케이스(상품 탭)가 생기고, 그 계정의 영상에 노란 바구니를 붙일 수 있다. 마케팅용 계정을 복수로 연결할 수 있다(개수 한도 있음).</td>
+      <td class="steps-td"><ol class="steps"><li>공식 계정 연결 승인</li><li>쇼케이스 생성 확인</li><li>보조 마케팅 계정 추가 연결</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>프로필에 쇼케이스 노출, 영상에 상품 앵커 부착 가능</span>
+        <span class="v-row"><span class="v-tag m">지표</span>연결 계정 수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>콘텐츠 계획(D4)에 필요한 계정이 전부 연결됨</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.6</span><span class="aname">팀 계정과 권한 설정</span><span class="loc">설정 › 계정 · 권한</span></td>
+      <td class="what">운영 · CS · 재무 담당자를 서브 계정으로 초대하고 역할별 권한을 준다. 전원이 마스터 계정을 공유하는 것이 최악의 상태.</td>
+      <td class="steps-td"><ol class="steps"><li>역할 정의 (관리 · 운영 · CS · 재무)</li><li>서브 계정 초대</li><li>최소 권한 부여</li><li>분기별 권한 정리</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>역할별 계정 존재, 마스터 공유 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>담당자 없는 업무 영역 수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>퇴사 · 이탈 인원 계정 잔존 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.7</span><span class="aname">외부 도구 연동</span><span class="loc">설정 › 서비스 연동</span></td>
+      <td class="what">ERP(재고 · 주문 동기화), 3PL(물류), 파트너 앱(TSP)을 API로 연결한다. 선택 사항이지만 주문량이 늘면 수작업이 병목이 된다.</td>
+      <td class="steps-td"><ol class="steps"><li>연동할 도구와 권한 범위(스코프) 확인</li><li>앱 승인 · 토큰 발급</li><li>테스트 주문으로 동기화 검증</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>토큰 유효, 테스트 호출 성공</span>
+        <span class="v-row"><span class="v-tag m">지표</span>재고 · 주문 동기화 오차 건수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>동기화 지연으로 인한 초과 판매(오버셀) 0건</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">0.8</span><span class="aname">신규 셀러 미션과 초기 혜택 수령</span><span class="loc">성장 Growth</span></td>
+      <td class="what">플랫폼이 신규 셀러에게 주는 미션(첫 상품 등록, 첫 라이브 등)을 완료하면 트래픽 부스트 · 쿠폰 지원 · 수수료 감면 같은 혜택을 준다. 기간 한정이라 놓치면 사라진다.</td>
+      <td class="steps-td"><ol class="steps"><li>Growth 센터에서 신규 미션 목록 확인</li><li>혜택 큰 순으로 완료</li><li>수령 혜택의 만료일 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>미션 완료 처리 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>수령 혜택의 금전 가치 합계</span>
+        <span class="v-row"><span class="v-tag j">판정</span>만료 전 소진율 100%</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d1">
+  <div class="domain-head"><span class="dnum serif">D1</span><h2 class="domain">상품 (리스팅)</h2><span class="count">9 액션</span></div>
+  <p class="intro">팔 물건을 플랫폼에 올리고 관리하는 일. 틱톡샵에서 상품 카드는 영상 · 라이브 · 샵 탭 어디에나 붙는 판매의 최소 단위다. 리스팅 품질이 낮으면 그 위에 쌓는 콘텐츠와 광고가 전부 샌다.</p>
+  <p class="keyq"><b>핵심 질문</b> 고객이 카드를 눌렀을 때, 사게 만들 준비가 되어 있는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">1.1</span><span class="aname">카테고리 판매 권한 신청</span><span class="loc">상품 Products</span></td>
+      <td class="what">뷰티 등 일반 카테고리는 기본 개방이지만, 건강기능식품 · 식품 · 일부 가전은 서류(FDA 관련 증빙, 성분표 등)를 내고 승인을 받아야 팔 수 있다.</td>
+      <td class="steps-td"><ol class="steps"><li>판매 예정 카테고리의 요구 서류 확인</li><li>증빙 제출</li><li>승인 후 판매 가능 목록 확인</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>카테고리 상태 Approved</span>
+        <span class="v-row"><span class="v-tag m">지표</span>승인 소요일</span>
+        <span class="v-row"><span class="v-tag j">판정</span>판매 예정 SKU 전부가 승인 카테고리 안에 있음</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.2</span><span class="aname">브랜드 등록</span><span class="loc">상품 › 브랜드</span></td>
+      <td class="what">상표 증빙(USPTO 등록증, 권리자 위임장)으로 브랜드 권한을 얻는다. 브랜드명을 리스팅에 쓸 자격이자, 위조품 · 무단 셀러를 신고할 근거가 된다.</td>
+      <td class="steps-td"><ol class="steps"><li>상표 서류 준비</li><li>브랜드 등록 신청</li><li>승인 후 리스팅에 브랜드 연결</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>브랜드 상태 Approved</span>
+        <span class="v-row"><span class="v-tag m">지표</span>브랜드명 사유 리스팅 반려 건수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>브랜드 사유 반려 0, 위조 신고 경로 확보(9.3과 연결)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.3</span><span class="aname">상품 등록</span><span class="loc">상품 › 상품 추가</span></td>
+      <td class="what">리스팅 생성. 제목 · 이미지 · 영상 · 카테고리 · 옵션(SKU) · 가격 · 재고 · 배송 정보를 입력하고 플랫폼 심사를 받는다.</td>
+      <td class="steps-td"><ol class="steps"><li>제목 작성 (검색 키워드 포함, 글자수 한도 내)</li><li>메인 이미지 (규격 · 배경 규정 준수) + 상세 이미지 · 상품 영상</li><li>카테고리 · 속성 정확 입력 (오분류는 노출 저하)</li><li>SKU · 옵션 · 가격 · 재고 입력</li><li>무게 · 치수 · 배송 템플릿 지정</li><li>필요 시 인증 서류 첨부 후 제출</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>심사 통과, 상태 Live</span>
+        <span class="v-row"><span class="v-tag m">지표</span>등록 후 7일 노출 · 클릭 <span class="loc">데이터 › 상품 분석</span>, 리스팅 품질 등급</span>
+        <span class="v-row"><span class="v-tag j">판정</span>반려 없이 통과 + 첫 주 노출 발생. 노출 0이면 카테고리 오분류나 심사 이슈부터 의심</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.4</span><span class="aname">심사 반려 대응</span><span class="loc">상품 › 심사 상태</span></td>
+      <td class="what">반려된 리스팅의 사유를 읽고 고쳐서 재제출한다. 같은 사유로 반복 반려되면 위반 포인트 리스크가 쌓인다.</td>
+      <td class="steps-td"><ol class="steps"><li>반려 사유 확인</li><li>해당 항목 수정</li><li>재제출</li><li>반복 사유는 등록 체크리스트에 반영</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>재제출 완료</span>
+        <span class="v-row"><span class="v-tag m">지표</span>재제출 통과율, 반려 → 재제출 평균 시간</span>
+        <span class="v-row"><span class="v-tag j">판정</span>동일 사유 재반려 0, 신규 등록 반려율이 시간이 갈수록 하락</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.5</span><span class="aname">가격 설정과 변경</span><span class="loc">상품 › 가격</span></td>
+      <td class="what">정가와 판매가를 정한다. 할인 표기의 기준가 규정(부풀린 정가 금지)이 있고, 경쟁 상품 대비 위치가 전환율을 좌우한다.</td>
+      <td class="steps-td"><ol class="steps"><li>경쟁 상품 가격 조사 (동일 용량 · 성분 비교)</li><li>정가 · 판매가 설정</li><li>변경 시 사유와 날짜 기록 (가격 로그)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>설정가가 전 지면에 반영됨</span>
+        <span class="v-row"><span class="v-tag m">지표</span>변경 전후 7일 창의 전환율 · 판매량 <span class="loc">데이터 › 상품 분석</span></span>
+        <span class="v-row"><span class="v-tag j">판정</span>가격 변경마다 결과가 기록으로 남고, 마진 훼손 없이 전환율이 유지 이상</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.6</span><span class="aname">재고 관리</span><span class="loc">상품 › 재고</span></td>
+      <td class="what">재고 수량을 최신으로 유지한다. 품절은 노출 순위를 죽이고, 재고 없는데 주문받는 초과 판매는 셀러 귀책 취소가 되어 샵 건강 점수를 깎는다.</td>
+      <td class="steps-td"><ol class="steps"><li>수량 갱신 (ERP 연동 시 동기화 검증)</li><li>안전 재고선 설정</li><li>판매 속도 기반 품절 예측과 발주</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>시스템 재고 = 실물 재고</span>
+        <span class="v-row"><span class="v-tag m">지표</span>SKU별 품절 일수, 재고 회전일</span>
+        <span class="v-row"><span class="v-tag j">판정</span>재고 사유 셀러 취소 0건, 주력 SKU 품절 0일</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.7</span><span class="aname">리스팅 최적화 (상시)</span><span class="loc">상품</span> <span class="loc">데이터</span></td>
+      <td class="what">제목 키워드, 첫 이미지, 사이즈 차트, 상품 영상을 데이터 기반으로 계속 고친다. 등록은 1회, 최적화는 상시 업무다.</td>
+      <td class="steps-td"><ol class="steps"><li>검색어 데이터로 제목 키워드 갱신</li><li>첫 이미지 교체 실험</li><li>사이즈 차트 · 상세 보강</li><li>한 번에 한 변수만 바꿔서 원인 분리</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>변경 반영 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>카드 클릭률(CTR), 상세 전환율(CVR), 품질 등급</span>
+        <span class="v-row"><span class="v-tag j">판정</span>변경 1건당 7일 창 전후 비교. 동시 다발 변경은 판정 불가로 간주</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.8</span><span class="aname">플랫폼 최적화 제안 처리</span><span class="loc">상품 › 개선 제안</span></td>
+      <td class="what">Seller Center가 자동으로 주는 개선 제안(이미지 개선, 사이즈 차트 추가, 가격 조정 등)을 검토하고 처리한다. 플랫폼이 노출 알고리즘 기준을 직접 알려주는 드문 창구다.</td>
+      <td class="steps-td"><ol class="steps"><li>제안 목록 주기 확인</li><li>타당한 제안 반영, 아닌 것은 사유와 함께 보류</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>제안 처리율 (반영 + 사유 있는 보류)</span>
+        <span class="v-row"><span class="v-tag m">지표</span>처리 후 해당 상품 노출 · CTR 변화</span>
+        <span class="v-row"><span class="v-tag j">판정</span>미확인 방치 제안 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">1.9</span><span class="aname">카탈로그 위생과 규정 준수</span><span class="loc">상품</span> <span class="loc">샵 건강</span></td>
+      <td class="what">중복 리스팅 제거, 저성과 상품 비활성화, 금지 표현(질병 치료 효능 단정 등) 정리. 카탈로그가 지저분하면 위반 포인트와 노출 저하로 돌아온다.</td>
+      <td class="steps-td"><ol class="steps"><li>분기별 카탈로그 전수 점검</li><li>중복 · 유령 리스팅 정리</li><li>표현 규정 점검 (효능 클레임, 최상급 표현)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>점검 완료 기록</span>
+        <span class="v-row"><span class="v-tag m">지표</span>상품 관련 위반 포인트, 활성 SKU 중 매출 기여 분포</span>
+        <span class="v-row"><span class="v-tag j">판정</span>위반 포인트 0 유지, 매출 0인 활성 SKU 비중 감소</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d2">
+  <div class="domain-head"><span class="dnum serif">D2</span><h2 class="domain">주문과 물류</h2><span class="count">7 액션</span></div>
+  <p class="intro">주문이 들어오면 기한 안에 보내고, 반품을 처리하는 일. 화려하지 않지만 샵 건강 점수의 뼈대가 여기다. 배송 지표가 무너지면 플랫폼이 노출 자체를 줄인다.</p>
+  <p class="keyq"><b>핵심 질문</b> 약속한 기한 안에, 추적 가능하게, 사고 없이 보내고 있는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">2.1</span><span class="aname">배송 체계 선택</span><span class="loc">설정 › 배송</span></td>
+      <td class="what">세 가지 중 선택: ① TikTok Shipping (플랫폼에서 라벨 구매, 추적 자동, 분쟁 시 유리) ② 자체 배송 (직접 계약한 택배) ③ FBT (틱톡 창고에 재고 위탁). 혼용도 가능하다.</td>
+      <td class="steps-td"><ol class="steps"><li>방식별 단가 · 속도 · 책임 범위 비교</li><li>주력 SKU별 방식 결정</li><li>설정 반영</li><li>분기별 재검토</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>방식 설정 완료</span>
+        <span class="v-row"><span class="v-tag m">지표</span>주문당 배송 원가, 평균 도착일</span>
+        <span class="v-row"><span class="v-tag j">판정</span>원가와 도착 속도의 조합이 대안 방식보다 우위 (분기 비교표)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.2</span><span class="aname">배송 템플릿과 출고 기한 설정</span><span class="loc">설정 › 배송 템플릿</span></td>
+      <td class="what">출고 준비 기간(핸들링 타임, 통상 1~2영업일), 배송 지역, 배송비 · 무료배송 조건을 템플릿으로 정의한다. 여기서 정한 기한이 곧 플랫폼과의 약속이 된다.</td>
+      <td class="steps-td"><ol class="steps"><li>실제 처리 능력 기준으로 핸들링 타임 설정</li><li>배송비 정책 결정</li><li>상품별 템플릿 연결</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>전 상품에 템플릿 연결됨</span>
+        <span class="v-row"><span class="v-tag m">지표</span>설정 기한 대비 실제 출고 준수율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>지킬 수 있는 기한인가. 준수율이 낮으면 기한을 늘리는 것도 정답</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.3</span><span class="aname">주문 확인과 출고</span><span class="loc">주문 Orders</span></td>
+      <td class="what">매일의 핵심 루틴. 신규 주문을 확인하고 라벨을 뽑아 포장 · 발송한다. 지연 출고율과 유효 송장률이 샵 건강의 배송 축을 결정한다.</td>
+      <td class="steps-td"><ol class="steps"><li>신규 주문 확인 (구매자 취소 유예 창 이후)</li><li>배송 라벨 발급 · 출력</li><li>포장 후 운송장 등록</li><li>택배사 인계 (스캔 기록 확보)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>대기 주문 0으로 마감</span>
+        <span class="v-row"><span class="v-tag m">지표</span>지연 출고율, 유효 송장률 <span class="loc">샵 건강</span></span>
+        <span class="v-row"><span class="v-tag j">판정</span>관리선 안쪽 유지 (부록 B: 지연 출고 4% 미만, 유효 송장 95% 이상 수준)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.4</span><span class="aname">FBT 입고와 재고 운영</span><span class="loc">FBT 메뉴</span></td>
+      <td class="what">FBT를 쓰는 경우, 틱톡 창고로 재고를 보내고(입고 계획 · 박스 라벨), 창고 재고 수준을 운영한다. 출고 SLA는 플랫폼이 책임지는 대신 보관비가 든다.</td>
+      <td class="steps-td"><ol class="steps"><li>입고 계획 생성</li><li>박스 라벨 부착 후 발송</li><li>입고 검수 결과 확인</li><li>재고 커버 일수 관리 (품절과 과잉 사이)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>입고 수량 = 검수 수량</span>
+        <span class="v-row"><span class="v-tag m">지표</span>입고 수용률, 재고 커버 일수, FBT 비용/GMV</span>
+        <span class="v-row"><span class="v-tag j">판정</span>품절 0을 유지하면서 장기 보관비가 발생하지 않는 재고 수준</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.5</span><span class="aname">주문 취소 처리</span><span class="loc">주문 › 취소</span></td>
+      <td class="what">구매자 요청 취소는 출고 전이면 승인한다. 문제는 셀러 사유 취소(재고 없음 등)로, 건건이 샵 건강 점수를 깎는 패널티 항목이다.</td>
+      <td class="steps-td"><ol class="steps"><li>취소 요청 확인 · 출고 전 승인</li><li>셀러 귀책 취소는 원인 기록 (대부분 재고 관리 실패)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>요청 처리 지연 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>셀러 귀책 취소율 <span class="loc">샵 건강</span></span>
+        <span class="v-row"><span class="v-tag j">판정</span>귀책 취소율 관리선(2.5% 미만 수준) 안쪽, 원인별 재발 방지 조치 존재</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.6</span><span class="aname">반품 · 환불 처리</span><span class="loc">주문 › 반품/환불</span></td>
+      <td class="what">반품 요청을 검토해 승인(반품 라벨 발급)하거나 증빙과 함께 거절한다. 기한 내 무응답이면 자동 승인되므로 방치가 곧 손실이다. 수령 후 검수하고 환불을 확정한다.</td>
+      <td class="steps-td"><ol class="steps"><li>요청 사유 · 사진 검토</li><li>승인(라벨 발급) 또는 증빙 첨부 거절</li><li>반품 수령 · 검수</li><li>환불 확정 또는 부분 환불 협의</li><li>사유 데이터 축적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>기한 초과 자동 승인 0건</span>
+        <span class="v-row"><span class="v-tag m">지표</span>반품률(카테고리 평균 대비), 환불액/GMV, 거절 건 분쟁 승률</span>
+        <span class="v-row"><span class="v-tag j">판정</span>반품 사유 Top 3가 파악되어 있고, 상품 · 물류 개선(D1 · D2)으로 되먹임되는 루프 존재</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">2.7</span><span class="aname">배송 사고 대응</span><span class="loc">주문</span> <span class="loc">고객 응대</span></td>
+      <td class="what">분실 · 파손 · 장기 지연에 대응한다. TikTok Shipping 라벨 사용 건은 플랫폼에 보상을 청구할 수 있다. 고객에게는 먼저 알리는 쪽이 부정 리뷰를 막는다.</td>
+      <td class="steps-td"><ol class="steps"><li>추적 이상 건 모니터링</li><li>고객 선제 안내</li><li>재발송 또는 환불 결정</li><li>보상 청구 (플랫폼 라벨 건)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>이상 건 대응 기록 존재</span>
+        <span class="v-row"><span class="v-tag m">지표</span>사고 보상 회수율, 배송 사유 부정 리뷰 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>사고 건의 리뷰 · 분쟁 전이율이 하락 추세</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d3">
+  <div class="domain-head"><span class="dnum serif">D3</span><h2 class="domain">프로모션</h2><span class="count">7 액션</span></div>
+  <p class="intro">플랫폼이 제공하는 할인 도구로 전환율과 객단가를 움직이는 일. 모든 프로모션의 판정 원칙은 하나다: 할인으로 포기한 마진보다 늘어난 순증분 매출이 큰가.</p>
+  <p class="keyq"><b>핵심 질문</b> 이 할인이 없었어도 팔렸을 물건에 돈을 쓰고 있는 것은 아닌가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">3.1</span><span class="aname">상품 할인</span><span class="loc">마케팅 › 프로모션</span></td>
+      <td class="what">기간을 정해 상품 가격을 % 또는 정액으로 내린다. 가장 기본적인 도구.</td>
+      <td class="steps-td"><ol class="steps"><li>대상 상품 · 할인폭 · 기간 설정</li><li>할인 표기 기준가 규정 확인</li><li>시작 · 종료 확인</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>할인가가 지면에 표기됨</span>
+        <span class="v-row"><span class="v-tag m">지표</span>기간 GMV · 판매량 vs 직전 동기간</span>
+        <span class="v-row"><span class="v-tag j">판정</span>증분 매출의 마진 &gt; 할인 비용. 직전 · 직후 창 포함해 당겨오기(함정 ②) 확인</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.2</span><span class="aname">플래시 딜</span><span class="loc">마케팅 › Flash Deal</span></td>
+      <td class="what">시간 한정 특가. 짧은 시간에 깊은 할인으로 판매 속도를 만들고, 플랫폼의 딜 지면 노출을 얻는다.</td>
+      <td class="steps-td"><ol class="steps"><li>딜 슬롯 신청 (수량 · 할인폭 요건)</li><li>재고 확보</li><li>딜 시간대 모니터링</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>딜 지면 노출 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>딜 시간대 판매량 · 신규 구매자 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>신규 구매자 유입 목적이면 신규 비중으로, 재고 소진 목적이면 소진율로 판정. 목적 없는 딜은 마진 소각</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.3</span><span class="aname">쿠폰 발행</span><span class="loc">마케팅 › 쿠폰</span></td>
+      <td class="what">샵 전체 쿠폰, 팔로워 전용, 신규 고객 전용, 라이브 전용 등 대상을 좁힌 할인권. 전면 할인과 달리 받을 사람만 할인해 마진 손실을 줄인다.</td>
+      <td class="steps-td"><ol class="steps"><li>목적별 쿠폰 설계 (신규 유치 / 재구매 / 라이브 부스트)</li><li>금액 · 최소 주문액 · 수량 · 기간 설정</li><li>노출 채널 지정</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>쿠폰 활성 · 노출 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>사용률(발급 대비), 쿠폰 주문의 신규 고객 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>사용률이 너무 낮으면 설계 실패, 너무 높으면 어차피 살 고객에게 준 것 의심. 쿠폰별 목적 지표로 판정</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.4</span><span class="aname">수량 할인과 번들</span><span class="loc">마케팅 › 번들</span></td>
+      <td class="what">"2개 사면 15% 할인" 같은 다수량 인센티브와 상품 묶음. 객단가(AOV)를 끌어올리는 도구다.</td>
+      <td class="steps-td"><ol class="steps"><li>궁합 상품 조합 설계</li><li>수량 구간별 할인 설정</li><li>번들 구성 등록</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>상품 상세에 번들 노출</span>
+        <span class="v-row"><span class="v-tag m">지표</span>객단가(AOV) 변화, 다수량 주문 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>AOV 상승분이 할인 비용을 상회. 단품 매출 잠식 여부 동시 확인</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.5</span><span class="aname">배송비 프로모션</span><span class="loc">마케팅 › 배송 할인</span></td>
+      <td class="what">무료배송 임계값 설정, 플랫폼 공동 부담(co-fund) 배송 캠페인 참여. 배송비는 장바구니 포기의 최대 사유라 체감 효과가 크다.</td>
+      <td class="steps-td"><ol class="steps"><li>무료배송 기준액 설정</li><li>플랫폼 배송 지원 프로그램 참여 검토</li><li>배송비 부담 비용 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>배송 혜택 표기 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>결제 전환율, 주문당 배송비 부담액</span>
+        <span class="v-row"><span class="v-tag j">판정</span>전환율 상승에 따른 증분 마진 &gt; 배송비 부담 증가</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.6</span><span class="aname">플랫폼 캠페인 참여</span><span class="loc">마케팅 › 캠페인</span></td>
+      <td class="what">블랙프라이데이, Deals For You Days 같은 플랫폼 주관 대형 행사에 신청해 들어간다. 자격 요건(샵 점수, 판매 실적, 요구 할인폭)이 있고, 채택되면 행사 지면 트래픽을 받는다.</td>
+      <td class="steps-td"><ol class="steps"><li>캠페인 캘린더 확인</li><li>자격 요건 대비 상태 점검</li><li>상품 · 할인폭 제출</li><li>채택 시 재고 · 물류 증설 준비</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>신청 → 채택 여부</span>
+        <span class="v-row"><span class="v-tag m">지표</span>캠페인 기간 GMV vs 평시 같은 길이 창, 행사 지면 유입</span>
+        <span class="v-row"><span class="v-tag j">판정</span>행사 후 낙수까지 본다: 행사로 유입된 신규 구매자의 재구매율. 행사 중 배송 지표 방어 여부도 판정에 포함</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">3.7</span><span class="aname">플랫폼 미션 수행</span><span class="loc">성장 Growth</span></td>
+      <td class="what">플랫폼이 상시로 거는 미션(라이브 N회, 신상품 N개 등록 등)을 완료하고 트래픽 · 쿠폰 보상을 받는다. 플랫폼이 밀고 싶은 행동이 무엇인지 읽는 신호이기도 하다.</td>
+      <td class="steps-td"><ol class="steps"><li>미션 목록 주기 확인</li><li>보상 대비 비용 낮은 미션 선별 수행</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>미션 완료 · 보상 수령</span>
+        <span class="v-row"><span class="v-tag m">지표</span>보상 가치 합계, 수행 비용</span>
+        <span class="v-row"><span class="v-tag j">판정</span>미션을 위한 억지 행동(질 낮은 라이브 등)으로 본업 지표를 해치지 않았는가</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d4">
+  <div class="domain-head"><span class="dnum serif">D4</span><h2 class="domain">콘텐츠 (오가닉)</h2><span class="count">6 액션</span></div>
+  <p class="intro">셀러 본인의 공식 계정으로 만드는 무료 트래픽. 틱톡샵의 본질이 "검색이 아니라 발견"이므로, 여기서 만드는 영상 자산은 광고(D6)의 소재 풀이기도 하다. 판정의 공용 자는 GPM(1,000뷰당 GMV)이다.</p>
+  <p class="keyq"><b>핵심 질문</b> 조회수가 아니라, 1,000명이 봤을 때 얼마가 팔리는 콘텐츠인가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">4.1</span><span class="aname">쇼퍼블 영상 게시</span><span class="loc">틱톡 앱</span> <span class="loc">데이터 › 콘텐츠 분석</span></td>
+      <td class="what">연결된 계정에 영상을 올리고 노란 바구니(상품 앵커)를 붙인다. 오가닉 판매의 기본 단위.</td>
+      <td class="steps-td"><ol class="steps"><li>상품 선정 · 스크립트 작성 (첫 3초 훅)</li><li>촬영 · 편집</li><li>게시 + 상품 앵커 부착</li><li>제목 · 해시태그에 검색 키워드 포함</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>게시 완료 + 앵커 정상 부착</span>
+        <span class="v-row"><span class="v-tag m">지표</span>조회수, 앵커 클릭률, 영상별 GMV, GPM</span>
+        <span class="v-row"><span class="v-tag j">판정</span>계정 평균 GPM 대비 상하 판정. 조회수만 높고 GPM이 0에 가까우면 상품과 콘텐츠의 미스매치</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">4.2</span><span class="aname">콘텐츠 포맷 실험</span><span class="loc">틱톡 앱</span> <span class="loc">데이터</span></td>
+      <td class="what">데모형, 비포애프터, 리뷰형, 스토리형 등 포맷을 체계적으로 실험해 이기는 형식을 찾는다. 찾은 포맷은 반복 생산하고 광고 소재로 넘긴다.</td>
+      <td class="steps-td"><ol class="steps"><li>포맷 가설 정의</li><li>포맷당 최소 3편 제작 · 게시</li><li>포맷별 성과 비교표 유지</li><li>승자 포맷 반복 생산</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>포맷별 편수 충족 (표본 규칙)</span>
+        <span class="v-row"><span class="v-tag m">지표</span>포맷별 GPM 비교, 저장 · 공유율 (검색성 높은 콘텐츠의 시그널)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>승자 포맷의 재생산 편들이 실제로 평균 이상을 유지하는가 (재현성)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">4.3</span><span class="aname">라이브 방송</span><span class="loc">틱톡 앱</span> <span class="loc">데이터 › 라이브 분석</span></td>
+      <td class="what">실시간 방송에서 상품을 핀으로 걸고 시연 · 판매한다. 예고 영상, 라이브 전용 쿠폰, 진행 스크립트가 한 세트다.</td>
+      <td class="steps-td"><ol class="steps"><li>예고 영상 게시</li><li>상품 핀 순서 · 시연 스크립트 준비</li><li>라이브 전용 쿠폰 연결</li><li>진행 (질문 응대, 핀 교체)</li><li>하이라이트를 숏폼으로 재활용</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>계획한 회차 · 시간 수행</span>
+        <span class="v-row"><span class="v-tag m">지표</span>시청자수, 평균 시청 시간, 라이브 GMV · GPM, 핀 상품별 전환</span>
+        <span class="v-row"><span class="v-tag j">판정</span>회차를 거듭할수록 GPM이 오르는가. 미국은 라이브 비중이 작으므로 투입 시간 대비 숏폼과의 기회비용 비교 필수</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">4.4</span><span class="aname">샵 탭 운영</span><span class="loc">샵 데코 메뉴</span></td>
+      <td class="what">샵 탭(스토어 페이지)의 컬렉션 구성과 대표 상품 배열을 관리한다. 목적 구매 고객이 도착하는 지면.</td>
+      <td class="steps-td"><ol class="steps"><li>컬렉션(기획전) 구성</li><li>베스트셀러 상단 배치</li><li>시즌별 리프레시</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>구성 반영 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>샵 탭 유입과 전환율 <span class="loc">데이터 › 트래픽 소스</span></span>
+        <span class="v-row"><span class="v-tag j">판정</span>개편 전후 샵 탭 경유 GMV 비교</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">4.5</span><span class="aname">검색 최적화 (샵 SEO)</span><span class="loc">데이터 › 검색 분석</span></td>
+      <td class="what">틱톡 안에서 사람들이 치는 검색어를 읽고, 리스팅 제목(D1.7)과 영상 제목 · 해시태그에 반영해 검색 지면 노출을 확보한다.</td>
+      <td class="steps-td"><ol class="steps"><li>유입 검색어 · 수요 키워드 확인</li><li>타깃 키워드 선정</li><li>리스팅 · 콘텐츠 텍스트에 반영</li><li>순위 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>타깃 키워드가 텍스트에 반영됨</span>
+        <span class="v-row"><span class="v-tag m">지표</span>검색 경유 유입 비중 추세, 타깃 키워드 노출 순위</span>
+        <span class="v-row"><span class="v-tag j">판정</span>반영 후 2~4주 창에서 검색 유입 비중 상승</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">4.6</span><span class="aname">외부 채널 유입 연계</span><span class="loc">타 플랫폼</span></td>
+      <td class="what">인스타그램 · 유튜브 · 뉴스레터 등 외부 채널에서 틱톡샵 상품 링크로 트래픽을 보낸다. 플랫폼 밖 자산을 매출로 잇는 통로.</td>
+      <td class="steps-td"><ol class="steps"><li>채널별 링크 배치 (프로필, 스토리 등)</li><li>채널별 소재 제작</li><li>유입 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>링크 정상 동작</span>
+        <span class="v-row"><span class="v-tag m">지표</span>외부 소스 유입 · GMV <span class="loc">데이터 › 트래픽 소스</span></span>
+        <span class="v-row"><span class="v-tag j">판정</span>외부 유입의 어트리뷰션은 불완전하므로 추세로만 판정하고 과신하지 않는다</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d5">
+  <div class="domain-head"><span class="dnum serif">D5</span><h2 class="domain">어필리에이트 (크리에이터 협업)</h2><span class="count">8 액션</span></div>
+  <p class="intro">판매 커미션을 걸어 크리에이터가 대신 영상을 만들어 팔게 하는 제도. 미국 틱톡샵 성장의 최대 엔진이며, 셀러 혼자 만드는 콘텐츠(D4)와 달리 확장에 상한이 없다. 운영의 실체는 "발굴 → 접촉 → 샘플 → 게시 → 매출" 퍼널의 전환율 관리다.</p>
+  <p class="keyq"><b>핵심 질문</b> 누가 우리 대신 팔게 만들 것이며, 샘플과 커미션은 회수되고 있는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">5.1</span><span class="aname">커미션 플랜 설계</span><span class="loc">제휴 Affiliate</span></td>
+      <td class="what">세 층위의 커미션 구조를 설계한다: ① Shop 플랜 (전 상품 기본율) ② Open 플랜 (상품별 공개율, 크리에이터 마켓에 노출) ③ Targeted 플랜 (특정 크리에이터 개별 조건). 통상 10~25% 범위.</td>
+      <td class="steps-td"><ol class="steps"><li>상품별 마진 여유 계산</li><li>기본율 · 공개율 설정</li><li>전략 상품은 높은 율로 차등</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>플랜 활성 · 마켓 노출 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>주간 신규 제휴 크리에이터 수, 어필리에이트 경유 GMV 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>커미션 + 플랫폼 수수료 + 배송비를 다 내고도 SKU가 흑자인가 (총 테이크레이트 검산)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.2</span><span class="aname">크리에이터 발굴</span><span class="loc">제휴 › 크리에이터 찾기</span></td>
+      <td class="what">Seller Center의 크리에이터 마켓플레이스에서 카테고리 · 팔로워 · 판매 실적 필터로 후보를 찾는다. 팔로워 수보다 판매 실적과 콘텐츠 결이 중요하다.</td>
+      <td class="steps-td"><ol class="steps"><li>필터 조건 정의 (카테고리 실적 우선)</li><li>후보 리스트 작성</li><li>실제 계정 콘텐츠 육안 검증 (결 · 진정성)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>주간 후보 확보 수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>발굴 → 접촉 → 수락 → 게시 → GMV 퍼널의 단계별 전환율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>발굴 기준을 바꿨을 때 하류 전환율(게시율 · 크리에이터당 GMV)이 오르는가</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.3</span><span class="aname">타깃 초대 발송</span><span class="loc">제휴 › 초대</span></td>
+      <td class="what">선별한 크리에이터에게 개별 커미션과 메시지, 샘플 제안을 담아 협업 초대를 보낸다. 일일 발송 한도가 있어 배치 운영이 필요하다.</td>
+      <td class="steps-td"><ol class="steps"><li>초대 문안 · 커미션 조건 준비</li><li>일일 한도 내 배치 발송</li><li>수락 · 무응답 추적, 문안 변형 실험</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>계획 물량 발송 완료</span>
+        <span class="v-row"><span class="v-tag m">지표</span>초대 수락률, 수락 후 30일 내 게시율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>문안 · 타깃 세그먼트별 수락률 비교로 다음 배치를 개선하는 루프 존재</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.4</span><span class="aname">샘플 운영</span><span class="loc">제휴 › 샘플 요청</span></td>
+      <td class="what">크리에이터의 무료 샘플 요청을 승인 · 거절하고 발송한다. 샘플에 콘텐츠 의무는 없으므로, 받고 안 만드는 비율을 관리하는 것이 이 액션의 전부다.</td>
+      <td class="steps-td"><ol class="steps"><li>승인 기준 정의 (팔로워 하한, 과거 이행률, 카테고리 적합)</li><li>요청 검토 · 승인</li><li>주문처럼 신속 발송</li><li>게시 여부 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>요청 대기 적체 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>샘플 → 영상 게시율 (이 도메인의 핵심 지표), 샘플 1건당 GMV</span>
+        <span class="v-row"><span class="v-tag j">판정</span>샘플 원가 총액 대비 회수 GMV. 게시율이 낮으면 승인 기준을 올리는 방향으로 조정</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.5</span><span class="aname">커미션 최적화</span><span class="loc">제휴</span></td>
+      <td class="what">상품별 · 기간별로 커미션율을 조정한다. 신제품 런칭 부스트, 상위 크리에이터 보너스 등. 커미션은 크리에이터 채택률을 움직이는 가격이다.</td>
+      <td class="steps-td"><ol class="steps"><li>현재 채택률 · 경쟁 브랜드 커미션 수준 파악</li><li>조정 실험 (한 번에 한 상품군)</li><li>전후 채택 변화 기록</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>변경 반영 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>인상 전후 신규 채택 크리에이터 수 (커미션 탄력성), 총 커미션 비용률</span>
+        <span class="v-row"><span class="v-tag j">판정</span>인상분만큼 채택과 GMV가 늘었는가. 안 늘면 커미션이 아니라 상품 · 콘텐츠 문제</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.6</span><span class="aname">크리에이터 관계 관리</span><span class="loc">제휴 › 메시지</span></td>
+      <td class="what">성과 낸 크리에이터와의 지속 협업: 메시지 응대, 재협업 제안, 신제품 우선 제공, 전용 딜. 한 번 판 크리에이터가 다시 팔게 만드는 일.</td>
+      <td class="steps-td"><ol class="steps"><li>성과 상위 크리에이터 목록 유지</li><li>재협업 · 신제품 시딩 제안</li><li>메시지 응대 SLA 유지</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>상위 크리에이터 접촉 주기 준수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>재협업률, 상위 10명 GMV 집중도</span>
+        <span class="v-row"><span class="v-tag j">판정</span>재협업률은 높게, 집중도는 위험선 아래로 (한 명 이탈이 매출 급락이 되지 않게 분산)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.7</span><span class="aname">파트너 대행 활용</span><span class="loc">제휴 › 파트너</span></td>
+      <td class="what">TAP(TikTok 공인 어필리에이트 파트너)이나 MCN에 크리에이터 모집 · 관리를 위탁한다. 수수료를 내는 대신 크리에이터 풀에 빠르게 접근한다.</td>
+      <td class="steps-td"><ol class="steps"><li>파트너 실적 검증 후 계약 (수수료 · 범위)</li><li>목표 설정 (모집 수 · GMV)</li><li>월별 성과 리뷰</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>계약 범위대로 활동 보고 수령</span>
+        <span class="v-row"><span class="v-tag m">지표</span>파트너 경유 GMV, 파트너 비용 포함 회수율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>같은 돈을 자체 운영(5.2~5.4)에 썼을 때와의 효율 비교</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">5.8</span><span class="aname">제휴 콘텐츠 모니터링</span><span class="loc">제휴</span> <span class="loc">틱톡 앱</span></td>
+      <td class="what">크리에이터들이 올리는 우리 상품 영상을 감시한다. 효능 과장, 허위 클레임, 광고 표시(#ad) 누락은 브랜드와 샵 모두의 리스크다.</td>
+      <td class="steps-td"><ol class="steps"><li>제휴 영상 주기 검수</li><li>위반 발견 시 수정 요청 · 제휴 해지 · 신고</li><li>가이드라인 문서를 초대 · 샘플 단계에 첨부</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>검수 주기 준수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>위반 발견 → 조치 리드타임</span>
+        <span class="v-row"><span class="v-tag j">판정</span>플랫폼 · 규제 기관에 먼저 적발당한 건 0</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d6">
+  <div class="domain-head"><span class="dnum serif">D6</span><h2 class="domain">유료 광고 (GMV Max)</h2><span class="count">6 액션</span></div>
+  <p class="intro">돈으로 노출을 사는 일. 2025년 이후 틱톡샵의 판매 목적 광고는 GMV Max 하나로 통합됐다(기존 Video · Product · LIVE Shopping Ads는 강제 이관). 셀러가 만질 수 있는 것은 사실상 4개뿐이다: 일 예산, 목표 ROI, 상품 세트, 켜기/끄기. 타겟팅 · 입찰 · 소재 선택은 전부 자동이고, 소재는 계정 영상과 광고 사용이 허가된 제휴 영상 풀에서 자동 수급된다. 그래서 광고 운영의 실력은 세팅이 아니라 소재 공급과 판정에서 갈린다.</p>
+  <p class="keyq"><b>핵심 질문</b> 대시보드의 ROI가 아니라, 광고가 없었을 때 대비 증분이 남는 장사인가.</p>
+  <div class="note"><b>혼합 ROI 주의.</b> GMV Max가 보고하는 GMV와 ROI는 광고를 안 봤어도 팔렸을 오가닉 · 어필리에이트 주문까지 캠페인에 합산한 혼합값이다. 대시보드 ROI가 실제 광고 효율의 2~3배로 보이는 것이 보통이며, 어필리에이트 커미션은 광고비 위에 별도로 얹힌다. 판정은 반드시 6.6의 증분 보정을 거친다.</div>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">6.1</span><span class="aname">광고 소재 풀 확보</span><span class="loc">제휴</span> <span class="loc">광고 Ads</span></td>
+      <td class="what">광고를 켜기 전의 준비 작업. 크리에이터에게 영상의 광고 사용 허가(ad authorization, Spark 코드)를 받아 소재 풀을 쌓는다. 소재가 없으면 GMV Max는 돌릴 것이 없다.</td>
+      <td class="steps-td"><ol class="steps"><li>제휴 조건에 광고 사용 허가 포함</li><li>성과 좋은 영상의 Spark 코드 수집</li><li>SKU당 소재 8~15개 확보 후 광고 시작 (권장 관행)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>허가 상태 유효한 소재 수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>SKU당 가용 소재 수, 주간 신규 소재 유입 속도(주 3~5개 권장)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>소재 풀 규모가 권장선 이상일 때만 캠페인 시작 승인</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">6.2</span><span class="aname">GMV Max Product 캠페인</span><span class="loc">광고 › GMV Max</span></td>
+      <td class="what">상품 판매용 자동 캠페인 생성. 상품을 고르고 일 예산과 목표 ROI를 설정하면 노출 지면 · 타겟 · 소재 조합을 플랫폼이 알아서 돌린다.</td>
+      <td class="steps-td"><ol class="steps"><li>대상 상품 세트 선정 (소재 풀 있는 상품만)</li><li>일 예산 설정</li><li>목표 ROI 설정 (손익분기 ROI 계산 먼저)</li><li>최소 14일 러닝 (조기 판정 금지)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>캠페인 활성, 예산 정상 소진</span>
+        <span class="v-row"><span class="v-tag m">지표</span>보고 ROI(혼합), 주문당 광고비, 소진율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>14일 후 6.6의 증분 보정으로만 판정. 혼합 ROI 단독 판정은 금지</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">6.3</span><span class="aname">GMV Max LIVE 캠페인</span><span class="loc">광고 › GMV Max</span></td>
+      <td class="what">라이브 방송에 유료 트래픽을 붙이는 캠페인. 라이브 역량(D4.3)이 검증된 뒤에 쓰는 증폭기다.</td>
+      <td class="steps-td"><ol class="steps"><li>오가닉 라이브 GPM 기준선 확보</li><li>캠페인 생성 (예산 · 목표 ROI)</li><li>방송 중 유입 품질 모니터링</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>방송 시간과 캠페인 시간 일치</span>
+        <span class="v-row"><span class="v-tag m">지표</span>유료 유입 구간의 라이브 GPM, 시청 유지율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>유료를 붙인 회차의 GPM이 오가닉 기준선 대비 유지 이상 (트래픽만 사고 전환이 무너지면 실패)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">6.4</span><span class="aname">캠페인 운영 조정</span><span class="loc">광고 › GMV Max</span></td>
+      <td class="what">가진 4개의 손잡이를 절제해서 움직인다. 급격한 변경은 자동 최적화의 학습을 리셋시킨다.</td>
+      <td class="steps-td"><ol class="steps"><li>목표 ROI는 주 단위로 0.25~0.5씩만 조정</li><li>예산은 2~3일 간격으로 20~30%씩 증액</li><li>상품 세트 추가 · 제외</li><li>변경 로그 유지</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>변경폭 규칙 준수 (로그로 확인)</span>
+        <span class="v-row"><span class="v-tag m">지표</span>조정 후 소진 안정성, ROI 변동폭</span>
+        <span class="v-row"><span class="v-tag j">판정</span>조정 사유와 결과가 짝으로 기록되어 다음 조정의 근거가 되는가</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">6.5</span><span class="aname">소재 공급 리프레시</span><span class="loc">제휴</span> <span class="loc">광고</span></td>
+      <td class="what">광고 소재는 2~3일이면 피로가 온다. 소재 선택은 자동이므로 셀러의 일은 새 소재를 계속 공급하는 것: 신규 제휴 영상 허가, 신규 자체 영상 투입.</td>
+      <td class="steps-td"><ol class="steps"><li>소재별 성과 · 피로 모니터링</li><li>주 3~5개 신규 소재 투입</li><li>저성과 소재의 패턴 기록 (제작 가이드에 반영)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>주간 신규 투입 수 충족</span>
+        <span class="v-row"><span class="v-tag m">지표</span>소재 풀의 평균 사용 일수, 캠페인 CTR 추세</span>
+        <span class="v-row"><span class="v-tag j">판정</span>소재 고갈로 인한 성과 하락 구간이 발생하지 않는가</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">6.6</span><span class="aname">증분 판정과 손익 보정</span><span class="loc">데이터</span> <span class="loc">재무</span></td>
+      <td class="what">광고 도메인의 최종 판정 액션. 혼합 ROI를 증분 기준으로 보정한다: 캠페인 GMV에서 광고 전 오가닉 기준선을 빼고, 광고비에 커미션 등 실비용을 더해 진짜 효율을 계산한다.</td>
+      <td class="steps-td"><ol class="steps"><li>광고 전 2~4주의 오가닉 GMV 기준선 확보</li><li>증분 GMV = 캠페인 기간 GMV − 기준선 추세치</li><li>총비용 = 광고비 + 증분분 커미션 · 수수료</li><li>증분 ROAS vs 손익분기 ROAS 비교</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>보정 계산이 주기적으로 수행됨</span>
+        <span class="v-row"><span class="v-tag m">지표</span>증분 ROAS, 전체 MER(총매출/총광고비)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>증분 ROAS ≥ 마진 기반 손익분기. 미달이 2주기 연속이면 캠페인 축소 · 중단</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d7">
+  <div class="domain-head"><span class="dnum serif">D7</span><h2 class="domain">CS와 평판</h2><span class="count">5 액션</span></div>
+  <p class="intro">문의 응대, 리뷰, 분쟁 처리. 매출을 직접 만들지는 않지만 평점과 응대 지표는 전환율과 샵 건강 양쪽에 걸려 있다. 특히 리뷰는 다음 고객의 구매 판단 재료다.</p>
+  <p class="keyq"><b>핵심 질문</b> 산 사람의 경험이 다음 사람의 구매 이유가 되고 있는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">7.1</span><span class="aname">고객 문의 응대</span><span class="loc">고객 응대 › 채팅</span></td>
+      <td class="what">구매 전 질문(재고 · 성분 · 사이즈)과 구매 후 문의(배송 · 환불)에 채팅으로 답한다. 플랫폼이 응답률을 지표로 잰다.</td>
+      <td class="steps-td"><ol class="steps"><li>응대 시간대 · 담당 지정</li><li>24시간 내 전건 응답</li><li>반복 질문은 FAQ · 상세페이지에 반영</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>미응답 잔여 0으로 일 마감</span>
+        <span class="v-row"><span class="v-tag m">지표</span>응답률 <span class="loc">샵 건강</span>, 평균 첫 응답 시간, 문의 후 구매 전환율</span>
+        <span class="v-row"><span class="v-tag j">판정</span>응답률 관리선 이상 + 같은 질문의 재발이 줄고 있는가 (상세페이지 개선 루프)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">7.2</span><span class="aname">응대 자동화 설정</span><span class="loc">고객 응대 › 설정</span></td>
+      <td class="what">자동 인사말, 자주 묻는 질문 자동 답변, 부재중 메시지를 설정해 야간 · 주말 공백을 메운다.</td>
+      <td class="steps-td"><ol class="steps"><li>문의 로그에서 상위 질문 추출</li><li>자동 답변 등록</li><li>월별 자동 답변 품질 점검</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>자동 응답 동작 확인</span>
+        <span class="v-row"><span class="v-tag m">지표</span>자동 해결 비율, 야간 응답 커버리지</span>
+        <span class="v-row"><span class="v-tag j">판정</span>자동 응답이 오답으로 분쟁을 만들지 않는가 (자동 답변 후 불만 전이율)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">7.3</span><span class="aname">리뷰 관리</span><span class="loc">고객 응대 › 리뷰</span></td>
+      <td class="what">리뷰를 모니터링하고, 답글을 달고, 부정 리뷰의 원인을 상품 · 물류 개선으로 되먹인다. 대가를 주고 리뷰를 사는 행위는 금지이며 적발 시 계정 리스크다.</td>
+      <td class="steps-td"><ol class="steps"><li>신규 리뷰 일일 확인</li><li>부정 리뷰 사유 분류 (상품 · 배송 · 기대 불일치)</li><li>필요 시 공개 답글 · CS 해결</li><li>사유 Top 3를 담당 도메인에 전달</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>부정 리뷰 미확인 방치 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>평점 추이(4.5 이상 유지 권장), 주문 대비 리뷰 작성률, 부정 사유 분포</span>
+        <span class="v-row"><span class="v-tag j">판정</span>같은 사유의 부정 리뷰가 개선 조치 이후 감소하는가. 표본 적을 때는 판정 유보(함정 ③)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">7.4</span><span class="aname">분쟁 · 클레임 대응</span><span class="loc">주문 › 분쟁</span></td>
+      <td class="what">구매자가 플랫폼에 분쟁을 제기하면 기한 내 증빙(운송장, 포장 사진, 대화 기록)을 제출해 다툰다. 무응답은 자동 패소다.</td>
+      <td class="steps-td"><ol class="steps"><li>분쟁 알림 즉시 확인</li><li>증빙 수집 · 기한 내 제출</li><li>결과 · 유형 기록</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>기한 초과 무응답 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>분쟁률(주문 대비), 셀러 승률</span>
+        <span class="v-row"><span class="v-tag j">판정</span>분쟁 유형별 근본 원인이 D1 · D2 개선으로 이어져 분쟁률 자체가 하락</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">7.5</span><span class="aname">재구매 · 팔로워 관리</span><span class="loc">마케팅</span> <span class="loc">틱톡 앱</span></td>
+      <td class="what">한 번 산 고객을 다시 사게 만드는 일: 샵 팔로우 유도, 팔로워 전용 쿠폰, 패키지 경험(동봉물), 재입고 소식. 신규 획득보다 싼 매출이다.</td>
+      <td class="steps-td"><ol class="steps"><li>팔로우 유도 장치 배치 (라이브 · 패키지)</li><li>팔로워 전용 혜택 운영</li><li>재구매 주기 파악 (소모품이면 주기 직전 접점)</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>팔로워 혜택 상시 존재</span>
+        <span class="v-row"><span class="v-tag m">지표</span>기간 코호트 재구매율, 팔로워의 구매 기여 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>재구매 코호트의 획득비가 신규 획득비보다 낮게 유지되는가</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d8">
+  <div class="domain-head"><span class="dnum serif">D8</span><h2 class="domain">데이터와 정산</h2><span class="count">5 액션</span></div>
+  <p class="intro">숫자를 읽고 돈을 확인하는 일. 리딩 자체도 액션이다: 읽는 주기를 지켰는가, 이상을 얼마나 빨리 알아챘는가로 검증한다. 정산은 "플랫폼이 준 대로 받기"가 아니라 "내 계산과 대사하기"다.</p>
+  <p class="keyq"><b>핵심 질문</b> 매출 급락을 몇 시간 만에 알아챌 수 있고, 입금액이 맞는지 검산하고 있는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">8.1</span><span class="aname">코어 지표 정기 리딩</span><span class="loc">데이터 Compass</span></td>
+      <td class="what">일 단위로 GMV · 주문 · 방문을 확인하고, 트래픽 소스(영상 / 라이브 / 샵 탭 · 검색 / 기타)로 분해해서 어디서 오는 매출인지 안다.</td>
+      <td class="steps-td"><ol class="steps"><li>일일 5분 리딩 루틴 (GMV · 주문 · 소스 분해)</li><li>주간 심층 리뷰 (추세 · 소스 구성 변화)</li><li>급변 시 원인 추적 절차 가동</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>리딩 주기 준수율</span>
+        <span class="v-row"><span class="v-tag m">지표</span>이상 감지 리드타임 (급락 · 급등을 인지하기까지 걸린 시간)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>매출 이상을 24시간 안에 인지하고 원인 가설까지 세웠는가</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">8.2</span><span class="aname">상품 퍼널 분석</span><span class="loc">데이터 › 상품 분석</span></td>
+      <td class="what">상품별 노출 → 클릭 → 구매 퍼널에서 병목을 찾는다. 병목의 위치가 다음에 할 액션을 정해 준다.</td>
+      <td class="steps-td"><ol class="steps"><li>주력 SKU 퍼널 확인</li><li>병목 진단: 노출 낮음 → D4 · D5 · D6 / 클릭률 낮음 → D1.7 이미지 · 제목 / 전환율 낮음 → 가격 · 리뷰 · 상세</li><li>조치 후 재측정</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 전수 진단 존재</span>
+        <span class="v-row"><span class="v-tag m">지표</span>병목 단계의 지표 (조치 전후)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>진단 → 액션 → 재측정의 사이클이 닫히는가 (진단만 하고 끝나면 0점)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">8.3</span><span class="aname">콘텐츠 · 크리에이터 성과 분석</span><span class="loc">데이터</span> <span class="loc">제휴</span></td>
+      <td class="what">영상별 GMV · GPM, 크리에이터별 매출 기여를 읽고 다음 자원 배분(샘플을 누구에게, 어떤 포맷을 더)을 정한다.</td>
+      <td class="steps-td"><ol class="steps"><li>영상 · 크리에이터 성과 정렬</li><li>상위 성과의 공통 패턴 추출</li><li>다음 샘플 · 제작 배분에 반영</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>주간 분석 산출물 존재</span>
+        <span class="v-row"><span class="v-tag m">지표</span>패턴 반영 후 신규 콘텐츠의 평균 GPM</span>
+        <span class="v-row"><span class="v-tag j">판정</span>분석에서 뽑은 패턴의 재생산이 실제로 평균을 이기는가 (적중률 기록)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">8.4</span><span class="aname">정산 확인과 인출</span><span class="loc">재무 Finance</span></td>
+      <td class="what">정산서를 읽고 인출한다. 주문별로 상품 대금에서 플랫폼 수수료 · 어필리에이트 커미션 · 환불 · 배송 조정이 빠진 금액이 들어온다. 배송 완료 후 일정 유예 기간이 지나야 정산 대상이 된다.</td>
+      <td class="steps-td"><ol class="steps"><li>정산 주기마다 명세 다운로드</li><li>자체 계산과 대사 (GMV − 수수료 − 커미션 − 환불)</li><li>이상 항목 이의 제기</li><li>인출 실행</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>정산 주기별 대사 수행</span>
+        <span class="v-row"><span class="v-tag m">지표</span>예상 정산액 vs 실입금 오차, 이상 수수료 적발 건수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>오차 0 또는 전건 소명. 대사 없이 입금액을 그대로 믿는 상태가 실패 상태</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">8.5</span><span class="aname">단위 경제 관리</span><span class="loc">자체 시트</span></td>
+      <td class="what">SKU별 기여 마진을 계산한다: 판매가 − 원가 − 플랫폼 수수료 − 커미션 − 배송 − 광고비 배부. 틱톡샵은 커미션과 광고가 겹으로 나가는 구조라, GMV가 커도 적자인 SKU가 흔하다.</td>
+      <td class="steps-td"><ol class="steps"><li>SKU별 비용 항목 전수 집계</li><li>기여 마진 산출 (월 주기)</li><li>적자 SKU 처방: 가격 · 커미션 · 광고 · 단종 중 택</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>월별 산출 존재, 비용 누락 항목 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>SKU별 기여 마진, 적자 SKU의 GMV 비중</span>
+        <span class="v-row"><span class="v-tag j">판정</span>적자 SKU가 식별되고 다음 달 처방이 실행됐는가</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="d9">
+  <div class="domain-head"><span class="dnum serif">D9</span><h2 class="domain">샵 건강과 거버넌스</h2><span class="count">6 액션</span></div>
+  <p class="intro">계정이 죽으면 전부 죽는다. 점수 · 위반 · 보안 · 정책 변화를 관리하는 방어 도메인이자, 카테고리와 시장을 넓히는 확장의 관문이다.</p>
+  <p class="keyq"><b>핵심 질문</b> 오늘 팔 자격이 내일도 유지되는가.</p>
+  <table class="actions">
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <tbody>
+    <tr>
+      <td class="act"><span class="aid">9.1</span><span class="aname">샵 성과 점수 모니터링</span><span class="loc">샵 건강 Shop Health</span></td>
+      <td class="what">플랫폼이 배송 · 상품 · 서비스 축으로 매기는 종합 점수를 주기 확인한다. 점수가 나쁘면 노출 제한 · 기능 제한 · 정지로 이어진다.</td>
+      <td class="steps-td"><ol class="steps"><li>주 1회 전 지표 확인</li><li>경고 구간 지표는 담당 도메인에 즉시 할당</li><li>제재 임계선과의 거리 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>확인 주기 준수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>종합 점수 추이, 경고 상태 지표 수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>전 지표 정상 구간 유지, 경고 → 정상 복귀 리드타임</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">9.2</span><span class="aname">위반 알림 대응과 소명</span><span class="loc">샵 건강 › 위반</span></td>
+      <td class="what">정책 위반 통지를 확인하고 기한 내 소명(appeal)한다. 위반 포인트는 누적되며 임계 초과 시 계정 제재가 온다.</td>
+      <td class="steps-td"><ol class="steps"><li>알림 즉시 확인 · 사실 관계 파악</li><li>부당하면 증빙 소명, 정당하면 원인 제거</li><li>동일 유형 재발 방지 체크리스트화</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>기한 내 대응률 100%</span>
+        <span class="v-row"><span class="v-tag m">지표</span>위반 포인트 잔액, 소명 승률</span>
+        <span class="v-row"><span class="v-tag j">판정</span>동일 유형 위반 재발 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">9.3</span><span class="aname">지식재산 보호</span><span class="loc">브랜드 포털</span></td>
+      <td class="what">우리 브랜드의 위조품 · 무단 셀러 · 이미지 도용을 신고해 내리게 한다. 브랜드 등록(1.2)이 신고 자격의 근거다.</td>
+      <td class="steps-td"><ol class="steps"><li>브랜드명 · 주력 상품 주기 검색</li><li>침해 리스팅 신고</li><li>처리 결과 추적</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>모니터링 주기 준수</span>
+        <span class="v-row"><span class="v-tag m">지표</span>신고 → 제거 리드타임, 잔존 침해 리스팅 수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>침해 리스팅 체류 기간이 짧아지는 추세</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">9.4</span><span class="aname">정책 변경 추적</span><span class="loc">공지 · 정책 센터</span></td>
+      <td class="what">수수료 개정, 카테고리 규정 변화, 캠페인 캘린더 같은 플랫폼 공지를 놓치지 않고 대응한다. 수수료가 오르면 가격과 커미션 설계(1.5 · 5.1)를 다시 계산해야 한다.</td>
+      <td class="steps-td"><ol class="steps"><li>공지 확인 루틴</li><li>영향 평가 (어느 액션의 전제가 바뀌나)</li><li>해당 도메인 재설정</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>주요 공지 인지 누락 0</span>
+        <span class="v-row"><span class="v-tag m">지표</span>정책 발효일 대비 대응 완료일</span>
+        <span class="v-row"><span class="v-tag j">판정</span>정책 변화로 인한 소급 손실 (수수료 오인, 규정 미준수) 0건</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">9.5</span><span class="aname">계정 보안과 접근 관리</span><span class="loc">설정</span></td>
+      <td class="what">2단계 인증, 연락처 최신화, 접근 권한 정리. 계정 탈취나 담당자 이탈로 인한 잠금이 가장 값비싼 다운타임이다.</td>
+      <td class="steps-td"><ol class="steps"><li>2단계 인증 전 계정 적용</li><li>복구 연락처 최신 유지</li><li>분기별 권한 · 연동 앱 정리</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>분기 점검 체크리스트 완료</span>
+        <span class="v-row"><span class="v-tag m">지표</span>비활성 계정 · 불필요 연동 잔존 수</span>
+        <span class="v-row"><span class="v-tag j">판정</span>탈취 · 잠금 사고 0, 사고 시 복구 절차가 문서로 존재</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="act"><span class="aid">9.6</span><span class="aname">확장</span><span class="loc">설정</span> <span class="loc">상품</span></td>
+      <td class="what">신규 카테고리 진출, 연결 계정 추가, 다른 시장의 샵 개설(크로스보더 멀티마켓). 확장 심사는 기존 샵의 건강 상태를 본다.</td>
+      <td class="steps-td"><ol class="steps"><li>기존 샵 건강 그린 확인 (확장의 전제)</li><li>신규 카테고리 · 시장 요건 조사</li><li>신청 · 승인</li><li>신규 영역 손익 분리 계상</li></ol></td>
+      <td class="verify">
+        <span class="v-row"><span class="v-tag e">실행</span>신청 승인 여부</span>
+        <span class="v-row"><span class="v-tag m">지표</span>신규 영역의 자체 손익 (기존과 분리)</span>
+        <span class="v-row"><span class="v-tag j">판정</span>확장이 기존 샵의 배송 · 응대 지표를 무너뜨리지 않았는가</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="apxa">
+  <div class="domain-head"><span class="dnum serif">A</span><h2 class="domain">부록 A · 핵심 지표 사전</h2></div>
+  <p class="intro">본문 성과 검증 칸에 등장하는 지표들의 정의. 지표 이름을 모르면 판정 문장을 읽을 수 없으므로 여기서 한 번에 정리한다.</p>
+  <table class="plain">
+    <thead><tr><th style="width:20%">지표</th><th style="width:44%">뜻</th><th style="width:18%">주로 보는 곳</th><th style="width:18%">주 사용 도메인</th></tr></thead>
+    <tbody>
+      <tr><td><b class="term">GMV</b></td><td>총 거래액. 취소 · 환불 차감 전의 주문 금액 합계. 틱톡샵 화면 대부분의 "매출"은 GMV다.</td><td>데이터 Compass</td><td>전체</td></tr>
+      <tr><td><b class="term">AOV</b></td><td>객단가. 주문 1건당 평균 결제액. 번들 · 수량 할인이 움직이는 항.</td><td>데이터</td><td>D3</td></tr>
+      <tr><td><b class="term">CTR</b></td><td>클릭률. 상품 카드나 앵커가 노출됐을 때 눌리는 비율. 이미지 · 제목 · 가격 표기의 성적표.</td><td>데이터 › 상품 분석</td><td>D1 · D4</td></tr>
+      <tr><td><b class="term">CVR</b></td><td>전환율. 상품 상세에 들어온 사람 중 구매한 비율. 가격 · 리뷰 · 상세페이지의 성적표.</td><td>데이터 › 상품 분석</td><td>D1 · D3 · D7</td></tr>
+      <tr><td><b class="term">GPM</b></td><td>조회수 1,000당 GMV. 콘텐츠 커머스 고유의 효율 지표로, 영상 · 라이브 · 크리에이터를 같은 자로 비교하게 해 준다. 조회수가 커도 GPM이 0이면 "재밌기만 한" 콘텐츠다.</td><td>데이터 › 콘텐츠 분석</td><td>D4 · D5 · D6</td></tr>
+      <tr><td><b class="term">어필리에이트 GMV 비중</b></td><td>전체 GMV 중 크리에이터 콘텐츠 경유 비율. 미국 틱톡샵에서는 이 비중이 절반을 훌쩍 넘는 것이 보통.</td><td>제휴 › 데이터</td><td>D5</td></tr>
+      <tr><td><b class="term">테이크레이트 합계</b></td><td>판매가에서 플랫폼 수수료 + 커미션 + 결제 · 배송 부담이 차지하는 총 비율. 이걸 빼고 남는 것이 진짜 마진이다.</td><td>재무 + 자체 계산</td><td>D5 · D8</td></tr>
+      <tr><td><b class="term">증분 ROAS</b></td><td>광고비 1달러당 "광고 때문에 늘어난" 매출. GMV Max의 보고 ROI(혼합값)에서 오가닉 기준선을 빼고 계산한다.</td><td>자체 계산</td><td>D6</td></tr>
+      <tr><td><b class="term">MER</b></td><td>총매출 ÷ 총광고비. 캠페인 단위 왜곡을 우회하는 상위 레벨 건전성 지표.</td><td>자체 계산</td><td>D6 · D8</td></tr>
+      <tr><td><b class="term">지연 출고율</b></td><td>약속한 출고 기한을 넘긴 주문 비율. 샵 건강 배송 축의 핵심.</td><td>샵 건강</td><td>D2</td></tr>
+      <tr><td><b class="term">유효 송장률</b></td><td>운송장이 실제 배송 추적으로 이어진 비율. 가짜 · 오입력 송장을 잡는 지표.</td><td>샵 건강</td><td>D2</td></tr>
+      <tr><td><b class="term">셀러 귀책 취소율</b></td><td>재고 없음 등 셀러 잘못으로 취소된 주문 비율. 건건이 점수를 깎는다.</td><td>샵 건강</td><td>D1 · D2</td></tr>
+      <tr><td><b class="term">반품률 · 환불률</b></td><td>주문 대비 반품 · 환불 비율. 카테고리 평균과 비교해서 읽는다 (의류는 원래 높다).</td><td>주문 · 재무</td><td>D2 · D7</td></tr>
+      <tr><td><b class="term">응답률</b></td><td>고객 문의에 기준 시간 안에 답한 비율. 플랫폼이 직접 측정한다.</td><td>샵 건강</td><td>D7</td></tr>
+      <tr><td><b class="term">샘플 게시율</b></td><td>보낸 무료 샘플 중 실제 영상 게시로 이어진 비율. 어필리에이트 운영 효율의 핵심.</td><td>제휴 + 자체 추적</td><td>D5</td></tr>
+      <tr><td><b class="term">재구매율</b></td><td>일정 기간 안에 다시 구매한 고객 비율. 코호트(같은 시기 첫 구매 집단)로 잘라서 본다.</td><td>데이터 + 자체 계산</td><td>D7</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="apxb">
+  <div class="domain-head"><span class="dnum serif">B</span><h2 class="domain">부록 B · 플랫폼 관리선 예시</h2></div>
+  <p class="intro">플랫폼이 제재 기준으로 삼는 대표 관리 지표의 통상 수준. 정확한 임계값은 수시로 개정되므로 <b>샵 건강 화면의 현행 기준이 항상 우선</b>이고, 아래는 감을 잡기 위한 예시다.</p>
+  <table class="plain">
+    <thead><tr><th style="width:26%">지표</th><th style="width:24%">통상 관리 수준</th><th style="width:50%">넘으면 생기는 일</th></tr></thead>
+    <tbody>
+      <tr><td>지연 출고율</td><td>4% 미만 유지</td><td>배송 축 점수 하락 → 노출 제한, 반복 시 판매 제한</td></tr>
+      <tr><td>셀러 귀책 취소율</td><td>2.5% 미만 유지</td><td>점수 하락 + 건별 패널티. 대부분 재고 관리(1.6) 실패에서 온다</td></tr>
+      <tr><td>유효 송장률</td><td>95% 이상</td><td>미추적 배송 증가 → 분쟁 자동 패소 증가와 점수 하락</td></tr>
+      <tr><td>문의 응답률</td><td>80~90% 이상 (24시간 기준)</td><td>서비스 축 점수 하락</td></tr>
+      <tr><td>샵 평점</td><td>4.5 이상 권장</td><td>임계 미만이면 전환율 하락과 캠페인(3.6) 참여 자격 상실</td></tr>
+      <tr><td>위반 포인트</td><td>0 유지</td><td>누적 임계 초과 시 기능 제한 → 계정 정지</td></tr>
+      <tr><td>플랫폼 판매 수수료</td><td>카테고리별 한 자릿수 % 수준</td><td>기준이 아니라 비용. 개정이 잦으니 정산서(8.4)에서 실효율을 확인</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="apxc">
+  <div class="domain-head"><span class="dnum serif">C</span><h2 class="domain">부록 C · Seller Center 메뉴 매핑</h2></div>
+  <p class="intro">Seller Center 왼쪽 메뉴에서 이 문서의 어느 도메인으로 이동하는지의 대응표. 메뉴 이름과 배치는 업데이트로 바뀔 수 있다.</p>
+  <table class="plain">
+    <thead><tr><th style="width:30%">Seller Center 메뉴</th><th style="width:20%">이 문서의 도메인</th><th style="width:50%">거기서 하는 일</th></tr></thead>
+    <tbody>
+      <tr><td>Homepage 홈</td><td>전체</td><td>할 일 목록, 공지, 샵 건강 요약. 하루의 시작점</td></tr>
+      <tr><td>Orders 주문</td><td>D2 · D7</td><td>출고, 취소, 반품 · 환불, 분쟁</td></tr>
+      <tr><td>Products 상품</td><td>D1</td><td>등록, 심사, 재고 · 가격, 브랜드, 개선 제안</td></tr>
+      <tr><td>Marketing 마케팅</td><td>D3</td><td>할인, 플래시 딜, 쿠폰, 번들, 캠페인 참여</td></tr>
+      <tr><td>Affiliate 제휴</td><td>D5 · D6.1</td><td>커미션 플랜, 크리에이터 찾기 · 초대, 샘플, 광고 허가</td></tr>
+      <tr><td>Ads 광고 (GMV Max)</td><td>D6</td><td>판매 목적 광고의 유일한 입구</td></tr>
+      <tr><td>Analytics 데이터 (Compass)</td><td>D8 · D4.5</td><td>코어 지표, 상품 · 콘텐츠 · 검색 분석</td></tr>
+      <tr><td>Finance 재무</td><td>D0.4 · D8.4</td><td>정산서, 인출, 세금 서류</td></tr>
+      <tr><td>Customer service 고객 응대</td><td>D7</td><td>채팅, 자동화, 리뷰</td></tr>
+      <tr><td>Shop health 샵 건강</td><td>D9 · D2의 성적표</td><td>성과 점수, 위반, 소명</td></tr>
+      <tr><td>Growth 성장</td><td>D0.8 · D3.7</td><td>신규 · 상시 미션과 보상</td></tr>
+      <tr><td>Settings 설정</td><td>D0 · D2.1 · D9.5</td><td>샵 정보, 배송, 계정 연결, 권한, 연동</td></tr>
+      <tr><td>(외부) 틱톡 앱</td><td>D4</td><td>영상 게시, 라이브, 쇼케이스</td></tr>
+      <tr><td>(외부) 브랜드 포털</td><td>D9.3</td><td>지식재산 침해 신고</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  틱톡샵 셀러 액션 맵 · 미국 샵 기준 · 플랫폼 정책과 수수료는 수시로 개정되므로 구체 수치는 Seller Center 현행 화면이 항상 우선한다.
+</footer>
+
+</div>
+</body>
+</html>
