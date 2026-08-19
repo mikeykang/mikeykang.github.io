@@ -217,7 +217,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">0.3</span><span class="aname">세금 인터뷰와 정산 계좌 연결</span><span class="loc">설정 Settings</span></td>
-      <td class="what">세금 인터뷰(미국 법인은 W-9, 한국 법인은 W-8BEN-E)를 완료하고 정산금을 받을 계좌(미국 계좌 또는 Payoneer류 가상계좌)를 연결한다. 이게 없으면 팔아도 돈을 못 받는다.</td>
+      <td class="what">세금 인터뷰(미국 법인은 W-9, 한국 법인은 W-8BEN-E)를 완료하고 정산금을 받을 계좌(미국 계좌, Payoneer류 가상계좌, 또는 아마존 자체 Seller Wallet: USD로 보유하다 원하는 시점에 환전)를 연결한다. 이게 없으면 팔아도 돈을 못 받는다.</td>
       <td class="steps-td"><ol class="steps"><li>세금 인터뷰 완료</li><li>입금 계좌 연결과 인증</li><li>첫 정산 후 소액 인출 테스트</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>세금 인터뷰 Valid, 계좌 상태 Verified</span>
@@ -298,7 +298,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">1.3</span><span class="aname">상품 등록</span><span class="loc">카탈로그 › 상품 추가</span></td>
-      <td class="what">리스팅 생성. 신규 ASIN을 만들거나(자체 브랜드) 기존 ASIN에 오퍼를 붙인다(리셀). 제목 · 불릿 5개 · 이미지 · 백엔드 검색어 · 옵션(배리에이션) · 가격 · 재고 · 풀필먼트 방식을 입력한다.</td>
+      <td class="what">리스팅 생성. 신규 ASIN을 만들거나(자체 브랜드) 기존 ASIN에 오퍼를 붙인다(리셀). 제목 · 불릿 5개 · 이미지 · 백엔드 검색어 · 옵션(배리에이션) · 가격 · 재고 · 풀필먼트 방식을 입력한다. 신규 ASIN은 FBA New Selection 등록도 챙긴다(초기 유닛 수수료 상한 · 보관 무료 · 리뷰 크레딧, 브랜드 ASIN 한정).</td>
       <td class="steps-td"><ol class="steps"><li>제목 작성 (핵심 키워드 앞배치, 카테고리별 글자수 · 표기 규정 준수)</li><li>메인 이미지 (흰 배경 · 프레임 채움 규정) + 보조 이미지 · 영상</li><li>불릿 5개 · 상품 설명 작성</li><li>백엔드 검색어 입력 (바이트 한도 내, 중복 키워드 낭비 금지)</li><li>배리에이션 구조 설계 (색상 · 용량을 한 페이지로 묶기)</li><li>가격 · 재고 · FBA/FBM 지정 후 제출</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>리스팅 Active, 검색 억제 아님</span>
@@ -339,7 +339,7 @@
     <tr>
       <td class="act"><span class="aid">1.7</span><span class="aname">리스팅 최적화 (상시)</span><span class="loc">카탈로그</span> <span class="loc">브랜드 Brands</span></td>
       <td class="what">제목 키워드, 메인 이미지, 불릿, 백엔드 검색어를 데이터 기반으로 계속 고친다. 등록은 1회, 최적화는 상시 업무다. 키워드 수요 데이터는 8.3(검색 쿼리 성과)에서 온다.</td>
-      <td class="steps-td"><ol class="steps"><li>검색 쿼리 데이터로 제목 · 백엔드 키워드 갱신</li><li>메인 이미지 교체 실험 (가능하면 4.5의 A/B로)</li><li>불릿 · 사이즈 정보 보강 (반품 사유 반영)</li><li>한 번에 한 변수만 바꿔서 원인 분리</li></ol></td>
+      <td class="steps-td"><ol class="steps"><li>검색 쿼리 데이터로 제목 · 백엔드 키워드 갱신</li><li>메인 이미지 교체 실험 (가능하면 4.5의 A/B로)</li><li>불릿 · 사이즈 정보 보강 (반품 사유 반영)</li><li>생성형 AI 리스팅 개선 제안(Enhance My Listing 등) 검토</li><li>한 번에 한 변수만 바꿔서 원인 분리</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>변경 반영 확인, 대상 키워드 인덱싱 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>검색 CTR, Unit Session %(CVR), 타깃 쿼리 순위</span>
@@ -409,7 +409,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">2.4</span><span class="aname">FBA 입고와 재고 운영</span><span class="loc">재고 › FBA 입고</span></td>
-      <td class="what">FBA를 쓰는 경우의 상시 업무: 입고 계획 생성(Send to Amazon), 상품 라벨(FNSKU) · 박스 라벨, 입고 분할 · 배치 수수료 선택, 입고 검수 차이 대사, 캐퍼시티(보관 한도) 관리, 장기보관 재고의 제거 · 처분(리무벌 · 청산 · 재판매 프로그램; 2025-09부터 미처분 재고는 청산 · 기부가 기본 동선).</td>
+      <td class="what">FBA를 쓰는 경우의 상시 업무: 입고 계획 생성(Send to Amazon), 상품 라벨(FNSKU) · 박스 라벨, 입고 분할 · 배치 수수료 선택, 입고 검수 차이 대사, 캐퍼시티(보관 한도) 관리, 장기보관 재고의 처분 사다리: 아웃렛 딜(90일 이상 재고의 할인 판매 지면, 제거보다 회수율 높음) → 리무벌 · 청산 · 재판매 프로그램(2025-09부터 미처분 재고는 청산 · 기부가 기본 동선). 대량 재고는 상류 창고 AWD에 두고 FBA로 자동 보충하는 구조도 검토한다(자동 보충 SKU는 저재고 수수료 면제).</td>
       <td class="steps-td"><ol class="steps"><li>입고 계획 생성 · 라벨 부착 · 발송</li><li>입고 검수 결과와 발송 수량 대사 (차이는 조사 요청)</li><li>재고 커버 일수 관리 (1.6과 연동)</li><li>장기보관 대상 월별 점검 (가산금은 181일부터 매월 부과) → 제거 · 처분 결정</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>입고 수량 = 검수 수량 (차이는 전건 조사)</span>
@@ -490,7 +490,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">3.3</span><span class="aname">쿠폰 발행</span><span class="loc">광고 › 쿠폰</span></td>
-      <td class="what">검색 결과에 초록 쿠폰 뱃지를 붙이는 할인권. 수수료는 쿠폰당 선불 + 쿠폰 귀속 매출 연동 구조다(2025-06 개정, 건당 클립 수수료는 폐지). 브랜드 셀러는 타깃 쿠폰(재구매 고객, 장바구니 이탈, 브랜드 팔로워 등 오디언스 한정)으로 대상을 좁혀 마진 손실을 줄일 수 있다.</td>
+      <td class="what">검색 결과에 초록 쿠폰 뱃지를 붙이는 할인권. 수수료는 쿠폰당 선불 + 쿠폰 귀속 매출 연동 구조다(2025-06 개정, 과거의 건당 사용 수수료는 폐지). 브랜드 셀러는 타깃 쿠폰(재구매 고객, 장바구니 이탈, 브랜드 팔로워 등 오디언스 한정)으로 대상을 좁혀 마진 손실을 줄일 수 있다.</td>
       <td class="steps-td"><ol class="steps"><li>목적별 쿠폰 설계 (전환 부스트 / 재구매 / 이탈 회수)</li><li>할인폭 · 기간 · 예산 설정</li><li>타깃 쿠폰은 오디언스 지정</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>쿠폰 활성 · 검색 지면 뱃지 노출 확인</span>
@@ -509,7 +509,7 @@
       </td>
     </tr>
     <tr>
-      <td class="act"><span class="aid">3.5</span><span class="aname">정기 구독 (Subscribe &amp; Save)</span><span class="loc">FBA › 정기 구독</span></td>
+      <td class="act"><span class="aid">3.5</span><span class="aname">정기 구독 (Subscribe &amp; Save)</span><span class="loc">정기 구독 Subscribe &amp; Save</span></td>
       <td class="what">소모품을 정기 배송 구독에 등록하고 셀러 부담 할인율을 정한다. 할인을 내주는 대신 예측 가능한 반복 매출과 이탈 방지벽을 얻는 교환이다. 소모품 카테고리에서는 재구매 전략의 뼈대가 된다.</td>
       <td class="steps-td"><ol class="steps"><li>대상 SKU 등록 (재구매 주기 있는 상품만)</li><li>셀러 부담 할인율 설정</li><li>구독자 수 · 유지율 추적, 품절로 구독 파기하지 않기 (1.6)</li></ol></td>
       <td class="verify">
@@ -551,7 +551,7 @@
     <tbody>
     <tr>
       <td class="act"><span class="aid">4.1</span><span class="aname">A+ 콘텐츠 제작</span><span class="loc">광고 › A+ 콘텐츠</span></td>
-      <td class="what">상세페이지 하단의 브랜드 편집 영역을 만든다: 비교 차트, 브랜드 스토리, 사용 장면. 요건을 채우면 프리미엄 A+(대형 모듈 · 영상)도 열린다. A+ 본문 텍스트는 검색에 잡히지 않으므로 역할은 순수하게 전환이다.</td>
+      <td class="what">상세페이지 하단의 브랜드 편집 영역을 만든다: 비교 차트, 브랜드 스토리, 사용 장면. 프리미엄 A+(대형 모듈 · 영상)는 무료로 열려 있지만 여전히 관문이 있다: 전 ASIN 브랜드 스토리 게시 + 최근 12개월 승인 A+ 5건(15건에서 완화). A+ 본문 텍스트는 검색에 잡히지 않으므로 역할은 순수하게 전환이다.</td>
       <td class="steps-td"><ol class="steps"><li>구매 장벽 목록화 (리뷰 · 문의 · 반품 사유에서 추출)</li><li>모듈 구성 (장벽에 답하는 순서로)</li><li>비교 차트로 자사 라인업 교차 판매</li><li>게시 승인 확인</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>A+ 승인 · 게시 상태, 주력 ASIN 커버리지 100%</span>
@@ -601,7 +601,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">4.6</span><span class="aname">고객 질문 신호 관리</span><span class="loc">메시지 · VoC</span> <span class="loc">상세페이지</span></td>
-      <td class="what">상세페이지의 공개 Q&amp;A 게시판은 폐지됐다(2024~25). 이제 질문은 구매자 메시지 · 리뷰 · 반품 사유로 들어오고, 답은 AI 쇼핑 어시스턴트(Rufus)가 리스팅 텍스트에서 뽑아 대신한다. 그래서 이 액션의 실체는 질문 신호를 모아 리스팅이 스스로 답하게 만드는 것이다: 반복 질문을 불릿 · A+ · 이미지로 승격해 질문 자체를 없앤다.</td>
+      <td class="what">상세페이지의 공개 Q&amp;A는 사실상 폐지됐다(열람형 게시판과 셀러 답변 기능 제거, 2024~). 이제 질문은 구매자 메시지 · 리뷰 · 반품 사유로 들어오고, 답은 AI 쇼핑 어시스턴트(Rufus, 2026년 Alexa 쇼핑으로 개편)가 리스팅 텍스트에서 뽑아 대신한다. 그래서 이 액션의 실체는 질문 신호를 모아 리스팅이 스스로 답하게 만드는 것이다: 반복 질문을 불릿 · A+ · 이미지로 승격해 질문 자체를 없앤다.</td>
       <td class="steps-td"><ol class="steps"><li>질문 신호 수집 (메시지 · 리뷰 · VoC · 반품 사유)</li><li>반복 질문 Top 5 선정</li><li>리스팅 반영 (1.7) 후 같은 질문 재발 추적</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>질문 신호 수집 루틴 존재</span>
@@ -744,7 +744,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">6.5</span><span class="aname">Sponsored Display · DSP</span><span class="loc">광고 › 캠페인 매니저</span> <span class="loc">광고 콘솔</span></td>
-      <td class="what">조회 후 미구매 고객 리타겟팅, 자사 · 경쟁 상세페이지 지면, 관심사 오디언스를 산다. 검색 의도 밖의 수요를 건드리는 도구라 전환 창이 길고 ACOS가 높게 보인다. DSP는 예산 규모가 커진 뒤 검토하는 확장 단계다.</td>
+      <td class="what">조회 후 미구매 고객 리타겟팅, 자사 · 경쟁 상세페이지 지면, 관심사 오디언스를 산다. 검색 의도 밖의 수요를 건드리는 도구라 전환 창이 길고 ACOS가 높게 보인다. DSP는 예산 규모가 커진 뒤 검토하는 확장 단계지만, 스트리밍 TV 광고(Sponsored TV)는 브랜드 등록 셀러면 최소 예산 없이 광고 콘솔에서 셀프서브로 집행할 수 있다.</td>
       <td class="steps-td"><ol class="steps"><li>리타겟팅 캠페인부터 시작 (조회 후 미구매)</li><li>자사 상세페이지 방어 지면 검토</li><li>성과 안정 후 오디언스 확장</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>캠페인 활성</span>
@@ -774,7 +774,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">6.8</span><span class="aname">증분 평가와 손익 보정</span><span class="loc">보고서</span> <span class="loc">자체 시트</span></td>
-      <td class="what">광고 도메인의 최종 평가 액션. 캠페인 ACOS가 아니라 계정 전체 TACOS(광고비 ÷ 전체 매출)와 브랜드 · 논브랜드 분리 숫자로 진짜 효율을 계산한다. 광고를 늘렸는데 TACOS만 오르고 전체 매출이 안 오르면, 광고가 오가닉을 대체하고 있는 것이다.</td>
+      <td class="what">광고 도메인의 최종 평가 액션. 캠페인 ACOS가 아니라 계정 전체 TACOS(광고비 ÷ 전체 매출)와 브랜드 · 논브랜드 분리 숫자로 진짜 효율을 계산한다. 광고를 늘렸는데 TACOS만 오르고 전체 매출이 안 오르면, 광고가 오가닉을 대체하고 있는 것이다. 더 깊은 분해가 필요하면 AMC(광고 데이터 클린룸)가 스폰서드 광고 계정에도 셀프서비스로 열려, 자연어 쿼리로 만든 오디언스를 SD 타기팅과 SP · SB 입찰 부스트에 쓸 수 있다.</td>
       <td class="steps-td"><ol class="steps"><li>월간 TACOS 추적 (전체 · SKU별)</li><li>브랜드 / 논브랜드 지출 · 매출 분리 집계</li><li>광고 증액 전후의 전체 매출 · 오가닉 매출 비교</li><li>한계 캠페인 축소 실험으로 증분 검증</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>보정 계산이 주기적으로 수행됨</span>
@@ -795,7 +795,7 @@
     <tbody>
     <tr>
       <td class="act"><span class="aid">7.1</span><span class="aname">구매자 메시지 응대</span><span class="loc">주문 › 메시지</span></td>
-      <td class="what">구매자 메시지에 24시간 안에(주말 · 휴일 포함) 답한다. 플랫폼이 응답 시간을 직접 재고, 응답 불필요 메시지는 그렇게 표시해야 지표에서 빠진다. FBA 주문의 배송 · 환불 문의는 아마존 CS로 넘기는 것이 원칙이다.</td>
+      <td class="what">구매자 메시지에 24시간 안에(주말 · 휴일 포함) 답한다. 플랫폼이 응답 시간을 직접 재고, 응답 불필요 메시지는 그렇게 표시해야 지표에서 빠진다. FBA 주문의 배송 · 환불 문의는 아마존 CS로 넘기는 것이 원칙이고, FBM은 CS 자체를 아마존에 위탁하는 CSBA도 선택지다(초기 무료 구간 있음, 문의율이 낮으면 계속 무료).</td>
       <td class="steps-td"><ol class="steps"><li>응대 시간대 · 담당 지정 (주말 커버 포함)</li><li>24시간 내 전건 응답 또는 응답 불필요 처리</li><li>반복 질문은 질문 신호 관리(4.6)를 거쳐 리스팅에 반영</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>미응답 잔여 0으로 일 마감</span>
@@ -815,7 +815,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">7.3</span><span class="aname">리뷰 · 피드백 관리</span><span class="loc">브랜드 › 고객 리뷰</span> <span class="loc">퍼포먼스 › 피드백</span></td>
-      <td class="what">제품 리뷰와 셀러 피드백(별개 시스템)을 모니터링한다. 부정 리뷰는 사유를 분류해 상품 · 물류 개선에 반영한다. 부정 리뷰 고객에게 셀러가 먼저 연락하는 공식 창구는 폐지됐으므로(2025~26), 구매자가 먼저 보낸 메시지에만 응대한다. 규정 위반 리뷰는 신고하고, FBA 배송 사유의 셀러 피드백은 제거를 요청한다.</td>
+      <td class="what">제품 리뷰와 셀러 피드백(별개 시스템)을 모니터링한다. 부정 리뷰는 사유를 분류해 상품 · 물류 개선에 반영한다. 부정 리뷰 고객에게 셀러가 먼저 연락하는 공식 창구는 폐지됐으므로(2026년 아마존 공식 확인), 구매자가 먼저 보낸 메시지에만 응대한다. 규정 위반 리뷰는 신고하고, FBA 배송 사유의 셀러 피드백은 제거를 요청한다.</td>
       <td class="steps-td"><ol class="steps"><li>신규 리뷰 · 피드백 일일 확인</li><li>부정 사유 분류 (상품 · 배송 · 기대 불일치)</li><li>위반 리뷰 신고, 먼저 온 문의에는 해결 제안</li><li>사유 Top 3를 담당 도메인에 전달</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>부정 리뷰 미확인 방치 0, 제거 요청 처리율</span>
@@ -896,7 +896,7 @@
     </tr>
     <tr>
       <td class="act"><span class="aid">8.5</span><span class="aname">단위 경제 관리</span><span class="loc">자체 시트</span> <span class="loc">보고서 › SKU 손익</span></td>
-      <td class="what">SKU별 기여 마진을 계산한다: 판매가 − 원가 − 판매 수수료 − FBA 비용 − 보관 · 입고비 − 광고비 배부 − 반품 비용. 아마존은 수수료가 겹겹인 구조라, 매출이 커도 적자인 SKU가 흔하다. 플랫폼이 주는 SKU 손익 화면을 자체 원가와 합쳐 완성한다.</td>
+      <td class="what">SKU별 기여 마진을 계산한다: 판매가 − 원가 − 판매 수수료 − FBA 비용 − 보관 · 입고비 − 광고비 배부 − 반품 비용. 아마존은 수수료가 겹겹인 구조라, 매출이 커도 적자인 SKU가 흔하다. 플랫폼이 주는 SKU 손익 화면을 자체 원가와 합쳐 완성한다. 포장도 처방이다: SIPP(제품 자체 포장 출고) 인증은 유닛당 할인이 붙고, 벌키는 미인증 포장 수수료가 생겨(2026) 사실상 필수가 됐다.</td>
       <td class="steps-td"><ol class="steps"><li>SKU별 비용 항목 전수 집계 (반품 비용 포함)</li><li>기여 마진 산출 (월 주기)</li><li>적자 SKU 처방: 가격 · 광고 · 치수 재측정 · 포장 경량화 · 단종 중 택</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>월별 산출 존재, 비용 누락 항목 0</span>
@@ -927,7 +927,7 @@
     <tbody>
     <tr>
       <td class="act"><span class="aid">9.1</span><span class="aname">계정 건강 모니터링</span><span class="loc">퍼포먼스 › 계정 건강</span></td>
-      <td class="what">계정 건강 등급(AHR)과 그 재료 지표(ODR · 지연 배송 · 취소 · 추적 · 정책 위반)를 주기 확인한다. 등급이 나쁘면 판매 제한과 정지로 이어지고, 등급을 높게 유지하면 즉시 정지 대신 소명 기회를 먼저 받는 보호 프로그램의 대상이 된다.</td>
+      <td class="what">계정 건강 등급(AHR)과 그 재료 지표(ODR · 지연 배송 · 취소 · 추적 · 정책 위반)를 주기 확인한다. 등급이 나쁘면 판매 제한과 정지로 이어지고, 등급을 높게 유지하면 즉시 정지 대신 소명 기회를 먼저 받는 보호 프로그램의 대상이 된다. 에이전틱 Seller Assistant(2025-09~)가 재고 · 계정 건강을 상시 감시하고 승인 하에 조치까지 실행하므로 감시 루틴의 기본 도구로 편입한다.</td>
       <td class="steps-td"><ol class="steps"><li>주 1회 전 지표 확인 + 이상 알림 즉시 대응</li><li>경고 구간 지표는 담당 도메인에 즉시 할당</li><li>제재 임계선과의 거리 추적</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>확인 주기 준수</span>
@@ -1025,7 +1025,7 @@
     <tbody>
       <tr><td>ODR (주문 결함률)</td><td>1% 미만 유지</td><td>계정 정지의 대표 사유. FBM에서 가장 무거운 한 줄</td></tr>
       <tr><td>지연 배송률</td><td>4% 미만 유지</td><td>배송 신뢰 하락 → FO 불리, 반복 시 판매 제한</td></tr>
-      <tr><td>정시 배송률 (OTDR)</td><td>90% 이상 (FBM)</td><td>미달 시 FBM 판매 제한 (2026-02부터 문제 리스팅 단위로 먼저 제재). 약속을 과하게 빠르게 잡은 대가</td></tr>
+      <tr><td>정시 배송률 (OTDR)</td><td>90% 이상 (FBM)</td><td>미달 시 문제 리스팅 단위 제재 (2026-02 개편; 전면 판매 제한은 심각 · 반복 케이스). 약속을 과하게 빠르게 잡은 대가</td></tr>
       <tr><td>셀러 귀책 취소율</td><td>2.5% 미만 유지</td><td>점수 하락. 대부분 재고 관리(1.6) 실패에서 온다</td></tr>
       <tr><td>유효 추적률</td><td>95% 이상</td><td>미추적 배송 증가 → 클레임 자동 패소 증가와 점수 하락</td></tr>
       <tr><td>메시지 응답</td><td>24시간 내 (주말 포함)</td><td>응답 지연 지표 악화, 부정 피드백 · 클레임 전이</td></tr>
