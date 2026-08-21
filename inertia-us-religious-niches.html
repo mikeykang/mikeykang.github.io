@@ -1,0 +1,218 @@
+<title>미국 소수 종교 총람</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;900&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F3EC; --panel:#EDE9DC;
+    --ink:#20242C; --ink2:#575D68; --ink3:#8A8FA0;
+    --rule:#D8D3C3; --rule2:#B7B19E;
+    --madder:#A23A28; --pine:#3E6E5C;
+    --disp:'Noto Serif KR',serif;
+    --body:'Noto Serif KR',Georgia,serif;
+    --ui:'IBM Plex Sans KR','Apple SD Gothic Neo',sans-serif;
+    --mono:'IBM Plex Mono','IBM Plex Sans KR',monospace;
+  }
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.78;word-break:keep-all}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px 120px}
+  a{color:var(--madder);text-decoration:none;border-bottom:1px solid var(--rule2)}
+  a:hover{border-bottom-color:var(--madder)}
+  a:focus-visible{outline:2px solid var(--madder);outline-offset:2px}
+
+  .mast{padding:58px 0 0;border-bottom:3px solid var(--ink)}
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--ink2);text-transform:uppercase}
+  h1{font-family:var(--disp);font-weight:900;font-size:clamp(38px,6.2vw,70px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 14px}
+  h1 .of{color:var(--madder)}
+  .dek{font-size:18.5px;max-width:62ch;margin:0 0 26px}
+  .assume{background:var(--panel);border:1px solid var(--rule2);padding:16px 20px;margin:0 0 26px;font-family:var(--ui);font-size:13px;line-height:1.85;color:var(--ink2)}
+  .assume b{color:var(--ink);font-weight:700}
+  .census{font-family:var(--ui);font-size:12px;line-height:2;color:var(--ink2);padding:14px 0 22px;border-top:1px solid var(--rule)}
+  .census b{color:var(--ink);font-weight:500}
+
+  section{padding-top:54px}
+  .sec-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--madder);text-transform:uppercase;font-weight:500}
+  h2{font-family:var(--disp);font-weight:900;font-size:clamp(25px,3.4vw,38px);line-height:1.2;letter-spacing:-.015em;margin:6px 0 18px}
+  p{margin:0 0 14px;max-width:74ch}
+  .note{color:var(--ink2);font-size:14.5px;font-family:var(--ui)}
+
+  .tblwrap{overflow-x:auto;border:1px solid var(--rule2);background:#FBFAF5;margin:16px 0}
+  table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.65;font-family:var(--ui)}
+  th{font-family:var(--ui);font-weight:700;font-size:12px;text-align:left;color:var(--ink2);padding:9px 12px;border-bottom:2px solid var(--ink);white-space:nowrap;vertical-align:bottom;position:sticky;top:0;background:#FBFAF5}
+  td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top;min-width:130px}
+  tr:last-child td{border-bottom:none}
+  td.name{font-weight:700;white-space:nowrap;min-width:0}
+  td.num{font-size:12.5px;color:var(--ink)}
+  td.wide{min-width:250px}
+  td.mid{min-width:190px}
+  td.web{font-size:12px;min-width:150px}
+  td.src{font-size:11.5px;color:var(--ink2);min-width:170px}
+  td.src a,td.web a{border-bottom:none}
+  td.src a:hover,td.web a:hover{border-bottom:1px solid var(--madder)}
+  td.fit{min-width:0;white-space:nowrap}
+  .fit-y{color:var(--madder);font-weight:700;font-family:var(--mono)}
+  .fit-m{color:var(--pine);font-family:var(--mono)}
+  .fit-n{color:var(--ink3);font-family:var(--mono)}
+
+  .feature{border:2px solid var(--ink);background:#FBFAF5;padding:26px 28px 22px;margin-top:10px}
+  .feature h4{font-family:var(--disp);font-size:26px;font-weight:900;letter-spacing:-.015em;margin:2px 0 12px;line-height:1.3}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 34px}
+  .fgrid h5{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--madder);margin:16px 0 4px;font-weight:500}
+  .fgrid p{font-size:14px;margin:0 0 8px;font-family:var(--ui);line-height:1.8}
+  .statline{font-family:var(--ui);font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);padding-bottom:12px;display:flex;flex-wrap:wrap;gap:6px 22px}
+  .statline b{color:var(--ink);font-weight:700}
+  .srcline{font-family:var(--ui);font-size:11.5px;color:var(--ink2);border-top:1px solid var(--rule);margin-top:14px;padding-top:10px;line-height:2}
+  .srcline b{font-family:var(--mono);letter-spacing:.08em;color:var(--ink)}
+
+  ul.tight{margin:6px 0 14px;padding-left:20px;max-width:78ch}
+  ul.tight li{margin-bottom:8px;font-size:15px}
+  .footer{margin-top:70px;border-top:3px solid var(--ink);padding-top:16px;font-family:var(--ui);font-size:12.5px;line-height:2;color:var(--ink2)}
+  .footer b{color:var(--ink);font-family:var(--mono);letter-spacing:.08em}
+  @media (max-width:640px){ .wrap{padding:0 18px 80px} .feature{padding:18px 16px} }
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">COBBLE FIELD NOTES · 이너샤 미국 진출 참고자료 · 2026-08-21 v2</div>
+  <h1>미국 소수 종교 <span class="of">총람</span></h1>
+  <p class="dek">미국의 소수 종교 커뮤니티 37곳. 규모, 거주지, 소비를 움직이는 규범, 커뮤니티 매체를 행마다 출처를 달아 정리했다.</p>
+  <div class="assume">
+    <b>이 문서의 전제</b> · 이너샤의 전체 제품군을 미국 틱톡샵 어필리에이트 채널로 테스트하는 상황을 전제로 한다. 채널이 정해져 있으므로 전략 해설은 뺐고, 아래 표가 본체다. 표의 사실 항목은 전부 행별 출처(퓨리서치, 미국 종교 센서스, 교단 공식 통계, 검증된 언론·학술 자료)로 확인한 것만 실었고, 확인이 안 된 항목은 싣지 않거나 "집계 없음"으로 적었다. "틱톡샵 관점"과 "적합도" 두 열만 우리 판단이다. 규모 수치는 집계 방식(교단 명부 / 설문 자기응답 / 본당 집계)에 따라 같은 종교라도 2~4배씩 벌어지므로 방식을 병기했다.
+  </div>
+  <div class="census"><b>수록 37:</b> 모르몬(후기 성도) · 아포스톨릭 오순절파 · 무슬림 · 힌두교 · 시크교 · 정통파 유대인 · 재림교회 · 동방 정교회 · 라틴 미사 가톨릭 · 아르메니아 사도교회 · 에티오피아·에리트레아 정교회 · 페이건·위카 · 여호와의 증인 · 콥트 정교회 · 칼데아·아시리아계 · 아미시 · 올드오더 메노나이트 · 후터라이트 · 브루더호프 · 퀘이커 · 크리스천 사이언스 · 네이션 오브 이슬람 · 아흐마디야 · 이스마일리 · 자이나교 · 불교(SGI 포함) · 바하이 · 조로아스터교 · 드루즈 · 야지디 · 유니테리언 · 라스타파리 · 하레 크리슈나 · 산테리아·부두 · 아메리카 원주민 교회 · 사이언톨로지 · 파룬궁</div>
+</header>
+
+<section id="target">
+  <div class="sec-eyebrow">이너샤가 이미 고른 타겟</div>
+  <h2>모르몬, 전부 뜯어보기</h2>
+  <div class="feature">
+    <h4>예수 그리스도 후기 성도 교회 ("모르몬")</h4>
+    <div class="statline"><span>미국 명부 신자 <b>692.9만</b>(교회, 2024년 말)</span><span>설문 기준 성인 <b>2%</b>(퓨 RLS, 2007년 이후 동일)</span><span>전임 선교사 <b>약 8.85만</b> 명, 역대 최다(2026-07)</span><span>유타 중위연령 <b>32.4세</b>, 미국 최연소 주(2024 센서스)</span></div>
+    <div class="fgrid">
+      <div>
+        <h5>누구인가</h5>
+        <p>본부 솔트레이크시티. 교회 명부상 미국 신자 692.9만, 설문에서는 성인의 2%가 스스로 신자라고 답한다. 미국 종교 집단 중 결혼율이 가장 높은 축(성인 66% 기혼)이고, 40~59세의 평생 자녀 수 3.4명은 전국 평균 2.1명을 크게 웃도는 최고치였다(퓨 2014 기준). 최근에는 자녀 수가 줄고 있다는 보도가 이어진다(NPR 2025). 그래도 젊은 대가족이라는 골격은 그대로다.</p>
+        <h5>지갑을 움직이는 계율</h5>
+        <p>"지혜의 말씀"이 술·커피·차·담배를 금하고, 교회는 그린티와 커피 기반 제품까지 금지 대상이라고 명시해 뒀다. 와인 한잔하는 엄마 감성도, 커피 문화 코드도 이 시장에서는 쓸 수 없는 크리에이티브다(성분표에 든 카페인 자체는 별개 문제다). 일요일은 예배일이고, 4월과 10월 첫째 주말에는 전 세계 신자가 연차 대회 중계를 본다.</p>
+        <h5>유타라는 시장</h5>
+        <p>유타 명부 신자 220.6만. 명부 기준으로는 주민의 60% 이상이지만, 자기응답 조사로는 42~50%다. 어느 기준으로든 광고 권역 하나(솔트레이크-프로보)로 핵심 인구가 잡히는 미국 유일의 종교 시장이다.</p>
+      </div>
+      <div>
+        <h5>크리에이터 생태계</h5>
+        <p>훌루 리얼리티 "The Secret Lives of Mormon Wives"가 시즌 3(2025-11 공개)까지 이어지며 18-34 스트리밍 차트 1위를 찍었고, 그 무대인 #MomTok이 곧 유타 크리에이터 신이다. 틱톡샵 어필리에이트 섭외 풀로는 미국 종교 커뮤니티 중 최대. 배경도 있다. 뉴스킨(프로보), 도테라(플레전트그로브), 영리빙(리하이)이 전부 유타 카운티 회랑에 본사를 둔, 소셜 셀링에 익숙한 동네다. 단, 다단계 헤어 브랜드 모나트가 2018년 탈모 유발 주장 집단소송(무과실 합의 종결)으로 홍역을 치른 시장이라, "다단계 아님·정식 유통"이 그 자체로 신뢰 포인트가 된다.</p>
+        <h5>한국이라는 접점</h5>
+        <p>교회 공식 통계로 한국에 선교부 3곳, 신자 89,092명, 성전 1곳이 있다. 한국에서 복무하고 돌아간 한국어 가능 귀환 선교사들이 유타에 누적돼 있다는 뜻이고, 한국 브랜드의 어필리에이트 섭외에서 자연스러운 첫 풀이 된다.</p>
+        <h5>조심할 것</h5>
+        <p>교회는 공식 명칭("예수 그리스도 후기 성도 교회")을 선호하고, 신자들끼리는 "모르몬"을 편하게 쓴다. 브랜드는 둘 다 쓰지 말고 문화와 지역만 겨냥한다. 성전 가먼트와 성전 내부는 어떤 크리에이티브에도 등장 금지. 일요일 오전과 연차 대회 주말은 조용히 간다.</p>
+      </div>
+    </div>
+    <div class="srcline"><b>출처</b> · <a href="https://www.churchofjesuschrist.org/learn/facts-statistics/united-states-of-america?lang=eng">교회 통계(미국)</a> · <a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/latter-day-saint-mormon/">퓨 RLS 2023-24</a> · <a href="https://newsroom.churchofjesuschrist.org/article/new-missionary-record-church-jesus-christ">교회 뉴스룸(선교사 신기록)</a> · <a href="https://www.pewresearch.org/short-reads/2015/05/22/mormons-more-likely-to-marry-have-more-children-than-other-u-s-religious-groups/">퓨(결혼·자녀)</a> · <a href="https://www.npr.org/2025/10/31/nx-s1-5535654/latter-day-saints-are-having-fewer-children-church-officials-are-taking-note">NPR(출산 감소)</a> · <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/word-of-wisdom?lang=eng">지혜의 말씀(공식)</a> · <a href="https://newsroom.churchofjesuschrist.org/article/general-conference">연차 대회(공식)</a> · <a href="https://newsroom.churchofjesuschrist.org/facts-and-statistics/state/utah">교회 통계(유타)</a> · <a href="https://www.sltrib.com/religion/2024/02/21/lets-get-real-about-divide-between/">솔트레이크 트리뷴(유타 비중)</a> · <a href="https://eccles.utah.edu/news/utah-is-still-the-youngest-state-in-the-nation-detailed-demographic-data/">유타대(최연소 주)</a> · <a href="https://deadline.com/2025/10/the-secret-lives-of-mormon-wives-season-3-trailer-hulu-disney-1236594152/">데드라인(시즌 3)</a> · <a href="https://en.wikipedia.org/wiki/DoTerra">도테라</a>·<a href="https://en.wikipedia.org/wiki/Young_Living">영리빙</a>(본사) · <a href="https://topclassactions.com/lawsuit-settlements/lawsuit-news/monat-class-action-lawsuit-says-haircare-products-lead-hair-loss/">모나트 소송</a>·<a href="https://www.ktnv.com/13-investigates/attorney-general-cracks-down-on-monat-hair-care-claims-in-wake-of-13-investigation">합의 결과</a> · <a href="https://www.churchofjesuschrist.org/learn/facts-statistics/south-korea?lang=eng">교회 통계(한국)</a></div>
+  </div>
+</section>
+
+<section id="atlas">
+  <div class="sec-eyebrow">전체 일람</div>
+  <h2>종합 일람표 · 37개 커뮤니티</h2>
+  <p class="note">적합도(우리 판단): <span class="fit-y">●</span> 우선 검토 · <span class="fit-m">◐</span> 조건부 · <span class="fit-n">○</span> 제외. "틱톡샵 관점"도 판단 열이다. 나머지 열은 전부 출처로 검증된 사실이며, 규모에는 집계 방식을 병기했다. "—"는 검증된 자료가 없다는 뜻.</p>
+  <div class="tblwrap"><table>
+    <tr><th>커뮤니티</th><th>미국 내 규모 (집계 방식)</th><th>주요 거주지</th><th>소비를 움직이는 규범·특성</th><th>틱톡샵 어필리에이트 관점 (판단)</th><th>커뮤니티·PR 웹사이트</th><th>참고 자료</th><th>적합도</th></tr>
+
+    <tr><td class="name">모르몬(후기 성도)</td><td class="num">명부 692.9만(교회 2024) · 설문 성인 2%(퓨)</td><td class="mid">유타(명부 220.6만, 자기응답 42~50%), 솔트레이크-프로보 권역</td><td class="wide">술·커피·차·담배 금지(공식 교리) · 결혼율 66%로 최고 수준, 평생 자녀 3.4명(40-59세, 퓨 2014) · 일요일 예배, 4·10월 첫 주말 연차 대회</td><td class="wide">위 심층 섹션 참고. MomTok 중심의 최대 크리에이터 풀, 한국어 가능 귀환 선교사 접점</td><td class="web"><a href="https://www.deseret.com">deseret.com</a> · <a href="https://www.thechurchnews.com">thechurchnews.com</a> · <a href="https://www.ldsliving.com">ldsliving.com</a></td><td class="src"><a href="https://www.churchofjesuschrist.org/learn/facts-statistics/united-states-of-america?lang=eng">교회 통계</a> · <a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/latter-day-saint-mormon/">퓨 RLS</a> · <a href="https://www.pewresearch.org/short-reads/2015/05/22/mormons-more-likely-to-marry-have-more-children-than-other-u-s-religious-groups/">퓨(가족)</a> · <a href="https://www.sltrib.com/religion/2024/02/21/lets-get-real-about-divide-between/">SL트리뷴</a></td><td class="fit"><span class="fit-y">●</span></td></tr>
+
+    <tr><td class="name">아포스톨릭 오순절파</td><td class="num">UPCI 구성원 100만(미국+캐나다, 2023 공식 첫 발표) · PAW는 공표 없음(2020 종교 센서스 부분집계 5.5만)</td><td class="mid">남부·중서부에 교회 단위로 분산</td><td class="wide">UPCI 공식 성결 문서가 고전 11장을 근거로 여성의 머리(자르지 않음), 화장·장신구 금지, 복장 기준을 명시 · 미용 관심이 머리로 집중되는 구조</td><td class="wide">틱톡에 'apostolic hair' 콘텐츠 생태계 실재(관련 게시물 73만+) · 지역 타겟 불가, 크리에이터로만 도달 가능</td><td class="web"><a href="https://upci.org/tag/pentecostal-life/">pentecostallife.com</a>(구 Pentecostal Herald) · <a href="https://upci.org">upci.org</a></td><td class="src"><a href="https://upci.org/one-million-constituents/">UPCI 100만 발표</a> · <a href="https://upci.org/wp-content/uploads/2022/10/Holiness.pdf">UPCI 성결 문서</a> · <a href="https://www.tiktok.com/discover/apostolic-hair-styles?lang=en">틱톡 태그</a></td><td class="fit"><span class="fit-y">●</span></td></tr>
+
+    <tr><td class="name">무슬림</td><td class="num">전 연령 345만(퓨 2017 추계, 2050년 810만 전망) · 설문 성인 ~1%(RLS)</td><td class="mid">디어본·햄트램크(미시간, 디어본은 주민 과반이 중동·북아프리카계), 뉴저지, 뉴욕, 시카고, 텍사스, 미네소타</td><td class="wide">성인 18-29세 비중 35%로 주요 종교 중 가장 젊음(기독교 14%) · 성인 20%가 흑인 무슬림 · 할랄 성분 검증(주의: 한국 KMF의 화장품 인증 실적은 아직 미미, 대부분 해외 인증기관 경유)</td><td class="wide">인구 구조가 틱톡 코어 연령대와 겹침 · 히잡 뷰티 등 커뮤니티 크리에이터 경유 · 라마단·이드 캘린더 반영</td><td class="web"><a href="https://www.arabamericannews.com">arabamericannews.com</a> · <a href="https://muslimmatters.org">muslimmatters.org</a></td><td class="src"><a href="https://www.pewresearch.org/short-reads/2018/01/03/new-estimates-show-u-s-muslim-population-continues-to-grow/">퓨 추계</a> · <a href="https://www.pewresearch.org/short-reads/2025/06/18/how-us-muslims-compare-with-other-americans-religiously-and-demographically/">퓨 2025</a> · <a href="https://www.clickondetroit.com/news/local/2023/09/26/census-data-shows-arab-american-population-in-dearborn-now-makes-up-majority-of-people-living-there/">디어본 센서스</a> · <a href="https://www.koreaherald.com/article/922321">코리아헤럴드(KMF)</a></td><td class="fit"><span class="fit-y">●</span></td></tr>
+
+    <tr><td class="name">힌두교</td><td class="num">설문 성인 1%(퓨 RLS) · 전 연령 총계는 공신력 있는 집계 없음</td><td class="mid">뉴저지(에디슨 일대, 로빈스빌에 미국 최대 힌두 사원), 베이에어리어, 텍사스, 애틀랜타</td><td class="wide">미국 종교 집단 중 학력 최고(학사 이상 ~70%, 전국 35%) · 소득도 최상위권($10만+ 가구 ~50%, 유대인과 비슷한 수준) · BAPS 사원 네트워크가 커뮤니티 축</td><td class="wide">구매력·학력 최상위 오디언스 · 남아시아 뷰티 크리에이터 신 경유(판단) · 디왈리 시즌 반영</td><td class="web"><a href="https://www.hinduismtoday.com">hinduismtoday.com</a> · <a href="https://indiawest.com">indiawest.com</a></td><td class="src"><a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/hindu/">퓨 RLS</a> · <a href="https://www.pewresearch.org/short-reads/2026/02/19/which-us-religious-groups-are-most-highly-educated/">퓨(학력)</a> · <a href="https://www.pewresearch.org/religion/2025/02/26/age-race-education-and-other-demographic-traits-of-us-religious-groups/">퓨(소득)</a> · <a href="https://en.wikipedia.org/wiki/Swaminarayan_Akshardham_(Robbinsville)">BAPS 로빈스빌</a></td><td class="fit"><span class="fit-y">●</span></td></tr>
+
+    <tr><td class="name">정통파 유대인</td><td class="num">미국 유대인 750만(전 연령) 중 성인 9%가 정통파, 18-29세는 17%(퓨 2020)</td><td class="mid">레이크우드 NJ(141,985명, 2024 센서스 추계, 뉴저지 4위 도시), 브루클린, 몬시, 볼티모어, LA</td><td class="wide">정통파 성인 평균 자녀 3.3명(비정통파 1.4) · 하레디는 6명 안팎(학술 추계) · 기혼 여성 셰이틀(인모 가발) 착용, 가격 $500~6,000 · 2004년 인도 사원 머리카락 금지 판결이 가발 공급망을 갈아엎은 전례(가발 = 진지한 산업)</td><td class="wide">하레디권은 틱톡 바깥이라 어필리에이트 국한 시 후순위(판단) · 모던 오소독스 한정 부분 도달</td><td class="web"><a href="https://mishpacha.com">mishpacha.com</a> · <a href="https://www.theyeshivaworld.com">theyeshivaworld.com</a> · <a href="https://thelakewoodscoop.com">thelakewoodscoop.com</a></td><td class="src"><a href="https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020/">퓨 2020</a> · <a href="https://thelakewoodscoop.com/news/new-lakewood-sees-5-growth-since-2020-new-census-estimates-show-now-fourth-largest-town-in-new-jersey/">레이크우드(센서스)</a> · <a href="https://forward.com/life/405821/meet-the-sheitel-fairy-godmother-providing-wigs-to-needy-orthodox-women/">포워드(셰이틀)</a> · <a href="https://www.jta.org/archive/ruling-on-idolatrous-wig-hair-creates-frenzy-in-orthodox-world">JTA(2004)</a> · <a href="https://www.demographic-research.org/volumes/vol49/29/49-29.pdf">하레디 출산(학술)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">시크교</td><td class="num">약 50만(시크 연합 추정) · 2020 센서스 기입식 집계는 48,321(연합은 "심각한 과소집계"라고 반박) · 보스턴대 종교 DB ~28만</td><td class="mid">캘리포니아 유바시티·센트럴밸리, 퀸스, 베이에어리어</td><td class="wide">입문자의 다섯 상징(5K)에 케시(자르지 않는 머리)와 캉가(나무 빗) 포함 · 유바시티 나가르 키르탄 행진에 약 20만 명 운집(2025, 인구 7만 도시에서)</td><td class="wide">규모는 작지만 결속 강함 · 펀자브계 크리에이터 경유, 남성 그루밍 접점 · 자르기·변신 화법 금지</td><td class="web"><a href="https://www.sikhnet.com">sikhnet.com</a> · <a href="https://www.sikhcoalition.org">sikhcoalition.org</a></td><td class="src"><a href="https://www.sikhcoalition.org/about-sikhs/">시크 연합</a> · <a href="https://www.sikhcoalition.org/blog/2023/updated-census-figures-severely-undercount-u-s-sikhs/">센서스 과소집계</a> · <a href="https://www.cbsnews.com/sacramento/news/roughly-200000-to-gather-in-yuba-city-for-2025-nagar-kirtan/">CBS(유바시티)</a> · <a href="https://www.pewresearch.org/2012/08/06/ask-the-expert-how-many-us-sikhs/">퓨(집계 논쟁)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">재림교회</td><td class="num">북미교구 128.8만(2024년 말, 캐나다·버뮤다·괌 포함이라 미국만은 이보다 적음)</td><td class="mid">로마린다(캘리포니아), 칼리지데일(테네시), 베리언스프링스(미시간), 올랜도</td><td class="wide">안식일 금요일 일몰~토요일 일몰(공식 교리) · 로마린다는 미국 유일의 블루존 지정 지역, 재림교인 수명 최대 10년 김</td><td class="wide">클린·웰니스 소구가 맞는 오디언스(판단) · 토요일 발송·라이브 금지</td><td class="web"><a href="https://adventistreview.org">adventistreview.org</a> · <a href="https://www.nadadventist.org">nadadventist.org</a></td><td class="src"><a href="https://documents.adventistarchives.org/Statistics/ASR/ASR2025A.pdf">교단 통계 2025</a> · <a href="https://adventist.org/beliefs/official/the-sabbath">안식일(공식)</a> · <a href="https://www.bluezones.com/explorations/loma-linda-california/">블루존</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">동방 정교회</td><td class="num">본당 집계 신자 675,765명(2020 정교회 센서스, 3천여 본당 97% 참여) · 설문 자기응답은 성인 1%(퓨, 두 기준이 4배 차이)</td><td class="mid">그리스·슬라브·아랍계 본당 + 전국의 신규 개종자</td><td class="wide">2020년 이후 젊은(특히 남성) 개종자 유입으로 본당 출석 기록치, "미국 정교회 역사에 없던 일"(NYT 2025 보도)</td><td class="wide">개종자 중심 콘텐츠 신 성장 중 · 남성 라인 테스트 시 재검토 가치(판단)</td><td class="web"><a href="https://www.orthodoxobserver.org">orthodoxobserver.org</a> · <a href="https://orthochristian.com">orthochristian.com</a></td><td class="src"><a href="https://orthodoxreality.org/wp-content/uploads/2021/03/2020CensusGeneralReport1.pdf">2020 정교회 센서스</a> · <a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/orthodox-christian/">퓨 RLS</a> · <a href="https://cssh.northeastern.edu/orthodox-church-pews-are-overflowing-with-converts/">NYT(개종 물결)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">라틴 미사 가톨릭</td><td class="num">퓨 조사에선 가톨릭 신자 2%가 "주 1회 이상 라틴 미사 참석"이라 응답했지만 연구자들은 과대응답으로 보고 실제 주간 참석 ~10만으로 추정 · 5년 내 1회 이상 참석은 13%</td><td class="mid">전국 분산(제공 본당 ~500곳)</td><td class="wide">젊은 층 중심의 성장 흐름을 두고 퓨 응답과 실측 추정이 크게 갈림(과대응답 논쟁 자체가 이 커뮤니티의 온라인 존재감을 보여줌)</td><td class="wide">전통 가정 콘텐츠 레인에 자연스럽게 포함되는 오디언스(판단) · 주력으론 작음</td><td class="web"><a href="https://onepeterfive.com">onepeterfive.com</a> · <a href="https://www.newliturgicalmovement.org">newliturgicalmovement.org</a></td><td class="src"><a href="https://www.pewresearch.org/religion/2025/06/16/catholic-practices-and-devotions/">퓨 2025</a> · <a href="https://eppc.org/publication/is-the-traditional-latin-mass-booming/">EPPC(실측 추정)</a> · <a href="https://www.catholicworldreport.com/2024/09/03/data-and-the-traditional-latin-mass/">CWR(본당 수)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">아르메니아 사도교회 / 아르메니아계</td><td class="num">센서스 519,001명(2020, 전·부분 혈통) · 커뮤니티 단체 주장은 150만~200만</td><td class="mid">글렌데일(약 66,070명, 주민 3명 중 1명), LA, 프레즈노, 보스턴</td><td class="wide">민족 교회가 정체성의 축 · LA 밀집으로 매체·상권 접근성 높음</td><td class="wide">LA 뷰티 크리에이터 신과 지리적으로 겹침(판단)</td><td class="web"><a href="https://armenianweekly.com">armenianweekly.com</a> · <a href="https://mirrorspectator.com">mirrorspectator.com</a></td><td class="src"><a href="https://en.wikipedia.org/wiki/Armenian_Americans">센서스 집계(위키 정리)</a> · <a href="https://www.neilsberg.com/insights/lists/armenian-population-in-california-by-city/">글렌데일(ACS)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">에티오피아·에리트레아 정교회</td><td class="num">에티오피아계 약 37만(ACS 2023 기반, 버지니아·메릴랜드·캘리포니아 순) · 에리트레아계는 신뢰 집계 없음</td><td class="mid">워싱턴 DC 근교가 최대 거점(국무부 확인 · 규모는 ACS 4만~커뮤니티 주장 10만+로 편차)</td><td class="wide">연 ~250일 금식일 중 평신도 의무 ~180일, 육류·유제품·계란까지 배제하는 비건식(네이처 게재 연구)</td><td class="wide">텍스처 케어·비건 소구와 접점(판단) · 커뮤니티 전용 틱톡 신은 얕음</td><td class="web"><a href="http://www.tadias.com">tadias.com</a></td><td class="src"><a href="https://www.neilsberg.com/insights/lists/ethiopian-population-in-united-states-by-state/">ACS 집계</a> · <a href="https://archive-share.america.gov/ethiopians-build-largest-u-s-community-in-d-c/index.html">국무부(DC)</a> · <a href="https://www.nature.com/articles/s41598-023-35060-4">네이처(금식)</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">페이건·위카</td><td class="num">퓨 2014 성인 0.3%(~100만) · RLS 2023-24는 "1% 미만"(18-29세는 1%) · 연구자 헬렌 버거 추정 마녀 ~150만, 위칸 ~80만(2021)</td><td class="mid">지역 없음(온라인 중심), 젊은 여성 비중 높음</td><td class="wide">실천이 곧 소비(허브·오일·양초·의식) · #WitchTok 조회수 300억 돌파(2022 보도)</td><td class="wide">세그먼트가 아니라 콘텐츠 앵글(판단): "리추얼" 프레이밍, 수행자 크리에이터 협업, 보름달 드롭</td><td class="web"><a href="https://wildhunt.org">wildhunt.org</a></td><td class="src"><a href="https://www.pewresearch.org/religion/religious-landscape-study/religious-denomination/pagan-or-wiccan/">퓨 2014</a> · <a href="https://theconversation.com/what-is-wicca-an-expert-on-modern-witchcraft-explains-165939">버거(추정)</a> · <a href="https://cbn.com/news/us/witchtok-booms-30-billion-views-ex-witch-warns-preschool-witchcraft">위치톡 300억 뷰</a></td><td class="fit"><span class="fit-m">◐</span></td></tr>
+
+    <tr><td class="name">여호와의 증인</td><td class="num">활동 신자("전도인") 평균 124.9만(2025 봉사연도 공식 보고, 기념식 참석은 237.8만) · 설문 성인 1% 미만(퓨)</td><td class="mid">전국 도시 분산</td><td class="wide">생일·크리스마스 등 명절 일절 안 지냄(공식 FAQ · 결혼기념일은 지냄) · 정치 중립</td><td class="wide">크리에이터 생태계 없음, 시즌 훅 불가 · 사실상 도달 불가(판단)</td><td class="web"><a href="https://www.jw.org">jw.org</a>(유일 · 독립 커뮤니티 매체 없음 확인)</td><td class="src"><a href="https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/2025-Country-and-Territory-Reports/">2025 공식 보고</a> · <a href="https://www.jw.org/en/jehovahs-witnesses/faq/jw-celebrate-holidays/">명절 FAQ</a> · <a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/jehovahs-witness/">퓨 RLS</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">콥트 정교회</td><td class="num">2020 종교 센서스 18만 명·292개 본당(하한) · 교회 추산 35만~50만 · 정부 통계 기반 10만~20만(편차 큼)</td><td class="mid">캘리포니아 최대(4.7만), 뉴저지·뉴욕(2.8만)</td><td class="wide">긴 금식기 · 촘촘한 본당 네트워크(10년 새 본당 수 1.7배)</td><td class="wide">전용 크리에이터 신·매체 없음(판단)</td><td class="web">전용 뉴스 매체 없음 확인(copticchurch.net은 전례 자료 사이트)</td><td class="src"><a href="https://www.thearda.com/us-religion/statistics/rankings?typ=0&amp;cod=186&amp;u=0&amp;con=0">2020 센서스(ARDA)</a> · <a href="https://en.wikipedia.org/wiki/Coptic_Americans">추정 범위 정리</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">칼데아·아시리아계</td><td class="num">디트로이트 메트로 칼데아계 18.35만(2023 월시칼리지 조사, "20만 상회 가능")</td><td class="mid">디트로이트 근교, 샌디에이고 엘카혼("리틀 바그다드")</td><td class="wide">디트로이트 주류·편의점의 ~90%, 대형 식료품점 80곳 중 75곳을 소유(상공회의소·업계 집계, 하버드 연구로도 다뤄짐) · 지역 경제효과 $17.6B</td><td class="wide">틱톡샵 접점 없음 · 가치는 오프라인 리테일망(진출 시 별도 트랙)</td><td class="web"><a href="https://www.chaldeannews.com">chaldeannews.com</a></td><td class="src"><a href="https://www.chaldeannews.com/2024-content/2024/1/1/walsh-college-survey-reveals-demographic-data-about-metro-detroit-chaldeans">월시 조사</a> · <a href="https://www.chaldeanfoundation.org/crains-article-about-thriving-chaldean-community-in-southeast-michigan/">CCF(경제효과)</a> · <a href="https://www.dbusiness.com/business-features/from-the-middle-east-to-the-motor-city/">DBusiness(상점)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">아미시</td><td class="num">북미 410,955명·683개 정착지(영 센터 2025-06) · 2000년 대비 +131%, 약 20년마다 2배</td><td class="mid">펜실베이니아·오하이오·인디애나에 61%</td><td class="wide">대부분의 그룹이 상용 전력망·TV·PC 거부(영 센터, "most groups" 한정) · 대표 매체 The Budget은 1890년부터 지금까지 인쇄 전용 주간지(2026년 보도)</td><td class="wide">디지털 도달 자체가 불가 · 광고비 배정 금지 대상(판단)</td><td class="web">The Budget(인쇄 전용) · <a href="https://amishamerica.com">amishamerica.com</a>(외부인 운영 정보 사이트)</td><td class="src"><a href="https://groups.etown.edu/amishstudies/amish-population-profile-2025/">영 센터 2025</a> · <a href="https://groups.etown.edu/amishstudies/cultural-practices/technology/">영 센터(기술)</a> · <a href="https://www.statenews.org/section/the-ohio-newsroom/2026-04-23/this-ohio-newspaper-avoids-the-internet-its-readers-like-it-that-way">오하이오 뉴스룸(버짓)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">올드오더 메노나이트</td><td class="num">마차 이용 올드오더 3.8만+(미국·캐나다·벨리즈, 영 센터 2023 집계) · 미국 재세례파 전체는 60.4만(아미시 포함, 랭커스터 메노나이트 역사학회)</td><td class="mid">펜실베이니아, 오하이오, 버지니아</td><td class="wide">수수한 복장·머리쓰개 · 기술 수용은 아미시보다 조금 넓은 스펙트럼</td><td class="wide">아미시와 동일: 도달 불가(판단)</td><td class="web"><a href="https://anabaptistworld.org">anabaptistworld.org</a></td><td class="src"><a href="https://amishamerica.com/old-order-mennonite-population-horse-buggy-38000-us-canada-belize/">영 센터 집계(전재)</a> · <a href="https://anabaptistworld.org/broad-census-counts-more-anabaptists/">재세례파 센서스</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">후터라이트</td><td class="num">북미 58,392명·544개 콜로니(2024 자체 디렉토리, 영 센터 놀트 연구노트) · 콜로니 4분의 3이 캐나다, 미국은 사우스다코타·몬태나 중심</td><td class="mid">사우스다코타, 몬태나, 노스다코타, 미네소타, 워싱턴</td><td class="wide">초대교회 모델의 완전한 재산 공동체(브리태니커) · 구매는 콜로니 단위, 개인 쇼핑 없음</td><td class="wide">소비자 마케팅 무의미(판단)</td><td class="web"><a href="https://hutterites.org">hutterites.org</a></td><td class="src"><a href="https://www.researchgate.net/publication/400251191_Research_Note_Hutterite_Population_and_Colonies_2024_with_a_15-Year_Comparison_of_Colony_Numbers">놀트 2024</a> · <a href="https://anabaptistworld.org/census-documents-growth-of-hutterite-population-colonies/">애너뱁티스트 월드</a> · <a href="https://www.britannica.com/topic/Hutterites">브리태니커</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">브루더호프</td><td class="num">전 세계 약 3,000명·24개 공동체, 그중 미국 18개(NYT 인용 2024 · 공식 사이트는 인원 미공표)</td><td class="mid">뉴욕, 펜실베이니아</td><td class="wide">완전 공동 소유("개인 소유가 없다", 공식) · 출판사 플라우 운영, 아미시와 달리 미디어 활용</td><td class="wide">상업 접점 없음(판단)</td><td class="web"><a href="https://www.plough.com/en">plough.com</a></td><td class="src"><a href="https://en.wikipedia.org/wiki/Bruderhof_Communities">위키(NYT 인용)</a> · <a href="https://www.bruderhof.com/life-in-community">공식</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">퀘이커</td><td class="num">미국 5.5만 미만(2020 종교 센서스 분석) · FGC의 "8.1만+"는 캐나다 포함</td><td class="mid">펜실베이니아, 노스캐롤라이나, 인디애나</td><td class="wide">검소함의 윤리, 진보 성향 · 흔히 인용되는 7~8만은 과대치라는 분석</td><td class="wide">접점 미미(판단) · "퀘이커" 오츠는 무관한 상표</td><td class="web"><a href="https://www.friendsjournal.org">friendsjournal.org</a></td><td class="src"><a href="https://fusionaier.org/2024/the-late-great-american-quaker/">FUSION/AIER 분석</a> · <a href="https://www.fgcquaker.org/quakerism/">FGC</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">크리스천 사이언스</td><td class="num">공식 통계 발표를 교회 규정이 금지 · 마지막 공식 집계는 1936년 26.9만 · 2019년 언론 추정 "5만까지 감소 가능성", 추정 폭 10만 미만~40만</td><td class="mid">보스턴 본부, 전국 분산·고령화</td><td class="wide">의료를 피하는 교리 · 등록 프랙티셔너 1,160명(2019, 1971년 5천 명에서 감소)</td><td class="wide">시장 미미 + 효능 표현 리스크(판단)</td><td class="web"><a href="https://www.csmonitor.com">csmonitor.com</a> · <a href="https://www.christianscience.com">christianscience.com</a></td><td class="src"><a href="https://thefederalist.com/2019/04/11/christian-science-became-dying-religion/">페더럴리스트(2019)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">네이션 오브 이슬람</td><td class="num">약 3.5만(2023 학술 기고 · 조직 공표 없음, 추정 폭 2.5만~10만)</td><td class="mid">시카고 본부</td><td class="wide">"흑인 경제 자립" 교리 · 정치적 논쟁 상수</td><td class="wide">접근 자체가 역효과(판단)</td><td class="web"><a href="https://new.finalcall.com">new.finalcall.com</a></td><td class="src"><a href="https://theconversation.com/the-nation-of-islam-a-brief-history-198227">더 컨버세이션(2023)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">아흐마디야</td><td class="num">약 2만·60개 지부(자체 저널 2020, 현재 공식 사이트는 73개 지부 표기·인원 미공표)</td><td class="mid">메릴랜드, 버지니아, 시카고(1921년 미국 최고령급 모스크)</td><td class="wide">1920년 설립, 미국에서 가장 오래된 조직화된 무슬림 공동체</td><td class="wide">일반 무슬림 레인에 포함되는 수준(판단)</td><td class="web"><a href="https://www.alislam.org">alislam.org</a> · <a href="https://www.ahmadiyya.us">ahmadiyya.us</a></td><td class="src"><a href="https://www.reviewofreligions.org/19909/celebrating-one-hundred-years-of-the-ahmadiyya-muslim-community-in-the-united-states-of-america/">자체 저널(100주년)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">이스마일리</td><td class="num">전국 집계 없음 · 휴스턴 3.5만~4만이 미국 최대(2025 보도), 텍사스 6.5만~7만</td><td class="mid">휴스턴(2025-11 미국 첫 이스마일리 센터 개관), 댈러스, 애틀랜타</td><td class="wide">아가 칸 네트워크 · 전문직·사업가 비중 높은 커뮤니티로 보도됨</td><td class="wide">규모 작고 전용 채널 없음(판단)</td><td class="web"><a href="https://the.ismaili">the.ismaili</a></td><td class="src"><a href="https://communityimpact.com/houston/heights-river-oaks-montrose/development/2025/11/06/ismaili-center-houston-soft-opens-as-first-of-its-kind-cultural-hub-in-the-united-states/">커뮤니티 임팩트</a> · <a href="https://theconversation.com/who-are-ismaili-muslims-and-how-do-their-beliefs-relate-to-the-aga-khans-work-249318">더 컨버세이션</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">자이나교</td><td class="num">JAINA "미국+캐나다 20만·72개 센터"(공식, 북미 합산치) · 미국만은 15만~20만 통용</td><td class="mid">뉴저지, 뉴욕, 시카고, 휴스턴</td><td class="wide">불살생 중심 교리(JAINA) · 비건·크루얼티프리 소비 성향으로 보도됨</td><td class="wide">비건 인증 있으면 남아시아 레인에 얹히는 오디언스(판단)</td><td class="web"><a href="https://www.jaina.org">jaina.org</a></td><td class="src"><a href="https://www.jaina.org/">JAINA</a> · <a href="https://www.tabletmag.com/sections/community/articles/jainism-american-style">태블릿</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">불교 (SGI 포함)</td><td class="num">설문 성인 ~1%(퓨 RLS) · SGI-USA는 인원 미공표(불교 센터 90곳·월 2,500회 모임 자체 공표, "미국 최대 불교 조직"이라는 학술 평가)</td><td class="mid">캘리포니아, 하와이, 뉴욕</td><td class="wide">이민 사찰 공동체 + 개종 수행 공동체의 이중 구조</td><td class="wide">특정 접점 없음(판단)</td><td class="web"><a href="https://www.lionsroar.com">lionsroar.com</a> · <a href="https://tricycle.org">tricycle.org</a></td><td class="src"><a href="https://www.pewresearch.org/religious-landscape-study/religious-tradition/buddhist/">퓨 RLS</a> · <a href="https://www.sgi-usa.org/about-our-community/">SGI-USA</a> · <a href="https://americanbuddhism.pages.wm.edu/soka-gakkai-international-usa/">W&amp;M 연구</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">바하이</td><td class="num">등록 177,880명(미국 총회 2023 리드반 보고 · 공식 웹 미게시, 커뮤니티 전언) · 주소 확인되는 회원은 절반 수준(총회 1999 자체 인정, 학자 스톡먼도 동일 평가)</td><td class="mid">일리노이 윌멧(본전), 전국 분산</td><td class="wide">금주 · 성직자 없는 구조</td><td class="wide">접점 미미(판단)</td><td class="web"><a href="https://www.bahai.us">bahai.us</a></td><td class="src"><a href="https://bahaipedia.org/Statistics_in_the_United_States">통계 정리</a> · <a href="https://bahai-library.com/stockman_bahai_membership_statistics">스톡먼</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">조로아스터교</td><td class="num">미국 1.5만(FEZANA 2012 조사) · FEZANA는 현재 "북미 2.5만+" 표방</td><td class="mid">캘리포니아, 뉴욕, 텍사스</td><td class="wide">파르시+이란계 이중 구성 · 조사 자체가 우편명부 기반이라 근사치</td><td class="wide">접점 없음(판단)</td><td class="web"><a href="https://fezana.org">fezana.org</a></td><td class="src"><a href="https://fezana.org/files/Demographics/Zworld6Sep12.pdf">FEZANA 2012(PDF)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">드루즈</td><td class="num">확정 집계 없음 · 미국드루즈협회 추정 1.5만~2만, 다른 문헌 3만~5만</td><td class="mid">남캘리포니아 최대</td><td class="wide">개종이 없는 폐쇄 신앙, 비공개 실천</td><td class="wide">세그먼트 접근 금지(판단)</td><td class="web"><a href="https://americandruzesociety.org">americandruzesociety.org</a></td><td class="src"><a href="https://www.americandruzeheritage.com/Druze%20Population.html">ADS 추정</a> · <a href="https://www.everyculture.com/multi/Bu-Dr/Druze.html">문헌 추정</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">야지디</td><td class="num">링컨(네브래스카) 약 3,000~4,000+명, 미국 최대 정착지 · 전국 총계 없음</td><td class="mid">네브래스카 링컨</td><td class="wide">난민 공동체 · 2026년에도 지역 언론이 신년 행사 보도(활동 확인)</td><td class="wide">접점 없음, 완결성 차원 수록(판단)</td><td class="web"><a href="https://www.yazda.org">yazda.org</a></td><td class="src"><a href="https://www.marketplace.org/story/2017/09/26/yazidis-find-home-lincoln-nebraska">마켓플레이스</a> · <a href="https://heartlandwebzine.unl.edu/article/why-yazidis-us-are-choosing-nebraska">UNL</a> · <a href="https://www.1011now.com/2026/04/16/lincoln-yazidi-community-combines-old-traditions-fresh-beginnings-with-new-year-celebrations/">지역 보도(2026)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">유니테리언</td><td class="num">등록 교인 13만 + 비회원 친교인 5.4만(2025 UUA 인증 보고 기반 분석) · 1,078개 회중 · 2016년 15.1만에서 감소세</td><td class="mid">뉴잉글랜드, 대학 도시</td><td class="wide">진보 성향 · 교세 감소 국면</td><td class="wide">접점 미미(판단)</td><td class="web"><a href="https://www.uuworld.org">uuworld.org</a></td><td class="src"><a href="https://www.graphsaboutreligion.com/p/what-about-the-unitarians">버지 분석(UUA 보고)</a> · <a href="https://www.uua.org/data/congregations">UUA</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">라스타파리</td><td class="num">신뢰할 집계 없음("어디에도 신뢰할 만한 추정치가 없다", 문화연구 문헌) · 미국 수치 부재</td><td class="mid">—</td><td class="wide">중앙 조직 없음, 제도권 집계에 대한 거부감이 집계 불가의 원인으로 지목됨</td><td class="wide">수치가 없어 판단 보류</td><td class="web">—</td><td class="src"><a href="https://www.everyculture.com/Middle-America-Caribbean/Rastafarians-Orientation.html">집계 불가(문헌)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">하레 크리슈나(ISKCON)</td><td class="num">미국 신도 추정 5만~10만(학술 인용 2016) · 미국 센터 56곳(공식 디렉토리)</td><td class="mid">전국 대도시</td><td class="wide">사원 신도의 상당수가 인도계 이민자로 재편(학술 연구)</td><td class="wide">남아시아 레인에 흡수(판단)</td><td class="web"><a href="https://iskconnews.org">iskconnews.org</a></td><td class="src"><a href="https://religionlink.com/source-guides/hare-krishna-in-the-u-s-turns-50/">릴리전링크</a> · <a href="https://centres.iskcon.org/centre-region/usa/">센터 디렉토리</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">산테리아·부두</td><td class="num">단일 수치 없음 · 학술 문헌 "수십만, 어쩌면 수백만"(산테리아) · 부두는 뉴욕권만 45만+ 추정(하버드 플루럴리즘 프로젝트)</td><td class="mid">마이애미, 뉴욕, 뉴저지, 탬파</td><td class="wide">사적·비공개 실천이라 구조적으로 집계 불가 · 실천이 보타니카(허브·오일 상점) 소매망을 통해 이뤄짐(마이애미권 ~60곳 집계 문헌)</td><td class="wide">광고 오디언스 아님 · 보타니카는 오프라인 유통 소재(판단)</td><td class="web">— (중앙 조직 없음)</td><td class="src"><a href="https://www.ebsco.com/research-starters/religion-and-philosophy/santeria">EBSCO</a> · <a href="https://pluralism.org/vodou-serving-the-spirits">하버드 플루럴리즘</a> · <a href="https://thenewinquiry.com/storefront-supernatural/">보타니카 문헌</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">아메리카 원주민 교회</td><td class="num">약 25만(문헌 통용 추정, 센서스 아님)</td><td class="mid">평원·남서부 부족</td><td class="wide">페요테 의례는 1994년 AIRFA 개정으로 합법 · 부족 주권 사안</td><td class="wide">마케팅 접근 금지: 주권·문화 전유 리스크(판단)</td><td class="web">—</td><td class="src"><a href="https://www.ebsco.com/research-starters/religion-and-philosophy/native-american-church">EBSCO</a> · <a href="https://firstamendment.mtsu.edu/article/american-indian-religious-freedom-act-of-1978-as-amended-in-1994/">MTSU(AIRFA)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">사이언톨로지</td><td class="num">독립 설문(ARIS) 자기응답 2001년 5.5만 → 2008년 약 2.5만(2008치는 표본 과소로 미공표·고불확실) · 교회 주장은 수백만</td><td class="mid">LA, 클리어워터(플로리다)</td><td class="wide">이름 사용에 극도로 공격적인 조직으로 보도 다수</td><td class="wide">상업 실익 전무, 전면 회피(판단)</td><td class="web">—</td><td class="src"><a href="https://www.villagevoice.com/2011/07/04/scientologists-how-many-of-them-are-there-anyway/">빌리지 보이스(ARIS 정리)</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+
+    <tr><td class="name">파룬궁</td><td class="num">미국 수치 없음 · "중국 밖 전 세계 수십만"(연구자 오운비), 공식 회원제 부재로 집계 불가</td><td class="mid">뉴욕(드래건 스프링스)</td><td class="wide">에포크 타임스·NTD·션윈이 이 운동의 대외 조직이라는 언론 검증(NBC 2019 등)</td><td class="wide">오디언스로도 채널로도 회피: 정치적 부담(판단)</td><td class="web">—</td><td class="src"><a href="https://en.wikipedia.org/wiki/Falun_Gong_outside_mainland_China">오운비 인용 정리</a> · <a href="https://www.britannica.com/topic/Falun-Gong">브리태니커</a></td><td class="fit"><span class="fit-n">○</span></td></tr>
+  </table></div>
+  <p class="note">집계 방식 주의: "명부·구성원"은 교단이 세는 숫자(이탈자 포함), "설문"은 스스로 신자라고 답한 성인 비율, "본당 집계"는 교회가 실제로 파악하는 인원이다. 같은 종교라도 기준에 따라 2~4배 차이 난다(동방 정교회: 본당 집계 67.6만 vs 설문 환산 ~260만).</p>
+</section>
+
+<section id="respect">
+  <div class="sec-eyebrow">넘지 말아야 할 선</div>
+  <h2>존중의 선이 곧 리스크 관리다</h2>
+  <ul class="tight">
+    <li><b>타겟을 이름으로 부르지 않는다.</b> "모르몬 전용" 식 카피는 당사자를 밀어내는 동시에 플랫폼 정책 지뢰다. 문화, 지역, 크리에이터를 겨냥하고 커뮤니티가 스스로를 알아보게 한다.</li>
+    <li><b>신성한 것은 크리에이티브 밖에 둔다.</b> 모르몬 성전 가먼트와 성전 내부, 토라 두루마리 소품, 제품 위의 꾸란 구절, 원주민 의례 이미지. 전부 영구 금지.</li>
+    <li><b>명칭을 조심한다.</b> 공식 문서에서는 "후기 성도". "하시딕"은 정통파 전체가 아니고, "무슬림"은 인종이 아니며, 시크교도는 힌두교도도 무슬림도 아니다(오인이 잦다).</li>
+    <li><b>교리를 거스르는 제안은 하지 않는다.</b> 시크·아포스톨릭에게 자르기·변신 언급 금지, 모르몬에게 커피·술 코드 금지, 여호와의 증인에게 명절 훅 금지, 라마단 낮 시간대의 탐닉 코드 금지.</li>
+    <li><b>인증은 받은 다음에만 쓴다.</b> "할랄"·"코셔"·"비건"은 실제 인증서가 있을 때만. 참고로 한국 KMF의 화장품 할랄 인증 실적은 아직 얇다는 보도가 있으니(코리아헤럴드) 인증 경로는 실사 후 결정.</li>
+    <li><b>크리에이터는 반드시 커뮤니티 안에서 찾는다.</b> 외부인이 미학을 연기하면 즉시 코스프레로 읽힌다. 섭외 메시지는 늘 그렇듯 사람이 승인한 다음에만 나간다.</li>
+    <li><b>효능 표현은 평소보다 더 보수적으로.</b> 뷰티·건강 효능 표현은 원래 규제 선상에 있고, 종교적 웰니스 맥락은 과장을 더 위험하게 만든다.</li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <b>방법론</b> · 이 문서의 사실 항목은 2026-08-21에 5개 병렬 리서치 트랙(기독교계 · 재세례파+유대교 · 이슬람+다르마계 · 동방 디아스포라 · 신흥·소규모)이 실제 접속해 확인한 출처만 반영했다. 확인 실패 항목은 삭제하거나 "집계 없음"으로 명시했다. 대표 출처: 퓨리서치(RLS 2023-24, 유대인 2020, 무슬림 추계), 2020 미국 종교 센서스, 각 교단 공식 통계(교회 통계 보고, jw.org 봉사연도 보고, 재림교회 ASR, UPCI, UUA, FEZANA, JAINA), 영 센터(아미시·후터라이트), 학술·언론 검증 자료(행별 링크 참조).<br>
+  <b>유의</b> · 음력 명절 날짜는 해마다 움직이니 집행 전 확인. "틱톡샵 관점"·"적합도" 열은 사실이 아니라 운영 판단. 2026-08-21 cobble 작성, 이너샤 미국 진출 참고용.
+</footer>
+
+</div>
