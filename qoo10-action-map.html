@@ -140,7 +140,7 @@
 
 <div class="note"><b>범위와 나누기 규칙.</b> 이 지도의 범위는 판매자가 실행하는 액션 전체다: 셀러 콘솔 J·QSM의 모든 메뉴 + 판매와 직결된 외부 지면(Qoo10 앱의 랭킹 · 라이브 지면, MD 제휴 창구, 외부 트래픽 채널). 제외한 것은 교육 콘텐츠(Qoo10大学), 구매자 · 크리에이터 측 액션, 경쟁사 조사처럼 플랫폼 밖에서 하는 업무다. 대행사에 운영을 위탁하는 선택도 액션으로 치지 않는다: 이 지도 전체가 곧 그 대행이 하는 일이기 때문이다. 경계 원칙 하나로 중복을 막는다: 하나의 실행은 하나의 도메인만 소유하고, 걸쳐 있는 일은 소유 도메인 번호로 참조한다 (예: 메가와리 성과 복기는 8.3이, 다음 행사의 실행은 3.5가 소유).</div>
 
-<div class="note"><b>중요도 · 기술적 난이도 표기.</b> <b>중요도</b>는 판매에 미치는 영향 기준이다: <span class="g imp-h">상</span> 잘하고 못하고가 매출을 직접 가른다 · <span class="g imp-m">중</span> 매출을 지키거나 보조한다 · <span class="g imp-l">하</span> 한 번 해두면 되는 관문 · 위생 작업. <b>기술적 난이도</b>는 이 액션을 AI 시스템으로 만든다고 할 때의 난이도다: <span class="g dif-h">상</span> 핵심이 자동화 불가 영역(관계 · 실물 · 실시간)에 있거나 인과 추론 · 다중 시스템 오케스트레이션이 필요하다 · <span class="g dif-m">중</span> 데이터 수집 인프라(크롤링 · RPA)나 품질 게이트를 자체 구축해야 한다 · <span class="g dif-l">하</span> 규칙 · 수식 · 표준 파이프라인으로 자동화된다. 각 판정의 근거는 해당 칸에 함께 적었다. 시스템화 착수 순서는 중요도 상 × 기술적 난이도 하부터다.</div>
+<div class="note"><b>중요도 · 기술적 난이도 표기.</b> <b>중요도</b>는 판매에 미치는 영향 기준이다: <span class="g imp-h">상</span> 잘하고 못하고가 매출을 직접 가른다 · <span class="g imp-m">중</span> 매출을 지키거나 보조한다 · <span class="g imp-l">하</span> 한 번 해두면 되는 관문 · 위생 작업. <b>기술적 난이도</b>는 AI의 보조를 받아 이 액션을 진행할 때 실제로 쉬운가 어려운가다: <span class="g dif-h">상</span> AI가 핵심을 대신 못 한다 (관계 · 협상 · 실전 운영 · 고난도 해석) · <span class="g dif-m">중</span> AI가 절반을 들어줘도 판단 · 품질 · 조율의 사람 몫이 남는다 · <span class="g dif-l">하</span> AI 보조로 사실상 루틴이 된다. 각 판정의 근거는 해당 칸에 함께 적었다. 착수 순서는 중요도 상 × 기술적 난이도 하부터다.</div>
 
 <section id="primer">
   <div class="domain-head"><h2 class="domain">큐텐 재팬 3분 이해</h2></div>
@@ -215,7 +215,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>선택 경로와 근거 · 전환 시점 가설이 문서로 남음</span>
         <span class="v-row"><span class="v-tag m">지표</span>구조 결정이라 직접 지표 없음</span>
         <span class="v-row"><span class="v-tag j">평가</span>이후 단계에서 경로 제약과 충돌 0건 (예: 직송인데 일본어 라벨을 다시 붙이는 식의 허가 저촉 없음). 9.6의 재검토 주기에 이 결정이 다시 올라오는가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">구조 선택이 마진 · 리드타임 · 법적 리스크의 상한을 정한다. 이후 모든 액션이 이 위에서 돈다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">리서치 · 비교표 · 개정 캘린더 생성은 에이전트 리서치로 자동화 쉽다. 결정만 인간 몫.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">구조 선택이 마진 · 리드타임 · 법적 리스크의 상한을 정한다. 이후 모든 액션이 이 위에서 돈다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">AI가 법 · 세제 · 물류 비교와 만료 캘린더까지 깔아 줘도, 되돌리기 어려운 구조 선택과 두 나라 법제에 걸친 판단은 남는다. 전문가 검증까지 붙는 전략 결정.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.2</span><span class="aname">셀러 계정 생성과 심사</span><span class="loc">가입 화면</span></td>
@@ -225,7 +225,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계정 승인, 판매 가능 상태</span>
         <span class="v-row"><span class="v-tag m">지표</span>심사 소요일, 반려 횟수</span>
         <span class="v-row"><span class="v-tag j">평가</span>1회 통과. 반려 최다 원인은 서류 간 명의 · 주소 불일치이므로 제출 전 교차 대조</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">통과하면 끝나는 일회성 관문. 잘한다고 매출이 늘지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">서류 체크리스트 · 폼 초안 보조 수준. 본인 인증은 사람이 해야 해서 자동화 대상 자체가 작다.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">통과하면 끝나는 일회성 관문. 잘한다고 매출이 늘지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">AI가 서류 체크리스트와 명의 · 주소 교차 대조까지 해 주면 반려 없이 지나가는 절차가 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.3</span><span class="aname">정산 계좌 연결</span><span class="loc">J·QSM › 정산</span></td>
@@ -235,7 +235,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계좌 인증 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>첫 인출 성공까지 걸린 일수, 경로 수수료율</span>
         <span class="v-row"><span class="v-tag j">평가</span>인출 실패 · 보류 0건, 환전 경로를 비교하고 골랐다는 기록 존재 (8.6과 연결)</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">돈을 받기 위한 관문. 매출을 만들지는 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">경로별 수수료 비교표 생성 정도. 계좌 인증은 사람 몫.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">돈을 받기 위한 관문. 매출을 만들지는 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">경로별 수수료 비교는 AI가 만들고, 남는 것은 계좌 인증 몇 번.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.4</span><span class="aname">샵 기본 정보 · 법정 표기</span><span class="loc">J·QSM › 기본 정보</span></td>
@@ -245,7 +245,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기본 정보 미완료 항목 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>반품지 도착 테스트 1회 성공</span>
         <span class="v-row"><span class="v-tag j">평가</span>첫 주문 · 첫 반품이 주소 · 표기 문제 없이 처리됨</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">미비하면 벌점, 잘해도 가점 없는 위생 항목.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">특상법 표기 템플릿 생성 + 미비 항목 자동 점검. 정형 텍스트라 쉽다.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">미비하면 벌점, 잘해도 가점 없는 위생 항목.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">특상법 표기 문안을 AI가 생성 · 점검해 주면 입력 작업만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.5</span><span class="aname">공식샵 · 브랜드 인증</span><span class="loc">J·QSM</span> <span class="loc">MD 창구</span></td>
@@ -255,7 +255,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>공식 마크 노출</span>
         <span class="v-row"><span class="v-tag m">지표</span>인증 소요일</span>
         <span class="v-row"><span class="v-tag j">평가</span>브랜드 검색 결과에서 우리 공식샵이 최상단 신뢰 위치를 차지하는가, 침해 신고 자격 확보(9.3)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">공식 마크는 전환의 신뢰 장치이자 위조 대응(9.3)의 자격. 직접 매출보다 기반.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">증빙 목록화 · 신청서 초안 자동화 수준. 상표 증빙은 법무 영역.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">공식 마크는 전환의 신뢰 장치이자 위조 대응(9.3)의 자격. 직접 매출보다 기반.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">증빙 목록과 신청서 초안은 AI가 준비한다. 상표 서류 모으는 일만 사람 몫.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.6</span><span class="aname">QAPI · 외부 도구 연동</span><span class="loc">J·QSM › QAPI</span></td>
@@ -265,7 +265,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>키 유효, 테스트 호출 성공</span>
         <span class="v-row"><span class="v-tag m">지표</span>재고 · 주문 동기화 오차 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>동기화 지연으로 인한 초과 판매 0건, 키 만료로 연동이 끊긴 날 0일. "분석까지 해 준다"는 유료 툴 약속은 이 API 위에선 성립 불가라는 것을 알고 구매 판단했는가</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">운영 효율 장치. 판매를 만들지 않고 사고를 막는다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">표준 API 연동 개발. 키 수명 관리 · 동기화 검증 파이프라인까지 정형적 엔지니어링이다.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">운영 효율 장치. 판매를 만들지 않고 사고를 막는다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">코딩 AI가 연동 구현을 도와줘도 키 발급 절차 · 동기화 검증 · 갱신 운영이 남는 엔지니어링 작업이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.7</span><span class="aname">담당 MD 채널 확보</span><span class="loc">MD 창구</span></td>
@@ -275,7 +275,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>연락 라인 존재, 소개 자료 전달 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>MD발 제안(기획전 · 행사 슬롯) 수신 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>행사 · 기획전 정보를 공지보다 먼저 아는 상태인가. 제휴 제안이 0이면 자료 · 실적 · 접점 중 무엇이 부족한지 진단</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">기획전 · 행사 슬롯이 MD 제휴로 열린다. 트래픽의 문이 여기 달려 있다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">관계는 자동화 불가 영역. AI는 소개 자료 · 제안서 · 실적 리포트 생성까지, 접촉과 신뢰는 사람이 쌓는다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">기획전 · 행사 슬롯이 MD 제휴로 열린다. 트래픽의 문이 여기 달려 있다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">소개 자료 · 제안서 · 실적 리포트는 AI가 만들어 줘도, 라인을 뚫고 신뢰를 쌓는 것은 온전히 사람의 일이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -296,7 +296,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>대상 카테고리에서 등록 가능 상태</span>
         <span class="v-row"><span class="v-tag m">지표</span>자격 사유 반려 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>판매 예정 SKU 전부가 자격 범위 안, 자격 문제로 런칭이 밀리지 않음</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">관문. 통과 여부만 있고 잘함의 정도가 없다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">카테고리 요건 DB화 + 자동 대조. 정형 규칙 체크.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">관문. 통과 여부만 있고 잘함의 정도가 없다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">요건 대조와 서류 목록화를 AI가 하면 확인 절차만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.2</span><span class="aname">상품 등록</span><span class="loc">상품 관리 › 상품 등록</span></td>
@@ -306,7 +306,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>판매중 상태 전환</span>
         <span class="v-row"><span class="v-tag m">지표</span>등록 후 7일 노출 · 판매 발생 여부</span>
         <span class="v-row"><span class="v-tag j">평가</span>반려 없이 통과 + 첫 주 검색 노출 발생. 노출 0이면 카테고리 오분류 · 키워드 부재부터 의심</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">상품명 키워드가 검색 노출의 시작점. 첫 리스팅 품질이 초기 판매를 정한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">LLM 일본어 카피 생성 + 상위 상품 어휘 학습 + 등록 자동화까지 파이프라인화 가능. 네이티브 품질 게이트가 남는 문제.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">상품명 키워드가 검색 노출의 시작점. 첫 리스팅 품질이 초기 판매를 정한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">카피 · 키워드 초안은 AI가 뽑아 줘도, 상위 상품과 견주는 일본어 품질과 카테고리 문법의 마감에는 검수 안목이 필요하다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.3</span><span class="aname">옵션 구조 설계</span><span class="loc">상품 관리 › 옵션</span></td>
@@ -316,7 +316,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>옵션 구조가 설계대로 반영</span>
         <span class="v-row"><span class="v-tag m">지표</span>옵션별 판매 분포, 옵션가 사유 클레임 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>옵션가 관련 제재 · 클레임 0. 통합 페이지의 리뷰 축적 속도가 분리 대비 우위였는가 (구조 결정의 사후 검증)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">리뷰 축적 속도와 검색 지면 수를 가르는 구조 결정. 되돌리기 어렵다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">판매 · 리뷰 데이터로 통합 vs 분리 시뮬레이션. 단순 모델링이고 결정은 인간.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">리뷰 축적 속도와 검색 지면 수를 가르는 구조 결정. 되돌리기 어렵다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">통합 vs 분리의 손익을 AI가 시뮬레이션해 주면 고르기만 하면 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.4</span><span class="aname">상세페이지 제작</span><span class="loc">상품 관리 › 상세</span></td>
@@ -326,7 +326,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 상세 커버리지 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>게시 전후 전환율, 상세 미비 사유 문의 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>전후 각 2주 비교로 전환율 개선 확인. 같은 질문의 문의가 줄었는가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">전환의 결전지. 상세가 약하면 사 온 트래픽이 그대로 샌다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">리뷰 · 문의에서 구매 장벽을 캐 구성안 · 카피를 만드는 것은 LLM의 장기. 이미지 제작과 일본어 감수 마감이 남는다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">전환의 결전지. 상세가 약하면 사 온 트래픽이 그대로 샌다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구매 장벽 추출과 구성 · 카피 초안은 AI 몫이지만, 이미지 제작과 팔리는 상세의 완성도는 제작 역량이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.5</span><span class="aname">판매가 설정</span><span class="loc">상품 관리 › 가격</span></td>
@@ -336,7 +336,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>설정가 반영</span>
         <span class="v-row"><span class="v-tag m">지표</span>변경 전후 7일 판매량 · 기여 마진 총액 (정산가 기준)</span>
         <span class="v-row"><span class="v-tag j">평가</span>가격의 성적표는 전환율이 아니라 이익 총액이다. 그리고 큐텐에서는 반드시 쿠폰 적용 후 실수령으로 계산한다 (흔한 실수 ①)</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">가격은 전환율과 마진을 동시에 정한다. 쿠폰 겹침 구조라 설계 실수가 곧 적자.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">쿠폰 겹침 마진 검산은 수식이다. 경쟁가 수집 + 시뮬레이터로 완전 자동화 가능.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">가격은 전환율과 마진을 동시에 정한다. 쿠폰 겹침 구조라 설계 실수가 곧 적자.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">쿠폰 겹침 마진 검산과 경쟁가 조사를 AI가 하면, 가격은 숫자 위에서 고르는 결정이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.6</span><span class="aname">재고 관리</span><span class="loc">상품 관리 › 재고</span></td>
@@ -346,7 +346,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>시스템 재고 = 실물 재고</span>
         <span class="v-row"><span class="v-tag m">지표</span>SKU별 품절 일수, 재고 사유 취소 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>주력 SKU 품절 0일, 특히 행사 주간에 버텼는가. 행사 중 품절은 트래픽을 산 뒤에 가게 문을 닫은 것과 같다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">품절은 랭킹 동력을 끊고, 재고 없는 주문은 등급을 깎는다. 행사 주간의 생명선.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">수요 예측 + 발주 제안은 표준 ML 문제. 직송 리드타임과 행사 스파이크가 변수라 모델 품이 든다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">품절은 랭킹 동력을 끊고, 재고 없는 주문은 등급을 깎는다. 행사 주간의 생명선.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">수요 예측과 발주 제안은 AI가 해도, 행사 스파이크와 직송 리드타임의 오차를 안고 재고 리스크를 지는 결정은 사람 몫이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.7</span><span class="aname">리스팅 최적화 (상시)</span><span class="loc">상품 관리</span></td>
@@ -356,7 +356,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>변경 반영 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>검색 노출 · 클릭, 전환율 (전후 7일)</span>
         <span class="v-row"><span class="v-tag j">평가</span>변경 1건마다 전후 비교. 동시에 여러 개를 바꾸면 원인을 가릴 수 없다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">등록은 한 번, 최적화는 상시. 검색 · 클릭 · 전환의 복리 개선이 여기서 나온다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">제안 생성은 쉽다. 성과 데이터(노출 · 순위)를 플랫폼이 안 줘서 관측 크롤링부터 만들어야 실험 루프가 돈다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">등록은 한 번, 최적화는 상시. 검색 · 클릭 · 전환의 복리 개선이 여기서 나온다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">개선안은 AI가 계속 내주지만, 순위 · 노출 데이터가 얇아 무엇이 통했는지 확인하는 검증 루프 유지가 어렵다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.8</span><span class="aname">등록 오류 · 심사 대응</span><span class="loc">상품 관리 › 상태</span></td>
@@ -366,7 +366,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>비정상 상태 잔여 0으로 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>발생 → 해소 평균 시간</span>
         <span class="v-row"><span class="v-tag j">평가</span>동일 사유 재발 0, 신규 등록 반려율 하락 추세</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">방치된 중지 리스팅은 존재하지 않는 상품. 잃은 매출의 복구.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">상태 모니터링 + 사유 분류 + 수정안 생성. 알림 봇 수준.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">방치된 중지 리스팅은 존재하지 않는 상품. 잃은 매출의 복구.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">AI 모니터링이 잡아 주고 수정안까지 내주면 처리만 하면 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.9</span><span class="aname">표현 규제 준수 (약기법 스택)</span><span class="loc">상품 관리</span> <span class="loc">자체 검수</span></td>
@@ -376,7 +376,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>감사 완료 기록, 미검수 카피 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>표현 사유 제재 · 수정 요구 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>플랫폼 · 당국에 지적당하기 전에 자체 검수로 잡은 비율 100%. 통관 심사가 광고를 들여다보는 경우도 있어, 직송 셀러일수록 이 액션이 물류 안정성이기도 하다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">표현 하나가 리스팅 중단 · 과징금(매출의 4.5%)까지 간다. 카피의 생사 관문.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">허용 표현 대조 + LLM 판정은 시스템화하기 좋은 문제. 개정 · 판례 추적과 경계 사례의 전문가 에스컬레이션 설계가 남는다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">표현 하나가 리스팅 중단 · 과징금(매출의 4.5%)까지 간다. 카피의 생사 관문.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">허용 표현 대조와 대체 카피는 AI가 즉시 내준다. 경계 사례의 판단과 최종 책임, 개정 추적이 남는다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -397,7 +397,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>방식 설정 · 계약 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>주문당 배송 원가, 평균 도착일</span>
         <span class="v-row"><span class="v-tag j">평가</span>원가 · 도착 속도 · 전환율의 조합이 대안 방식보다 우위 (분기 비교표). 도착일 단축이 전환과 리뷰에 만드는 차이까지 넣고 비교</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">배송 원가와 도착 속도가 전환 · 리뷰 · 마진을 동시에 움직인다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">물류사 견적 · 리드타임 비교는 데이터 정리 문제. 계약 협상만 사람.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">배송 원가와 도착 속도가 전환 · 리뷰 · 마진을 동시에 움직인다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">비교표는 AI가 만들어도 물류사 계약 · 단가 협상과 방식 전환 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.2</span><span class="aname">배송비 · 발송 기한 설정</span><span class="loc">기본 정보 › 배송</span> <span class="loc">상품 관리</span></td>
@@ -407,7 +407,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전 상품에 배송 설정 연결</span>
         <span class="v-row"><span class="v-tag m">지표</span>설정 기한 대비 실제 발송 준수율</span>
         <span class="v-row"><span class="v-tag j">평가</span>지킬 수 있는 기한인가. 준수율이 낮으면 기한을 늘리는 것도 정답 (약속을 늘리면 전환이 조금 줄고, 약속을 어기면 등급이 줄어든다)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">기한 약속의 수위 조절. 전환(빠른 약속)과 등급(지킬 약속)의 트레이드오프.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">실적 데이터로 지킬 수 있는 기한을 역산해 제안. 단순 통계.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">기한 약속의 수위 조절. 전환(빠른 약속)과 등급(지킬 약속)의 트레이드오프.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">실적 기반으로 지킬 수 있는 기한을 AI가 역산해 주면 설정만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.3</span><span class="aname">주문 확인과 출고</span><span class="loc">배송 관리</span></td>
@@ -417,7 +417,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>대기 주문 0으로 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>발송 지연률, 송장 등록률</span>
         <span class="v-row"><span class="v-tag j">평가</span>지연률이 등급 관리선 안쪽 유지 (부록 B), 미등록 송장 0</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">매일의 생명선. 지연은 등급을 깎아 노출과 행사 자격을 잃게 한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">주문 조회 · 송장 등록은 QAPI가 커버해 자동화 쉽다. 포장 · 발송 실물만 물류사 몫.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">매일의 생명선. 지연은 등급을 깎아 노출과 행사 자격을 잃게 한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">주문 취합 · 송장 등록 · 임박 알림을 AI가 돌리면 남는 것은 포장 · 발송 실물뿐이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.4</span><span class="aname">직송 통관 운영</span><span class="loc">물류사</span> <span class="loc">자체 시트</span></td>
@@ -427,7 +427,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>통관 라인 점검 규칙 존재 · 적용</span>
         <span class="v-row"><span class="v-tag m">지표</span>통관 보류 · 반송 건수, 통관발 배송 지연 일수</span>
         <span class="v-row"><span class="v-tag j">평가</span>통관 사유 사고 0. 고액 세트가 과세 라인을 넘겨 고객이 세금 고지서를 받는 사건은 리뷰 폭탄으로 돌아온다: 구성 단계(3.4)에서 걸렀는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">규칙만 지키면 조용하지만, 사고 한 번이 리뷰 폭탄으로 돌아온다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">주문별 수량 · 금액 라인 체크는 규칙 엔진. 세제 개정 추적은 에이전트 리서치로 커버.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">규칙만 지키면 조용하지만, 사고 한 번이 리뷰 폭탄으로 돌아온다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">주문별 수량 · 금액 라인 체크와 세제 개정 추적을 AI가 하면 규칙 운영이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.5</span><span class="aname">주문 취소 처리</span><span class="loc">취소 · 반품</span></td>
@@ -437,7 +437,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>요청 처리 지연 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>셀러 귀책 취소율</span>
         <span class="v-row"><span class="v-tag j">평가</span>귀책 취소율 관리선 안쪽, 원인별 재발 방지 조치 존재</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">방어 절차. 잘 처리해도 매출이 늘지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">발송 전 여부 판별 + 자동 승인 규칙. 단순 워크플로.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">방어 절차. 잘 처리해도 매출이 늘지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">규칙 기반 자동 처리. AI 보조면 예외 건만 보면 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.6</span><span class="aname">반품 · 환불 처리</span><span class="loc">취소 · 반품</span></td>
@@ -447,7 +447,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기한 초과 방치 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>반품률 · 환불액/매출, 반품 처리 원가</span>
         <span class="v-row"><span class="v-tag j">평가</span>반품 사유 Top 3가 파악되어 있고 개선으로 이어지는 흐름 존재. 반품 1건의 평균 처리 원가를 알고 정책(폐기 vs 반송)을 정했는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">반품 원가와 평판의 방어. 기준선을 정하면 예측 가능해진다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">사유 분류 · 사진 검토(비전 LLM) · 승인 판단까지 자동화 가능하나, 돈이 걸린 판단이라 인간 승인 게이트 설계가 필요하다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">반품 원가와 평판의 방어. 기준선을 정하면 예측 가능해진다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">사유 검토 초안은 AI가 내도, 돈이 걸린 승인 · 소명 판단과 반품 동선의 원가 설계는 사람이 정해야 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.7</span><span class="aname">배송 사고 대응</span><span class="loc">주문 · 배송</span> <span class="loc">문의</span></td>
@@ -457,7 +457,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>이상 건 대응 기록 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>사고 보상 회수율, 배송 사유 부정 리뷰 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>사고 건의 클레임 · 부정 리뷰 전이율이 하락 추세</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">선제 안내가 부정 리뷰를 막는다. 평판 방어의 최전선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">추적 이상 감지 + 표준 문안 발송 + 보상 청구 초안. 모니터링 봇의 전형.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">선제 안내가 부정 리뷰를 막는다. 평판 방어의 최전선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">이상 감지 · 선제 안내 · 보상 청구 초안까지 AI가 준비해 둔다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.8</span><span class="aname">휴무 운영 (일괄 판매 중지)</span><span class="loc">상품 관리</span> <span class="loc">기본 정보</span></td>
@@ -467,7 +467,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>설정 기간이 계획과 일치</span>
         <span class="v-row"><span class="v-tag m">지표</span>휴무 전후 발송 지연률</span>
         <span class="v-row"><span class="v-tag j">평가</span>휴무로 인한 지표 훼손 0. 한국 연휴에 지연이 쌓였다면 이 액션의 실패</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">약속 위반을 막는 방어 워크플로.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">한일 공휴일 캘린더 연동 + 일괄 중지 자동 실행. 스케줄러 수준.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">약속 위반을 막는 방어 워크플로.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">한일 캘린더 연동으로 AI가 미리 알리고 절차를 준비해 준다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -488,7 +488,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>쿠폰 활성 · 상세페이지 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>사용률, 쿠폰 적용 주문 비중, 쿠폰 비용/매출</span>
         <span class="v-row"><span class="v-tag j">평가</span>쿠폰별 목적 지표로 평가 (신규 유입 목적이면 신규 비중). 사용률이 너무 높으면 어차피 살 고객에게 준 것 의심</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">쿠폰은 가격 표시의 두 번째 층. 없으면 '지금 사면 손해'로 학습된 고객이 이탈한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">설계(목적 · 폭 · 기간) 제안은 데이터로 자동화 가능. 발행 실행이 API 밖이라 QSM 브라우저 자동화(RPA)가 필요하다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">쿠폰은 가격 표시의 두 번째 층. 없으면 '지금 사면 손해'로 학습된 고객이 이탈한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">목적 · 폭 · 기간 설계안과 마진 검산을 AI가 내주면 발행은 실행 작업이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.2</span><span class="aname">타임세일 · 오늘의 특가</span><span class="loc">프로모션 › 타임세일</span></td>
@@ -498,7 +498,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>딜 지면 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>딜 시간대 판매량 · 신규 구매자 비중, 딜 후 랭킹 변화</span>
         <span class="v-row"><span class="v-tag j">평가</span>목적별 평가: 랭킹 부양 목적이면 딜 후 랭킹 · 오가닉 판매가 올라섰는가, 재고 소진 목적이면 소진율. 목적 없는 딜은 마진 소각</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">평시 딜 지면의 트래픽이자 랭킹의 연료. 목적 없이 쓰면 마진 소각.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">슬롯 선정 · 손익 시뮬레이션은 자동화 가능. 신청 · 집행이 QSM 수작업 영역이라 RPA가 필요하다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">평시 딜 지면의 트래픽이자 랭킹의 연료. 목적 없이 쓰면 마진 소각.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">슬롯 손익 시뮬레이션과 신청 타이밍을 AI가 잡아 주면 신청과 모니터링만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.3</span><span class="aname">무료배송 · 배송비 프로모션</span><span class="loc">프로모션</span> <span class="loc">기본 정보 › 배송</span></td>
@@ -508,7 +508,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>배송 혜택 표기 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>결제 전환율, 객단가, 주문당 배송비 부담액</span>
         <span class="v-row"><span class="v-tag j">평가</span>전환 · 객단가 상승의 증분 마진 &gt; 배송비 부담 증가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">배송비는 장바구니 포기의 최대 사유. 기준액이 전환과 객단가를 동시에 만진다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">객단가 분포에서 기준액 역산은 단순 분석. 설정 반영까지 어렵지 않다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">배송비는 장바구니 포기의 최대 사유. 기준액이 전환과 객단가를 동시에 만진다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">기준액 역산은 AI 계산, 설정은 클릭이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.4</span><span class="aname">세트 · 대용량 구성</span><span class="loc">상품 관리</span> <span class="loc">프로모션</span></td>
@@ -518,7 +518,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>행사 전 세트 리스팅 준비 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>세트 판매 비중, 객단가 변화</span>
         <span class="v-row"><span class="v-tag j">평가</span>세트가 단품 매출을 잠식했는가 아니면 새 지갑을 열었는가 (합산 기여 마진으로 판정). 통관 · 마진 검산을 통과 못 한 세트가 행사에 나간 사고 0</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">메가와리의 승부는 세트 구성에서 난다. 행사 매출의 본체.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">마진 · 통관 · 쿠폰 3중 제약의 조합 최적화. 알고리즘화하기 좋은 문제지만 비용 · 통관 데이터 모델링이 전제다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">메가와리의 승부는 세트 구성에서 난다. 행사 매출의 본체.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">마진 · 통관 · 쿠폰 3중 제약을 AI가 풀어 후보를 내줘도, 기다렸다 살 값어치가 있는 구성을 고르는 상품 감각은 사람의 몫이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.5</span><span class="aname">메가와리 참가</span><span class="loc">프로모션 › 행사</span> <span class="loc">MD 창구</span></td>
@@ -528,7 +528,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>신청 → 채택, 준비 체크리스트 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 기간 매출 · 신규 구매자 수 vs 직전 행사, 행사 중 품절 시간</span>
         <span class="v-row"><span class="v-tag j">평가</span>분담금 · 할인 · 광고비를 다 내고도 증분 이익이 남는가를 정산 기준으로 계산 (흔한 실수 ①). 전후 함몰 기간까지 붙인 분기 합산으로 순증분 판정 (흔한 실수 ②). 행사로 온 신규 고객의 다음 행사 재구매율까지가 성적표다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">분기 매출의 큰 덩어리가 이 열흘에 몰린다. 큐텐 운영의 단일 최대 레버.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">체크리스트 · 모니터링 · 복기는 자동화돼도, 신청 · 협상 · 실시간 대응이 얽힌 풀 사이클이라 오케스트레이션 설계가 가장 무겁다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">분기 매출의 큰 덩어리가 이 열흘에 몰린다. 큐텐 운영의 단일 최대 레버.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">AI가 체크리스트 · 모니터링 · 복기를 들어줘도, 열흘간 재고 · 순위 · 광고 · 응대가 동시에 터지는 실전 운영은 여전히 총력전이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.6</span><span class="aname">포인트 · 중간 행사 참가</span><span class="loc">프로모션 › 행사</span></td>
@@ -538,7 +538,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>분기당 참가 행사 계획 대비 실행률</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 간 평시 주간 매출의 바닥 수준</span>
         <span class="v-row"><span class="v-tag j">평가</span>참가한 중간 행사의 증분이 분담 비용을 넘는가, 그리고 분기 매출의 행사 의존도(부록 A)가 계획한 범위 안인가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">행사 사이 매출 바닥을 받치는 완충 장치.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">행사 캘린더 추적 + 참가 조건 대조 + 신청 알림. 절차 자동화.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">행사 사이 매출 바닥을 받치는 완충 장치.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">행사 캘린더 추적과 조건 대조를 AI가 하면 신청 절차만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.7</span><span class="aname">기획전 · MD 제휴 프로모션</span><span class="loc">MD 창구</span></td>
@@ -548,7 +548,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>분기 제휴 성사 건수</span>
         <span class="v-row"><span class="v-tag m">지표</span>제휴 지면 유입 · 판매, 제휴 조건 비용</span>
         <span class="v-row"><span class="v-tag j">평가</span>제휴 건별 증분 이익 계산 존재. 성과 공유가 다음 제휴 제안으로 이어지는 선순환이 돌고 있는가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">공개 신청으로 안 열리는 슬롯이 제휴로 열린다. 큐텐 트래픽 경제의 본체.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">제안서 · 실적 리포트 생성은 AI 몫이지만 협상 자체는 자동화 불가. 사람의 관계 위에서만 도는 액션.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">공개 신청으로 안 열리는 슬롯이 제휴로 열린다. 큐텐 트래픽 경제의 본체.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">제안서와 성과 리포트는 AI가 만들지만, 협상 테이블에서 조건을 얻어 내는 것은 사람의 역량이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -569,7 +569,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>타깃 검색어가 리스팅에 반영됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>타깃 검색어 노출 순위 추이, 검색 경유 판매</span>
         <span class="v-row"><span class="v-tag j">평가</span>반영 후 2~4주 안에 순위 상승. 플랫폼이 검색 데이터를 거의 안 주므로 순위 기록은 자체 관측이 기본이다 (8.1)</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">오가닉 발견의 입구. 검색어 선정이 광고 효율(6.2)까지 정한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">검색어 수집 · 어휘 분석은 크롤링 + LLM으로 가능. 순위 관측 인프라를 자체 구축해야 하는 것이 공수다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">오가닉 발견의 입구. 검색어 선정이 광고 효율(6.2)까지 정한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">키워드 후보와 어휘 분석은 AI가 해 줘도, 순위 데이터를 플랫폼이 안 줘서 관측을 자체로 돌려야 잘했는지 확인된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.2</span><span class="aname">랭킹 진입 운영</span><span class="loc">Qoo10 앱 › 랭킹</span></td>
@@ -579,7 +579,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>집중 캠페인이 계획대로 동시 실행됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>카테고리 랭킹 순위, 랭킹 진입 후 오가닉 판매 수준</span>
         <span class="v-row"><span class="v-tag j">평가</span>진입 비용 대비, 진입 후 부양 없이 유지된 기간의 증분 매출. 캠페인이 끝나자마자 순위가 원위치면 상품력 문제이지 노출 문제가 아니다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">랭킹은 결과이자 지면. 진입하면 랭킹 자체가 트래픽을 공급하는 플라이휠.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">딜 · 광고 · 외부를 동시 발화시키는 멀티채널 오케스트레이션 + 일 단위 순위 크롤링. 시스템 여러 개가 맞물려야 돈다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">랭킹은 결과이자 지면. 진입하면 랭킹 자체가 트래픽을 공급하는 플라이휠.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">AI가 계획과 모니터링을 짜 줘도, 딜 · 광고 · 외부를 같은 기간에 실제로 발화시키는 집중 캠페인의 실행은 고난도 운영이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.3</span><span class="aname">썸네일 · 이미지 자산</span><span class="loc">상품 관리</span></td>
@@ -589,7 +589,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 썸네일 정비 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>교체 전후 클릭 · 판매 (같은 노출 조건 7일씩)</span>
         <span class="v-row"><span class="v-tag j">평가</span>교체가 판매를 실제로 움직였는가를 기록으로 판정. 감으로 반복 교체하면 무엇이 이겼는지 영영 모른다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">목록 지면에서 클릭을 정하는 첫 화면. 노출을 판매로 바꾸는 관문.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">상위 썸네일 패턴 분석 + 이미지 생성으로 시안까지 자동화 가능. 클릭 데이터가 얇아 검증 루프 설계가 관건.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">목록 지면에서 클릭을 정하는 첫 화면. 노출을 판매로 바꾸는 관문.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">패턴 분석과 시안 생성은 AI 몫. 클릭을 이기는 한 장을 고르고 얇은 데이터로 검증하는 안목의 게임이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.4</span><span class="aname">미니샵 · 팔로워 운영</span><span class="loc">기본 정보 › 미니샵</span></td>
@@ -599,7 +599,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>미니샵 구성 반영, 리프레시 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>팔로워 수 추이, 미니샵 경유 판매</span>
         <span class="v-row"><span class="v-tag j">평가</span>행사 초동(첫 1~2일) 매출에서 팔로워 기여가 커지고 있는가. 팔로워만 늘고 반응이 없으면 혜택 설계(7.5)부터 재점검</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">팔로워는 행사 초동의 화력. 자산이지만 단독으론 매출을 못 만든다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">진열 리프레시 · 팔로워 쿠폰 연동의 주기 실행. 템플릿 자동화 수준.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">팔로워는 행사 초동의 화력. 자산이지만 단독으론 매출을 못 만든다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">진열 리프레시와 팔로워 쿠폰 연동은 AI 보조로 주기 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.5</span><span class="aname">라이브 방송</span><span class="loc">라이브 신청 · MD</span></td>
@@ -609,7 +609,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계획한 회차 수행</span>
         <span class="v-row"><span class="v-tag m">지표</span>시청자 수, 방송 시간대 판매</span>
         <span class="v-row"><span class="v-tag j">평가</span>회차당 투입 시간 대비 판매 증분이 다른 액션(딜 · 외부 광고)의 같은 투입 대비 우위인가. 아니면 접는 것도 정답</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">성장 중이지만 아직 작은 지면. 신청 기반이라 통제권도 낮다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">방송 진행은 실물 · 실시간 영역이라 시스템화 불가. AI는 스크립트 · 특가 설계 보조까지.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">성장 중이지만 아직 작은 지면. 신청 기반이라 통제권도 낮다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">방송 자체는 AI가 대신 못 한다. 일본어 진행 · 시연 역량이 필요한 실전이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -630,7 +630,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계측 설계 없는 외부 캠페인 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>채널별 식별 가능 매출 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>캠페인 종료 후 "얼마 돌아왔나"에 숫자로 답할 수 있는가. 답 못 하는 캠페인이 반복되면 이 액션의 실패</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">직접 팔지 않지만, 이것 없이는 외부 지출 전체가 평가 불능이 된다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">쿠폰 코드 발급 · 기준선 집계 자동화는 쉽다. 채널별 증분을 추정하는 모델 설계가 진짜 문제.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">직접 팔지 않지만, 이것 없이는 외부 지출 전체가 평가 불능이 된다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">쿠폰 코드와 기준선 틀은 AI가 세팅해 줘도, 증분을 읽는 해석과 계측 규율의 유지가 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.2</span><span class="aname">인플루언서 시딩</span><span class="loc">외부 채널</span></td>
@@ -640,7 +640,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>발송 대비 게시율, 행사 전 게시 적중률</span>
         <span class="v-row"><span class="v-tag m">지표</span>게시 콘텐츠 수 · 반응, 게시 시점의 판매 · 랭킹 변화</span>
         <span class="v-row"><span class="v-tag j">평가</span>샘플 원가 총액 대비 회수 (5.1의 계측 틀로). 게시율이 낮으면 발굴 기준을, 게시돼도 안 움직이면 상품 · 소구를 재점검</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 전 '사야 할 목록'에 들어가는 수요 창출. K뷰티 재팬의 주력 채널.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">발굴 · 검증 · 게시 추적은 크롤링 + LLM 파이프라인으로 시스템화 가능. 관계 · 협상 레이어만 사람에 남는다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 전 '사야 할 목록'에 들어가는 수요 창출. K뷰티 재팬의 주력 채널.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">발굴 · 검증 · 일정 역산 · 가이드 문서까지 AI가 준비한다. 크리에이터와의 소통과 협상이 사람 몫으로 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.3</span><span class="aname">외부 유료 광고</span><span class="loc">외부 채널</span></td>
@@ -650,7 +650,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전 캠페인에 계측 장치 적용</span>
         <span class="v-row"><span class="v-tag m">지표</span>채널별 식별 매출 · 추정 ROAS, 클릭 단가</span>
         <span class="v-row"><span class="v-tag j">평가</span>기준선 대비 증분으로 손익 판정. 행사 주간과 겹치면 행사 효과와 분리 불가하므로, 평가용 집행은 평시에 따로 한다 (흔한 실수 ④)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">보조 트래픽. 계측이 약한 채로 키우면 위험하다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">Meta · 틱톡은 API가 완비된 세계. 소재 생성 · 집행 · 리포트까지 파이프라인화가 표준 기술이다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">보조 트래픽. 계측이 약한 채로 키우면 위험하다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">소재 초안과 세팅은 AI 보조로 표준화됐지만, 큐텐 랜딩은 전환 신호가 없어 얇은 계측 위에서 손익을 판단하는 감각이 필요하다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.4</span><span class="aname">자사 SNS 운영</span><span class="loc">외부 채널</span></td>
@@ -660,7 +660,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>게시 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>팔로워 추이, 행사 고지 게시물의 반응 · 유입</span>
         <span class="v-row"><span class="v-tag j">평가</span>행사 고지가 실제 초동 매출을 만드는 채널로 자라고 있는가 (5.1 계측으로 확인)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">구매 전 확인하는 신뢰 장치이자 행사 고지 채널.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">생성 · 예약 게시는 표준 자동화. 네이티브 톤 품질 게이트와 커뮤니티 반응 대응이 남는다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">구매 전 확인하는 신뢰 장치이자 행사 고지 채널.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">콘텐츠 초안 · 캘린더 · 예약 게시까지 AI가 돌리고 사람은 검수만 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.5</span><span class="aname">행사 연동 외부 캠페인</span><span class="loc">외부 채널</span></td>
@@ -670,7 +670,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>캘린더 대비 집행률</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 초동(첫 48시간) 매출 비중, 행사 전 찜 · 팔로워 증가</span>
         <span class="v-row"><span class="v-tag j">평가</span>예열한 행사와 안 한 행사의 초동 기울기 비교. 초동이 행사 전체 순위를 정하는 구조라, 이 액션의 성적은 행사 첫 이틀에 다 나온다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">초동이 행사 전체 순위를 정한다. 행사 성과의 바깥 절반.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">역산 캘린더 · 소재 · 동시 집행의 조율 문제. 각 채널 자동화가 되어 있으면 조립이다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">초동이 행사 전체 순위를 정한다. 행사 성과의 바깥 절반.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">역산 캘린더와 소재는 AI가 깔아 줘도, 여러 채널을 같은 초동에 정렬시키는 실행 조율이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.6</span><span class="aname">어필리에이트 · 미디어 제휴</span><span class="loc">외부 채널</span></td>
@@ -680,7 +680,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>제휴 채널 가동 수</span>
         <span class="v-row"><span class="v-tag m">지표</span>제휴 식별 매출, 커미션 비용률</span>
         <span class="v-row"><span class="v-tag j">평가</span>커미션을 다 내고도 남는가. 제휴 매출이 어차피 왔을 고객의 경유 수수료가 되고 있지 않은지 기준선으로 검증</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">커미션 기반이라 리스크 낮은 확산 채널. 주력은 아니다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">ASP 후보 조사 · 조건 비교 · 성과 집계 자동화는 쉽다. 계약 체결만 사람.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">커미션 기반이라 리스크 낮은 확산 채널. 주력은 아니다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">후보 조사 · 조건 비교 · 성과 집계는 AI. 계약 협의만 사람.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.7</span><span class="aname">콘텐츠 · 표기 모니터링</span><span class="loc">외부 채널</span></td>
@@ -690,7 +690,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>검수 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>위반 발견 → 조치 리드타임</span>
         <span class="v-row"><span class="v-tag j">평가</span>플랫폼 · 규제 기관에 먼저 적발당한 건 0. 표기 없는 협업 게시물이 우리 쪽 요청으로 만들어진 적도 0</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">스테마 · 약기법 위반 한 건이 브랜드 전체의 리스크가 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">게시물 수집 + 표기 · 표현 위반 LLM 검출. 검수 파이프라인의 전형이고 조치 요청만 사람이 보낸다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">스테마 · 약기법 위반 한 건이 브랜드 전체의 리스크가 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">게시물 수집과 위반 검출은 AI가 상시로 돌린다. 조치 요청만 사람이 보낸다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -712,7 +712,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>손익분기 문서 존재, 역할 없는 집행 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>예산 대비 집행률, 역할별 배분 비율</span>
         <span class="v-row"><span class="v-tag j">평가</span>임의의 광고 지출에 대해 "무슨 역할로 샀고 얼마 돌아왔나"를 답할 수 있는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">역할 없는 광고 구매를 막는 설계 기반. 광고비의 낭비 방지선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">손익분기 역산 · 예산 배분은 수식과 규칙. 완전 자동화 영역.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">역할 없는 광고 구매를 막는 설계 기반. 광고비의 낭비 방지선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">손익분기 역산과 예산 배분안은 AI 계산 그 자체다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.2</span><span class="aname">검색 순위 광고 (파워랭크업)</span><span class="loc">광고 관리</span></td>
@@ -722,7 +722,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>구매한 지면에 실제 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>키워드별 광고비 대비 판매 (평시 기준), 광고 후 오가닉 순위 변화</span>
         <span class="v-row"><span class="v-tag j">평가</span>손익분기 대비 키워드별 판정, 2주기 연속 미달 키워드는 교체. 광고로 순위를 산 검색어에서 오가닉 순위가 따라 오르면 자산을 만든 것이다</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">검색 상단을 사는 주력 광고. 키워드 선정이 성패의 전부.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">키워드 성과 수집 · 입찰 제안은 자동화 가능하나, 광고 관리가 API 밖이라 QSM RPA + 자체 성과 관측이 전제다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">검색 상단을 사는 주력 광고. 키워드 선정이 성패의 전부.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">키워드 선정과 입찰안은 AI가 내줘도, 리포트가 얇은 플랫폼에서 성과를 읽고 갈아타는 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.3</span><span class="aname">키워드 전시 광고 (플러스 전시)</span><span class="loc">광고 관리</span></td>
@@ -732,7 +732,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>지면 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>집행 기간 유입 · 판매의 기준선 대비 증분</span>
         <span class="v-row"><span class="v-tag j">평가</span>단독 ROAS가 아니라 캠페인(랭킹 진입 · 신제품 런칭) 전체의 성패 안에서 평가. 상시 관성 구매가 되고 있으면 중단 실험으로 증분을 재검증</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">의도 옅은 트래픽의 보조 화력. 역할을 좁혀야 값을 한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">같은 이유(QSM 수작업 + 얇은 리포트). 슬롯 선정 로직 자체는 단순하다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">의도 옅은 트래픽의 보조 화력. 역할을 좁혀야 값을 한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">역할이 좁게 정의된 지면 구매. AI 손익 계산 위에서 사고 말고만 정하면 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.4</span><span class="aname">행사 광고 패키지</span><span class="loc">광고 관리</span> <span class="loc">MD 창구</span></td>
@@ -742,7 +742,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계획 SKU에만 집행 (분산 구매 0)</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 광고비, 행사 매출 내 광고 기여 추정</span>
         <span class="v-row"><span class="v-tag j">평가</span>행사 단위 복기(8.3)에서 광고 포함 총비용으로 증분 이익 판정. 광고를 안 산 과거 행사와의 비교가 가장 정직한 잣대다</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">행사 화력의 증폭기. 승부 SKU에 몰 때만 값을 한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구매 판단 로직은 단순하다. 행사 중 실시간 모니터링 루프를 만드는 것이 공수다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">행사 화력의 증폭기. 승부 SKU에 몰 때만 값을 한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구매 판단은 쉬워도, 행사 중 실시간으로 노출 · 판매를 보며 조정하는 운영이 얹힌다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.5</span><span class="aname">광고 운영 조정</span><span class="loc">광고 관리</span></td>
@@ -752,7 +752,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>갱신 결정이 전건 기록 기반</span>
         <span class="v-row"><span class="v-tag m">지표</span>자동 갱신으로 관성 집행된 지출 (0이어야 함)</span>
         <span class="v-row"><span class="v-tag j">평가</span>조정 사유와 결과가 짝으로 기록되어 다음 결정의 근거가 되는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">관성 지출을 끊는 갱신 규율. 새는 돈의 방어.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">성과 기록 기반 갱신 · 중단 제안. 규칙 + 알림 봇.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">관성 지출을 끊는 갱신 규율. 새는 돈의 방어.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">성과 기록과 갱신 · 중단 제안을 AI가 내주면 결정만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.6</span><span class="aname">증분 평가와 손익 보정</span><span class="loc">자체 시트</span></td>
@@ -762,7 +762,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>보정 계산이 주기적으로 수행됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>광고 의존도 추세, 총 판촉비율</span>
         <span class="v-row"><span class="v-tag j">평가</span>성장기의 정상 패턴은 "판촉비율 유지 + 매출 성장"이다. 판촉비율만 오르고 매출이 정체하면 축소 실험으로 증분을 재검증한다</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">광고의 진짜 성적표. 이것 없이는 광고 운영 전체가 감이다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">어트리뷰션 없는 플랫폼에서 증분을 분리하는 인과 추론. 기준선 · 중단 실험의 설계와 해석은 자동화의 최난도 영역이다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">광고의 진짜 성적표. 이것 없이는 광고 운영 전체가 감이다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">계산은 AI가 다 해 줘도, 어트리뷰션 없는 데이터에서 증분을 읽어 내는 해석은 실험 설계 역량 그 자체다. 잘못 읽으면 광고 운영 전체가 감으로 돌아간다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -783,7 +783,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>미응답 잔여 0으로 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>평균 응답 시간, 문의 후 구매 전환</span>
         <span class="v-row"><span class="v-tag j">평가</span>응답 지연발 부정 리뷰 0, 같은 질문의 재발이 줄고 있는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">응대 속도는 서비스 지표, 공개 문의는 전환 콘텐츠다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">LLM 일본어 응대 초안 + 인간 승인 발송. 표준 패턴이다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">응대 속도는 서비스 지표, 공개 문의는 전환 콘텐츠다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">AI 일본어 초안에 사람 승인만 얹으면 속도전이 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.2</span><span class="aname">리뷰 관리</span><span class="loc">문의 · 리뷰</span></td>
@@ -793,7 +793,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>부정 리뷰 미확인 방치 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>평점 추이, 주문 대비 리뷰 작성률, 부정 사유 분포</span>
         <span class="v-row"><span class="v-tag j">평가</span>같은 사유의 부정 리뷰가 개선 조치 이후 감소하는가. 표본이 적을 때는 결론 유보 (흔한 실수 ③)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">리뷰는 다음 고객의 구매 판단 재료. 사유 분류가 개선의 입력이 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">리뷰 수집 · 사유 분류 · 개선 과제 라우팅. 분류 파이프라인의 전형.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">리뷰는 다음 고객의 구매 판단 재료. 사유 분류가 개선의 입력이 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">수집 · 사유 분류 · 개선 과제 라우팅은 AI. 사람은 처방을 정한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.3</span><span class="aname">클레임 · 미수취 대응</span><span class="loc">취소 · 반품 · 미수취</span></td>
@@ -803,7 +803,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기한 초과 무응답 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>클레임률(주문 대비), 대응 승률</span>
         <span class="v-row"><span class="v-tag j">평가</span>클레임 유형별 근본 원인이 D1 · D2 개선으로 이어져 클레임률 자체가 하락</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">등급과 돈의 방어전. 증빙 준비가 승률을 정한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">클레임 감지 + 증빙(송장 · 추적 · 대화) 자동 조립 + 기한 알림.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">등급과 돈의 방어전. 증빙 준비가 승률을 정한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">증빙 패키지 조립과 기한 관리를 AI가 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.4</span><span class="aname">선제 안내 · 기대 관리</span><span class="loc">상품 관리</span> <span class="loc">문의</span></td>
@@ -813,7 +813,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 안내 커버리지 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>배송 기대 사유 클레임 · 부정 리뷰 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>안내 도입 전후로 배송 사유 클레임이 실제로 줄었는가. 같은 배송 속도에서 클레임만 줄었다면 이 액션의 순수 성과다</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">직송 클레임 대부분의 예방선. 같은 배송 속도에서 평판만 올린다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">표준 문안 생성 · 배치 · 지연 트리거 발송. 템플릿 + 트리거.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">직송 클레임 대부분의 예방선. 같은 배송 속도에서 평판만 올린다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">표준 문안 생성 · 배치 · 지연 트리거 발송까지 AI 보조로 예방 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.5</span><span class="aname">재구매 · 단골 관리</span><span class="loc">프로모션</span> <span class="loc">미니샵</span></td>
@@ -823,7 +823,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>팔로워 혜택 상시 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 구매자의 다음 행사 재구매율, 팔로워의 구매 기여 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>재구매를 만드는 비용이 신규 고객을 데려오는 비용(광고 · 분담)보다 낮게 유지되는가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 리듬 플랫폼의 리텐션은 다음 행사 재구매다. 신규 획득보다 싼 매출.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구매 주기 분석 · 타이밍 제안은 자동화 가능. 접점 실행이 플랫폼 기능 제약에 걸린다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 리듬 플랫폼의 리텐션은 다음 행사 재구매다. 신규 획득보다 싼 매출.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">주기 분석과 타이밍 제안은 AI가 해도, 접점이 쿠폰 · 고지뿐이라 설계 여지가 좁고 성과 확인이 더디다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -844,7 +844,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>확인 · 기록 주기 준수율</span>
         <span class="v-row"><span class="v-tag m">지표</span>이상 감지 리드타임</span>
         <span class="v-row"><span class="v-tag j">평가</span>매출 이상을 24시간 안에 인지하고 원인 가설까지 세웠는가. 자체 시트가 끊긴 주가 있으면 그 주의 판단은 전부 감이었다는 뜻이다</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">이상 감지의 속도가 손실의 크기를 정한다. 모든 판단의 데이터 기반.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">본체는 QSM 밖으로 안 나오는 데이터의 수집 인프라(크롤링 · RPA). 그 위의 대시보드 · 이상 알림은 쉽다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">이상 감지의 속도가 손실의 크기를 정한다. 모든 판단의 데이터 기반.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">대시보드와 이상 알림, 관측 시트 유지까지 AI가 돌리면 매일 5분 확인이 진짜 5분이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.2</span><span class="aname">병목 진단</span><span class="loc">판매 통계</span> <span class="loc">자체 시트</span></td>
@@ -854,7 +854,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 전수 진단 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>병목 가설의 조치 전후 지표</span>
         <span class="v-row"><span class="v-tag j">평가</span>진단 → 조치 → 재측정이 끝까지 이어지는가 (진단만 하고 끝나면 0점)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">병목을 짚어야 다음 액션이 정해진다. 진단이 처방을 만든다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">대리 지표를 교차하는 진단 로직은 LLM 추론으로 시스템화 가능. 입력 데이터 수집(8.1)이 전제다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">병목을 짚어야 다음 액션이 정해진다. 진단이 처방을 만든다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">AI가 가설을 내줘도, 얇은 대리 지표 위에서 원인을 확정하고 조치로 잇는 데는 진단 경험이 필요하다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.3</span><span class="aname">행사 단위 복기</span><span class="loc">자체 시트</span></td>
@@ -864,7 +864,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>행사마다 복기 문서 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사별 순증분 이익, 행사 의존도 추이</span>
         <span class="v-row"><span class="v-tag j">평가</span>복기의 변경 목록이 다음 행사에서 실제로 실행되고, 행사별 순증분이 회를 거듭할수록 개선되는가</span>
-      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 복기가 곧 분기 경영 리뷰. 다음 행사의 개선이 전부 여기서 나온다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">정산 · 판매 데이터만 모이면 함몰 기간 포함 복기 리포트 생성은 LLM의 장기다.</span></td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">행사 복기가 곧 분기 경영 리뷰. 다음 행사의 개선이 전부 여기서 나온다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">데이터 취합과 복기 리포트 생성은 AI의 장기. 사람은 다음 행사에 바꿀 것을 정한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.4</span><span class="aname">정산 확인과 인출</span><span class="loc">정산 관리</span></td>
@@ -874,7 +874,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>정산 주기별 대사 수행</span>
         <span class="v-row"><span class="v-tag m">지표</span>예상 정산액 vs 실입금 오차, 미지급 잔액 추이</span>
         <span class="v-row"><span class="v-tag j">평가</span>오차 0 또는 전건 소명. 행사 다음 정산은 분담 항목이 몰리는 지점이라 그 회차의 대사가 가장 중요하다</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">받을 돈의 검산. 오차를 잡을 뿐 매출을 만들지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">명세 파싱 + 자체 계산 대사 + 오차 알림. 정형 데이터 검산의 전형.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">받을 돈의 검산. 오차를 잡을 뿐 매출을 만들지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">명세 파싱과 대사, 오차 알림까지 AI가 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.5</span><span class="aname">단위 경제 관리</span><span class="loc">자체 시트</span></td>
@@ -884,7 +884,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>월별 산출 존재, 행사가 검산 완비</span>
         <span class="v-row"><span class="v-tag m">지표</span>SKU별 기여 마진 (평시 · 행사 각각), 적자 SKU의 매출 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>적자 SKU가 식별되고 다음 달 · 다음 행사 처방이 실행됐는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">적자 SKU가 행사 물량을 가져가는 사고를 막는 이익 방어선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">비용 배부 규칙만 정하면 SKU 손익은 수식. 완전 자동화 영역.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">적자 SKU가 행사 물량을 가져가는 사고를 막는 이익 방어선.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">배부 규칙만 정하면 SKU 손익 계산은 AI 수식이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.6</span><span class="aname">환율 · 자금 관리</span><span class="loc">정산 관리</span> <span class="loc">자체 시트</span></td>
@@ -894,7 +894,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>환전 규칙 존재 · 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>실효 환율 vs 기간 평균 환율, 환전 수수료율</span>
         <span class="v-row"><span class="v-tag j">평가</span>환율 손익이 감이 아니라 규칙의 결과인가. 행사 재고 선투입이 현금 부족을 만든 적 없는가</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">마진 몇 %의 문제. 규칙화하면 조용해진다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">환전 규칙 엔진 + 현금 흐름 캘린더. 실행만 사람 승인.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">마진 몇 %의 문제. 규칙화하면 조용해진다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">환전 규칙과 현금 흐름 캘린더는 AI 보조로 정리된다. 실행만 승인.</span></td>
     </tr>
     </tbody>
   </table>
@@ -915,7 +915,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>확인 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>등급 추이, 경고 상태 지표 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>목표 등급 유지, 경고 → 정상 복귀 리드타임</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">등급은 노출 · 행사 자격의 자격증. 떨어지면 회복이 느리다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">지표 수집 + 임계선 알림. 모니터링 봇.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">등급은 노출 · 행사 자격의 자격증. 떨어지면 회복이 느리다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">지표 수집과 임계선 알림은 AI 몫이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.2</span><span class="aname">페널티 · 제재 대응</span><span class="loc">J·QSM › 공지 · 알림</span></td>
@@ -925,7 +925,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기한 내 대응률 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>미해소 위반 잔수, 소명 승률</span>
         <span class="v-row"><span class="v-tag j">평가</span>동일 유형 위반 재발 0</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">무대응이 최악수인 계정 생존 절차.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">알림 감지 + 소명 초안 생성 + 기한 관리. 초안은 AI, 제출은 사람.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">무대응이 최악수인 계정 생존 절차.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">알림 감지와 소명 초안, 기한 관리를 AI가 한다. 제출만 사람.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.3</span><span class="aname">위조 · 무단 셀러 대응</span><span class="loc">공식샵 · MD 창구</span></td>
@@ -935,7 +935,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>모니터링 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>위조 신고 → 제거 리드타임, 브랜드 검색 결과 내 공식샵 판매 점유</span>
         <span class="v-row"><span class="v-tag j">평가</span>위조 잔존 0, 병행 대비 공식샵 점유가 오르는 추세인가 (내리는 싸움이 아니라 이기는 싸움으로 프레임했는가)</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">병행 셀러가 가격을 무너뜨리기 전에 잡는 브랜드 방어.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">브랜드명 검색 모니터링 + 위조 의심 스코어링은 크롤링 + 분류의 전형. 신고 제출만 사람.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">병행 셀러가 가격을 무너뜨리기 전에 잡는 브랜드 방어.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">감시와 위조 스코어링은 AI가 해도, 병행 셀러와의 싸움은 구성 · 가격 · 공식성을 조합하는 전략 대응이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.4</span><span class="aname">정책 · 제도 변경 추적</span><span class="loc">공지</span> <span class="loc">자체 캘린더</span></td>
@@ -945,7 +945,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주요 변경 인지 누락 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>발효일 대비 대응 완료일</span>
         <span class="v-row"><span class="v-tag j">평가</span>제도 변화로 인한 소급 손실 0건. 예고된 변화가 실제 발효 전에 구조 재검토(9.6)로 이어졌는가</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">제도 변화가 직송 모델의 전제를 바꾼다. 늦게 알면 소급 손실.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">공지 · 세제 소스의 에이전트 리서치 + 영향 요약. 정기 스캔으로 절차화된다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">제도 변화가 직송 모델의 전제를 바꾼다. 늦게 알면 소급 손실.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">공지 · 세제 소스의 정기 스캔과 영향 요약은 AI가 한다. 사람은 트리거만 당긴다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.5</span><span class="aname">계정 보안과 접근 관리</span><span class="loc">기본 정보 › 계정</span></td>
@@ -955,7 +955,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>분기 점검 체크리스트 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>불필요 접근 · 연동 잔존 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>탈취 · 잠금 · 연동 단절 사고 0, 복구 절차가 문서로 존재</span>
-      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">사고 확률은 낮지만, 계정 잠금은 가장 비싼 다운타임.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">권한 목록 점검 + 키 만료 캘린더. 체크리스트 자동화.</span></td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">사고 확률은 낮지만, 계정 잠금은 가장 비싼 다운타임.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">권한 점검과 키 만료 캘린더는 체크리스트 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.6</span><span class="aname">일본 재고 전환 · 확장</span><span class="loc">구조 결정</span></td>
@@ -965,7 +965,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전환 판단 문서와 착수 시한 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>전환 시나리오별 손익 비교표의 최신성</span>
         <span class="v-row"><span class="v-tag j">평가</span>제도 시한보다 허가 리드타임만큼 앞서 움직이고 있는가. 시한이 닥쳐서 급히 대행을 잡으면 조건이 나빠진다</span>
-      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">지금 매출이 아니라 다음 단계 매출의 문을 여는 구조 결정.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">시나리오 손익 모델 · 허가 요건 리서치는 자동화 가능. 허가 취득 · 법인 실행은 완전히 사람 영역이다.</span></td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">지금 매출이 아니라 다음 단계 매출의 문을 여는 구조 결정.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">시나리오 손익과 허가 요건 조사는 AI가 해도, 허가 취득 · 법인 또는 대행 계약 · 수개월의 전환 실행은 무거운 프로젝트다.</span></td>
     </tr>
     </tbody>
   </table>
