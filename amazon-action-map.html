@@ -12,7 +12,7 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{background:var(--bg); color:var(--ink); font-family:'Apple SD Gothic Neo','Pretendard',-apple-system,sans-serif; line-height:1.62; font-size:15px;}
-  .wrap{max-width:1100px; margin:0 auto; padding:56px 32px 96px;}
+  .wrap{max-width:1440px; margin:0 auto; padding:56px 32px 96px;}
   .serif{font-family:Georgia,'Times New Roman','Apple SD Gothic Neo',serif;}
   header.hero{border-bottom:3px solid var(--ink); padding-bottom:28px; margin-bottom:36px;}
   .kicker{font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:14px;}
@@ -66,10 +66,13 @@
   .actions th{font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; text-align:left; color:var(--sub); font-weight:700; padding:10px 14px; border-bottom:2px solid var(--ink); background:#F0EBDF;}
   .actions td{padding:14px; border-bottom:1px solid var(--rule); vertical-align:top; font-size:13.5px;}
   .actions tr:last-child td{border-bottom:none;}
-  .actions td.act{width:19%;}
-  .actions td.what{width:24%; color:var(--sub);}
-  .actions td.steps-td{width:27%;}
-  .actions td.verify{width:30%;}
+  .actions td.act{width:14%;}
+  .actions td.what{width:19%; color:var(--sub);}
+  .actions td.steps-td{width:20%;}
+  .actions td.verify{width:21%;}
+  .actions td.imp{width:13%;}
+  .actions td.dif{width:13%;}
+  .dwhy{display:block; margin-top:7px; font-size:12.5px; color:var(--sub); line-height:1.55;}
   .aid{font-family:Georgia,serif; font-style:italic; color:var(--accent); font-size:13px; display:block;}
   .aname{font-weight:700; font-size:14.5px; display:block; margin:1px 0 6px;}
   .loc{display:inline-block; font-size:11px; color:var(--sub); background:var(--bg); border:1px solid var(--rule); padding:1px 7px; border-radius:9px; margin:1px 2px 0 0;}
@@ -81,7 +84,14 @@
   .v-tag.e{background:var(--tag-exec); color:#7A5A18;}
   .v-tag.m{background:var(--tag-metric); color:#5B4380;}
   .v-tag.j{background:var(--tag-judge); color:var(--green);}
-  .note{background:#F0E9DB; border-left:3px solid var(--accent); padding:12px 16px; font-size:13.5px; margin:14px 0; color:var(--ink);}
+  .g{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.04em; padding:1px 8px; border-radius:3px; border:1px solid transparent; line-height:1.6;}
+  .g.imp-h{background:var(--accent); color:#fff;}
+  .g.imp-m{background:#F3E2D4; color:var(--accent); border-color:#E5C4AC;}
+  .g.imp-l{background:transparent; color:var(--sub); border-color:var(--rule);}
+  .g.dif-h{background:var(--ink); color:#F4F1EA;}
+  .g.dif-m{background:#E7E2D8; color:var(--ink); border-color:var(--rule);}
+  .g.dif-l{background:transparent; color:var(--sub); border-color:var(--rule);}
+  .note{max-width:1100px; background:#F0E9DB; border-left:3px solid var(--accent); padding:12px 16px; font-size:13.5px; margin:14px 0; color:var(--ink);}
   .note b{color:var(--accent);}
   /* appendix tables */
   table.plain{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--rule);}
@@ -129,6 +139,8 @@
 </nav>
 
 <div class="note"><b>범위와 나누기 규칙.</b> 이 지도의 범위는 판매자가 실행하는 액션 전체다: Seller Central의 모든 메뉴 + 판매와 직결된 외부 지면(광고 콘솔, Brand Registry 포털, 외부 트래픽 채널). 제외한 것은 교육 콘텐츠(Seller University), 구매자 · 크리에이터 측 액션, 경쟁사 조사처럼 플랫폼 밖에서 하는 업무다. 대행사에 운영을 위탁하는 선택도 액션으로 치지 않는다: 이 지도 전체가 곧 그 대행이 하는 일이기 때문이다. 경계 원칙 하나로 중복을 막는다: 하나의 실행은 하나의 도메인만 소유하고, 걸쳐 있는 일은 소유 도메인 번호로 참조한다 (예: 검색어 수요 읽기는 8.3이, 그것을 리스팅 제목에 반영하는 실행은 1.7이 소유).</div>
+
+<div class="note"><b>중요도 · 기술적 난이도 표기.</b> <b>중요도</b>는 판매에 미치는 영향 기준이다: <span class="g imp-h">상</span> 잘하고 못하고가 매출을 직접 가른다 · <span class="g imp-m">중</span> 매출을 지키거나 보조한다 · <span class="g imp-l">하</span> 한 번 해두면 되는 관문 · 위생 작업. <b>기술적 난이도</b>는 AI의 보조를 받아 이 액션을 진행할 때 실제로 쉬운가 어려운가다: <span class="g dif-h">상</span> AI가 핵심을 대신 못 한다 (관계 · 협상 · 실전 운영 · 고난도 해석) · <span class="g dif-m">중</span> AI가 절반을 들어줘도 판단 · 품질 · 조율의 사람 몫이 남는다 · <span class="g dif-l">하</span> AI 보조로 사실상 루틴이 된다. 각 판정의 근거는 해당 칸에 함께 적었다. 착수 순서는 중요도 상 × 기술적 난이도 하부터다.</div>
 
 <section id="primer">
   <div class="domain-head"><h2 class="domain">아마존 3분 이해</h2></div>
@@ -193,7 +205,7 @@
   <p class="intro">아마존에 판매자로 등록하고 팔 수 있는 상태를 만드는 단계. 여기서의 실수(서류 불일치, 잘못된 플랜 · 물류 선택)는 뒤 단계 전부를 지연시킨다.</p>
   <p class="keyq"><b>핵심 질문</b> 어떤 자격으로 들어가서, 언제부터 팔 수 있는 상태가 되는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">0.1</span><span class="aname">판매 구조 · 진입 경로 결정</span><span class="loc">가입 전</span></td>
@@ -203,7 +215,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>선택 경로와 근거가 문서로 남음</span>
         <span class="v-row"><span class="v-tag m">지표</span>구조 결정이라 직접 지표 없음</span>
         <span class="v-row"><span class="v-tag j">평가</span>이후 단계에서 경로 제약과 충돌 0건 (예: 세금 인터뷰에서 법인 서류가 맞지 않아 되돌아가는 일 없음)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">플랜 · 법인 · 물류 방향이 수수료 구조와 프라임 뱃지라는 판매 조건을 정한다. 되돌릴 수는 있어도 시작 궤도가 여기서 갈린다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">방식별 비용 · 세금 비교는 AI가 다 해 주고, 법인 형태는 가입 후에도 변경할 수 있어 되돌리기 어려운 결정이 아니다. 초기 경로 선택과 서류 준비의 판단만 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.2</span><span class="aname">셀러 계정 생성과 신원 검증</span><span class="loc">가입 화면</span></td>
@@ -213,7 +225,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계정 상태 Active, 신원 검증 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>검증 소요일, 반려 횟수</span>
         <span class="v-row"><span class="v-tag j">평가</span>1회 통과. 반려 최다 원인은 서류 간 명의 · 주소 불일치이므로 제출 전 교차 대조</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">통과하면 끝나는 관문이다. 잘해서 매출이 늘지 않고, 못하면 시작이 늦어질 뿐이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">명의 · 주소 교차 대조까지는 AI가 해 주지만, 서류 화질 · 유효기간 · 중복 계정 플래그, 영상 인증 예약 장애, INFORM 재인증 반복 반려처럼 AI가 예방 못 하는 변수가 흔해 재시도와 에스컬레이션을 사람이 끝까지 끌고 가야 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.3</span><span class="aname">세금 인터뷰와 정산 계좌 연결</span><span class="loc">설정 Settings</span></td>
@@ -223,7 +235,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>세금 인터뷰 Valid, 계좌 상태 Verified</span>
         <span class="v-row"><span class="v-tag m">지표</span>첫 인출 성공까지 걸린 일수</span>
         <span class="v-row"><span class="v-tag j">평가</span>인출 실패 · 보류 0건, 환전 수수료를 알고 선택했는가 (계좌 경로별 수수료 비교 존재)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">돈을 받기 위한 일회성 관문이다. 매출을 만들지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">W-8BEN-E 같은 낯선 서식을 AI가 항목별로 안내해 주고 계좌 경로별 수수료 비교까지 해 주면, 남는 것은 입력 절차다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.4</span><span class="aname">스토어 기본 정보 설정</span><span class="loc">설정 › 계정 정보</span></td>
@@ -233,7 +245,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>계정 정보 화면에 미완료 경고 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>반품지 도착 테스트 1회 성공 (FBM인 경우)</span>
         <span class="v-row"><span class="v-tag j">평가</span>첫 주문 · 첫 반품이 주소 문제 없이 처리됨</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">한 번 해두면 되는 위생 작업이다. 반품 주소 선택만 2.6에 영향을 준다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">입력 항목이 정해져 있는 설정 작업이라 AI 점검 목록만 있으면 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.5</span><span class="aname">브랜드 레지스트리 등록</span><span class="loc">Brand Registry 포털</span></td>
@@ -243,7 +255,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>브랜드 상태 Approved, A+ · 스토어 메뉴 활성</span>
         <span class="v-row"><span class="v-tag m">지표</span>등록 소요일, 브랜드명 사유 리스팅 반려 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>브랜드 사유 반려 0, 위조 · 무단 셀러 신고 자격 확보(9.3과 연결), 브랜드 전용 도구가 실제로 쓰이기 시작함(D4 · D8.3)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">A+ · 스토어 · 브랜드 분석 · Vine · 침해 신고까지, 전환과 방어 도구 대부분이 이 등록 뒤에 잠겨 있다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">신청서 작성과 상표 검색은 AI가 대신해 주지만, 등록 상표가 없으면 IP Accelerator 경로로 출원까지 가야 하고 (일반 출원의 pending만으로는 반려 사례가 많다) 클래스 선택과 반려 대응 같은 법적 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.6</span><span class="aname">외부 도구 연동</span><span class="loc">앱과 서비스 Apps &amp; Services</span></td>
@@ -253,7 +265,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>토큰 유효, 테스트 호출 성공</span>
         <span class="v-row"><span class="v-tag m">지표</span>재고 · 주문 · 가격 동기화 오차 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>동기화 지연으로 인한 초과 판매 · 가격 사고 0건</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">선택 사항인 효율화 도구다. 규모가 커지기 전에는 없어도 매출이 달라지지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">권한 범위 검토와 동기화 검증 절차를 AI가 짜 주면 연동 자체는 승인 클릭의 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">0.7</span><span class="aname">신규 셀러 혜택 수령</span><span class="loc">성장 Growth</span></td>
@@ -263,7 +275,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>혜택별 달성 조건 충족 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>수령 혜택의 금전 가치 합계</span>
         <span class="v-row"><span class="v-tag j">평가</span>기한 경과로 소멸시킨 혜택 0, 크레딧 만료 전 소진율 100%</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">첫 5만 달러의 10% 환급과 각종 크레딧이 걸려 있어, 챙기면 초기 현금을 지키고 놓치면 그대로 사라진다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">혜택별 조건과 기한을 AI가 추적표로 관리해 주면 남는 것은 기한 안에 조건을 채우는 루틴이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -274,7 +286,7 @@
   <p class="intro">팔 물건을 플랫폼에 올리고 관리하는 일. 아마존에서 상세페이지는 검색 · 광고 · 딜 어디서 클릭해도 도착하는 판매의 최소 단위다. 리스팅 품질이 낮으면 그 위에 쌓는 광고와 외부 트래픽이 전부 샌다.</p>
   <p class="keyq"><b>핵심 질문</b> 고객이 검색에서 눌렀을 때, 사게 만들 준비가 되어 있는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">1.1</span><span class="aname">카테고리 · 상품 승인 (언게이팅)</span><span class="loc">카탈로그 Catalog</span></td>
@@ -284,7 +296,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>승인 상태 Approved</span>
         <span class="v-row"><span class="v-tag m">지표</span>승인 소요일, 반려 횟수</span>
         <span class="v-row"><span class="v-tag j">평가</span>판매 예정 SKU 전부가 승인 범위 안에 있음, 승인 문제로 런칭 일정이 밀리지 않음</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">통과하면 끝나는 관문이다. 못 넘으면 판매 자체가 막히지만, 잘 넘었다고 매출이 늘지는 않는다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">요건 해석과 서류 정리는 AI가 해 주지만, 도매 인보이스와 안전 인증 같은 실물 증빙은 공급망에서 사람이 받아 와야 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.2</span><span class="aname">GTIN(바코드) 준비 · 면제</span><span class="loc">카탈로그</span></td>
@@ -294,7 +306,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>등록에 쓸 UPC 또는 면제 승인 확보</span>
         <span class="v-row"><span class="v-tag m">지표</span>바코드 사유 등록 오류 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>바코드 출처 문제로 인한 리스팅 차단 0건 (재판매 바코드 구매가 이 실패의 최다 원인)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">출처 불명 바코드만 피하면 되는 일회성 준비 작업이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">GS1 발급 절차와 SKU 대응표 관리는 AI 보조로 완전한 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.3</span><span class="aname">상품 등록</span><span class="loc">카탈로그 › 상품 추가</span></td>
@@ -304,7 +316,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>리스팅 Active, 검색 억제 아님</span>
         <span class="v-row"><span class="v-tag m">지표</span>등록 후 7일 세션 · Unit Session % <span class="loc">보고서 › 비즈니스 리포트</span></span>
         <span class="v-row"><span class="v-tag j">평가</span>오류 없이 활성화 + 첫 주 검색 노출 발생. 노출 0이면 인덱싱 · 억제 상태부터 의심(1.4)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">제목 · 이미지 · 키워드가 노출과 전환을 직접 정하는, 판매의 최소 단위를 만드는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">제목 · 불릿 · 백엔드 검색어 작성과 규정 점검을 AI가 다 해 주므로, 남는 것은 폼 입력과 최종 검수다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.4</span><span class="aname">등록 오류 · 억제 리스팅 대응</span><span class="loc">재고 Inventory › 리스팅 상태</span></td>
@@ -314,7 +326,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>억제 · 좌초 잔여 0으로 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>발생 → 해소 평균 시간, 반복 발생 사유 분포</span>
         <span class="v-row"><span class="v-tag j">평가</span>동일 사유 재발 0, 신규 등록의 오류율이 시간이 갈수록 하락</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">방치된 억제 리스팅은 존재하지 않는 상품과 같아서, 이 대응이 매출을 지킨다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">사유 진단과 수정안 작성을 AI가 해 주면 나머지는 주기 확인과 반영의 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.5</span><span class="aname">가격 설정과 Featured Offer 관리</span><span class="loc">가격 Pricing</span></td>
@@ -324,7 +336,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>설정가 반영, FO 보유 여부 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>Featured Offer 점유율 <span class="loc">보고서 › 비즈니스 리포트</span>, 변경 전후 7일 판매량 · 기여 마진 총액</span>
         <span class="v-row"><span class="v-tag j">평가</span>가격의 성적표는 전환율이 아니라 이익 총액이다: 내린 가격은 늘어난 판매량이 얇아진 마진을 넘어야 하고, 올린 가격은 두꺼워진 마진이 줄어든 판매량을 넘어야 정당하다. FO 점유율 급락은 가격 · 외부가 · 계정 건강 중 어디가 원인인지 가른다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">가격이 전환 · Featured Offer · 마진을 동시에 정한다. 판매를 좌우하는 단일 변수로 이보다 큰 것이 없다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">경쟁가 조사와 마진 검산은 AI가 즉시 해 주지만, 외부 채널 가격 제약과 FO 상실 리스크까지 걸린 가격 결정은 이익 총액을 책임지는 고위험 전략 판단으로 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.6</span><span class="aname">재고 계획과 품절 방지</span><span class="loc">재고</span> <span class="loc">FBA 재고</span></td>
@@ -334,7 +346,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>시스템 재고 = 실물 · 창고 재고</span>
         <span class="v-row"><span class="v-tag m">지표</span>SKU별 품절 일수, 재고 커버 일수, 저재고 · 장기보관 수수료 발생액</span>
         <span class="v-row"><span class="v-tag j">평가</span>주력 SKU 품절 0일 + 재고 관련 벌금성 수수료 0. 진짜 시험은 딜이 터져 판매 속도가 급증한 주에 버텼는가다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">품절은 순위와 FO를 죽이고 복구가 느리며, 과잉과 과소에는 수수료 벌금이 붙는다. 재고가 곧 매출 조건이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">판매 속도 분석과 발주 시점 계산은 AI가 다 해 주지만, 현금과 리드타임을 걸고 발주 수량을 확정하는 결정은 사람 몫이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.7</span><span class="aname">리스팅 최적화 (상시)</span><span class="loc">카탈로그</span> <span class="loc">브랜드 Brands</span></td>
@@ -344,7 +356,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>변경 반영 확인, 대상 키워드 인덱싱 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>검색 CTR, Unit Session %(CVR), 타깃 쿼리 순위</span>
         <span class="v-row"><span class="v-tag j">평가</span>변경 1건마다 전후 7일씩 비교. 동시에 여러 개를 바꾸면 원인을 가릴 수 없다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">검색 CTR과 전환율을 상시로 밀어 올리는 본체 루틴이고, 전환율은 다시 검색 순위를 밀어 올린다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">쿼리 데이터 해석부터 문안 작성까지 AI가 다 해 주므로, 한 번에 한 변수 원칙만 지키면 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.8</span><span class="aname">플랫폼 개선 제안 처리</span><span class="loc">카탈로그 › 리스팅 품질</span></td>
@@ -354,7 +366,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>제안 처리율 (반영 + 사유 있는 보류)</span>
         <span class="v-row"><span class="v-tag m">지표</span>처리 후 해당 상품 노출 · CTR 변화</span>
         <span class="v-row"><span class="v-tag j">평가</span>미확인 방치 제안 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">속성 미보완은 조용한 노출 저하로 돌아온다. 지키는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">제안의 타당성 분류를 AI가 걸러 주면 반영은 클릭 수준의 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">1.9</span><span class="aname">카탈로그 정리와 규정 준수</span><span class="loc">카탈로그</span> <span class="loc">계정 건강</span></td>
@@ -364,7 +376,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>점검 완료 기록, 서류 요청 기한 초과 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>상품 관련 정책 위반 건수, 활성 SKU 중 매출 기여 분포</span>
         <span class="v-row"><span class="v-tag j">평가</span>표현 · 서류 사유 리스팅 다운 0 유지, 매출 0인 활성 SKU 비중 감소</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">표현 하나로 리스팅이 내려가는 카테고리가 많다. 매출을 만드는 일이 아니라 잃지 않는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">금지 표현 스캔과 규정 대조는 AI가 가장 잘하는 작업이라, 주기만 지키면 루틴이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -375,7 +387,7 @@
   <p class="intro">주문이 들어오면 기한 안에 보내고, 반품을 처리하는 일. 아마존에서는 물류의 큰 덩어리를 FBA에 위탁할 수 있지만, 그 경우에도 입고 · 재고 수준 · 환급 회수는 셀러의 일로 남는다. 배송 지표가 무너지면 FO와 계정을 잃는다.</p>
   <p class="keyq"><b>핵심 질문</b> 약속한 기한 안에, 추적 가능하게, 사고 없이 보내고 있는가. FBA라면: 창고에 맡긴 재고와 돈이 새고 있지 않은가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">2.1</span><span class="aname">풀필먼트 체계 선택</span><span class="loc">설정 › 배송</span> <span class="loc">FBA</span></td>
@@ -385,7 +397,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>SKU별 방식 설정 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>주문당 풀필먼트 원가, 평균 도착일, 프라임 노출 여부</span>
         <span class="v-row"><span class="v-tag j">평가</span>원가 · 도착 속도 · 전환율의 조합이 대안 방식보다 우위 (분기 비교표). 프라임 뱃지가 만드는 전환 차이까지 넣고 비교해야 공정하다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">FBA냐 FBM이냐가 프라임 뱃지 · 전환율 · 원가 구조를 한꺼번에 정한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">방식별 원가 · 속도 비교표는 AI가 다 만들어 주지만, 프라임 전환 효과와 재고 리스크를 걸고 방식을 확정하는 결정이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.2</span><span class="aname">배송 템플릿과 출고 기한 설정</span><span class="loc">설정 › 배송 템플릿</span></td>
@@ -395,7 +407,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전 FBM 상품에 템플릿 연결됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>설정 기한 대비 실제 출고 준수율, 정시 배송률(OTDR)</span>
         <span class="v-row"><span class="v-tag j">평가</span>지킬 수 있는 기한인가. 준수율이 낮으면 기한을 늘리는 것도 정답 (약속을 늘리면 전환이 조금 줄고, 약속을 어기면 계정이 줄어든다)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">여기서 정한 약속이 OTDR의 분모가 된다. 지킬 수 없는 약속이 계정을 깎는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">처리 능력 기준의 기한 계산을 AI가 해 주고, 설정은 언제든 되돌릴 수 있어 부담이 낮다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.3</span><span class="aname">주문 확인과 출고</span><span class="loc">주문 Orders</span></td>
@@ -405,7 +417,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>대기 주문 0으로 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>지연 배송률, 유효 추적률 <span class="loc">계정 건강</span></span>
         <span class="v-row"><span class="v-tag j">평가</span>관리선 안쪽 유지 (부록 B: 지연 배송 4% 미만, 유효 추적 95% 이상 수준)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">매일의 출고가 배송 지표를 지킨다. FBM 매출의 유지 조건이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">라벨 발급과 운송장 등록은 시스템 루틴이고, 포장과 인계는 AI 몫이 없는 물리 작업이지만 어려울 것도 없다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.4</span><span class="aname">FBA 입고와 재고 운영</span><span class="loc">재고 › FBA 입고</span></td>
@@ -415,7 +427,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>입고 수량 = 검수 수량 (차이는 전건 조사)</span>
         <span class="v-row"><span class="v-tag m">지표</span>IPI 점수, 보관비 · 입고비 /매출 비율, 장기보관 수수료 발생액</span>
         <span class="v-row"><span class="v-tag j">평가</span>품절 0을 유지하면서 장기보관비가 발생하지 않는 재고 수준. 캐퍼시티 제한에 걸려 입고를 못 하는 상황은 이 액션의 실패</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">입고가 막히면 품절로, 재고가 늙으면 수수료로 돈이 샌다. 지키는 일의 본체다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">입고 계획과 수량 대사는 AI 보조로 루틴이지만, 장기재고의 처분 사다리와 AWD 구조 같은 비용 결정이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.5</span><span class="aname">주문 취소 처리</span><span class="loc">주문 › 취소</span></td>
@@ -425,7 +437,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>요청 처리 지연 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>셀러 귀책 취소율 <span class="loc">계정 건강</span></span>
         <span class="v-row"><span class="v-tag j">평가</span>귀책 취소율 관리선(2.5% 미만) 안쪽, 원인별 재발 방지 조치 존재</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">출고 전 승인 클릭의 위생 작업이다. 취소율의 근본 원인은 재고 관리(1.6)가 소유한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">요청 확인과 원인 기록은 AI 보조로 완전한 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.6</span><span class="aname">반품 · 환불 처리</span><span class="loc">주문 › 반품 관리</span></td>
@@ -435,7 +447,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>수령 후 미처리 반품 0, SAFE-T 기한 초과 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>반품률(카테고리 평균 대비), 환불액/매출, SAFE-T 회수액</span>
         <span class="v-row"><span class="v-tag j">평가</span>반품 사유 Top 3가 파악되어 있고, 상품 · 물류 개선(D1 · D2)으로 이어지는 흐름 존재. 반품률 높은 ASIN을 방치해 반품 뱃지가 붙었다면 이 액션의 실패</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">환불 기한 · SAFE-T · 반품 뱃지에 돈과 전환이 걸려 있다. 새는 것을 막는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">기한 추적과 SAFE-T 클레임 문안을 AI가 만들어 주면, 남는 것은 검수와 확정의 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.7</span><span class="aname">배송 사고 대응과 FBA 환급 회수</span><span class="loc">주문</span> <span class="loc">재무 Payments</span></td>
@@ -445,7 +457,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>이상 건 대응 기록 존재, 환급 대사 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>환급 회수액, 배송 사유 부정 피드백 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>사고 건의 클레임 전이율 하락 추세, 청구 가능 기한을 넘겨 소멸시킨 환급 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">회수 안 한 환급은 사라진 돈이다. 대사가 곧 수익이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">분실 · 파손 내역 대사와 청구문 작성은 정확히 AI가 대신할 수 있는 데이터 작업이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">2.8</span><span class="aname">휴가 모드 운영</span><span class="loc">설정 › 계정 정보</span></td>
@@ -455,7 +467,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>상태 전환 시점이 계획과 일치</span>
         <span class="v-row"><span class="v-tag m">지표</span>휴가 전후 지연 배송률 · 응답 시간</span>
         <span class="v-row"><span class="v-tag j">평가</span>휴가로 인한 지표 훼손 · 위반 0. 끄는 것을 잊어 지연 출고가 쌓였다면 이 액션의 실패</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">쉬는 기간의 위생 작업이다. 잊지만 않으면 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">전환 시점 체크리스트를 AI가 관리해 주면 클릭 두 번의 루틴이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -466,7 +478,7 @@
   <p class="intro">플랫폼이 제공하는 할인 도구로 전환율과 객단가를 움직이는 일. 아마존의 딜 · 쿠폰은 참가비와 수수료가 붙는 유료 도구가 많아졌다. 모든 프로모션의 평가 원칙은 하나다: 할인과 수수료로 포기한 마진보다 늘어난 순증분 매출이 큰가.</p>
   <p class="keyq"><b>핵심 질문</b> 이 할인이 없었어도 팔렸을 물건에 돈을 쓰고 있는 것은 아닌가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">3.1</span><span class="aname">가격 할인 표기</span><span class="loc">광고 Advertising › 프로모션</span> <span class="loc">가격</span></td>
@@ -476,7 +488,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>할인가 · 취소선이 상세페이지에 표기됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>기간 매출 · 판매량 vs 직전 동기간</span>
         <span class="v-row"><span class="v-tag j">평가</span>증분 매출의 마진 &gt; 할인 비용. 전후 기간까지 포함해 수요 앞당김(흔한 실수 ②) 여부 확인</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">취소선 표기가 전환을 보조한다. 매출의 본체가 아니라 부스터다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">참조가 요건 확인과 증분 계산은 AI가 해 주지만, 할인폭과 기간은 마진을 거는 가격성 결정이라 하까지 내려가지 않는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.2</span><span class="aname">딜 운영</span><span class="loc">광고 › 딜 Deals</span></td>
@@ -486,7 +498,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>딜 지면 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>딜 시간대 판매량 · 신규 구매자 비중, 딜 후 2주 BSR · 오가닉 판매 수준</span>
         <span class="v-row"><span class="v-tag j">평가</span>딜 수수료와 할인 비용을 내고도 증분 이익이 남는가, 그리고 딜이 끝난 뒤 오가닉 기준선이 올라갔는가 (랭킹 부양 효과). 목적 없는 딜은 마진 소각</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">딜 지면 트래픽과 랭킹 부양을 얻는 도구다. 잘 쓰면 크게 보조하지만 상시 매출의 본체는 아니다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">자격 확인과 손익 시뮬레이션은 AI가 해 주지만, 딜가와 수량을 걸고 수수료를 낼지 정하는 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.3</span><span class="aname">쿠폰 발행</span><span class="loc">광고 › 쿠폰</span></td>
@@ -496,7 +508,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>쿠폰 활성 · 검색 지면 뱃지 노출 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>사용률, 쿠폰 기간 CTR · CVR 변화, 쿠폰 주문의 신규 고객 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>쿠폰 뱃지의 CTR 개선분과 증분 마진이 할인 + 수수료를 상회. 사용률이 너무 높으면 어차피 살 고객에게 준 것 의심</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">검색 결과의 쿠폰 뱃지가 CTR을 보조한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">쿠폰 설계안과 손익 검산은 AI가 주지만, 할인폭 결정은 가격성 판단으로 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.4</span><span class="aname">프로모션 · 번들</span><span class="loc">광고 › 프로모션</span> <span class="loc">브랜드 › 번들</span></td>
@@ -506,7 +518,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>상세페이지에 프로모션 · 번들 노출</span>
         <span class="v-row"><span class="v-tag m">지표</span>객단가(AOV) 변화, 번들 판매 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>AOV 상승분이 할인 비용을 상회. 단품 매출 잠식 여부 동시 확인. 코드 유출 사고 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">객단가를 끌어올리는 보조 도구다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">동반 구매 데이터에서 조합 후보를 AI가 뽑아 주고, 코드 한도만 걸면 사고 위험도 없는 설정 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.5</span><span class="aname">정기 구독 (Subscribe &amp; Save)</span><span class="loc">정기 구독 Subscribe &amp; Save</span></td>
@@ -516,17 +528,17 @@
         <span class="v-row"><span class="v-tag e">실행</span>구독 옵션이 상세페이지에 노출</span>
         <span class="v-row"><span class="v-tag m">지표</span>구독자 수 추이, 구독 매출 비중, 구독 유지율</span>
         <span class="v-row"><span class="v-tag j">평가</span>구독 고객의 생애 매출이 할인 총비용을 상회하는가. 구독 비중이 오르면 매출의 변동성이 실제로 줄었는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">소모품이라면 재구매의 뼈대가 되는 교환이다. 예측 가능한 반복 매출을 산다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구독 데이터 분석은 AI가 해 주지만, 셀러 부담 할인율은 생애 매출을 거는 가격 결정이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.6</span><span class="aname">행사 참여</span><span class="loc">광고 › 딜</span> <span class="loc">FBA 입고</span></td>
-      <td class="what">프라임데이 · 블랙프라이데이 같은 플랫폼 대형 행사에 딜 · 프라임 한정 할인으로 들어간다. 딜 제출과 FBA 입고에 행사 수주 전 마감일이 있어, 행사 운영의 절반은 달력 관리다. 채택되면 행사 지면 트래픽을 받고, 행사 딜과 프라임 한정 할인 모두 참가 수수료(선불 + 매출 연동)가 붙는다(2026 프라임데이부터).</td>
+      <td class="what">프라임데이 · 블랙프라이데이 같은 플랫폼 대형 행사에 딜 · 프라임 한정 할인으로 들어간다. 딜 제출과 FBA 입고에 행사 수주 전 마감일이 있어, 행사 운영의 절반은 달력 관리다. 채택되면 행사 지면 트래픽을 받고, 행사 딜과 프라임 한정 할인 모두 참가 수수료가 붙는다(2025년 정액제에서 2026 프라임데이부터 선불 + 매출 연동으로 개편).</td>
       <td class="steps-td"><ol class="steps"><li>행사 캘린더 · 제출 마감 확인</li><li>자격 요건 대비 상태 점검, 딜 · 할인 제출</li><li>행사 입고 마감일 전 재고 입고</li><li>행사 주간 모니터링 (품절 · 광고 입찰 급등 대응), 행사 후 반품 파도 대비</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>제출 → 채택 여부, 입고 마감 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>행사 기간 매출 vs 평시 같은 길이 기간, 행사 지면 유입, 행사 후 반품률</span>
         <span class="v-row"><span class="v-tag j">평가</span>행사가 요구한 할인폭 · 수수료를 내고도 증분 이익이 남는지 확인하고, 행사 뒤에 남는 효과까지 본다: 행사로 유입된 신규 구매자의 재구매율과 행사 후 오가닉 기준선. 행사 중 품절은 최대 실패다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">프라임데이 · 블랙프라이데이는 연중 최대 매출 스파이크이자 신규 고객 유입 창구다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">마감 캘린더와 자격 점검은 AI가 관리해 주지만, 행사 재고 베팅과 행사 주간의 품절 · 입찰 급등 실전 대응은 AI가 대신 못 하는 운영이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">3.7</span><span class="aname">B2B 가격 · 수량 할인</span><span class="loc">가격 › B2B</span></td>
@@ -536,7 +548,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>B2B 가격이 노출됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>B2B 매출 비중, 평균 주문 수량</span>
         <span class="v-row"><span class="v-tag j">평가</span>수량 할인 구간이 실제 대량 주문을 만들었는가 (구간 설정 전후 비교). 마진 하한선 아래 구간은 없는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">법인 수요가 조용한 두 번째 매출줄이 된다. 소모품 상품군의 보조 매출이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구간 설계안과 마진 검산은 AI가 주지만, 견적 응답가와 구간 확정은 가격 판단으로 남는다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -547,7 +559,7 @@
   <p class="intro">아마존의 오가닉 지면은 영상 피드가 아니라 상세페이지와 검색 결과다. 브랜드 레지스트리(0.5)가 열어 주는 편집 영역(A+ · 스토어 · 실험 도구)을 채우고, 검색 수요에 리스팅을 맞추는 일. 여기서 만드는 전환율이 다시 검색 순위를 밀어 올린다.</p>
   <p class="keyq"><b>핵심 질문</b> 검색해서 들어온 사람이 안 사고 나갈 이유를 하나씩 지우고 있는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">4.1</span><span class="aname">A+ 콘텐츠 제작</span><span class="loc">광고 › A+ 콘텐츠</span></td>
@@ -557,7 +569,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>A+ 승인 · 게시 상태, 주력 ASIN 커버리지 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>게시 전후 Unit Session %(CVR)</span>
         <span class="v-row"><span class="v-tag j">평가</span>전후 각 2주 이상 CVR 비교 (같은 트래픽 조건에서). 가능하면 4.5의 A/B 실험으로 확정</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">검색 색인에 잡히지 않아 노출 · 클릭에는 관여하지 않는 상세 하단의 전환 보조 영역이다. 공식 수치도 최대 8%(프리미엄 20%)의 상한형 부스트라, 가르기보다 지키고 보조한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구성 기획과 카피, 비교 차트까지 AI가 다 뽑아 주지만, 실사 촬영과 브랜드 톤의 품질 판단은 사람 몫이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.2</span><span class="aname">브랜드 스토어 구축 · 운영</span><span class="loc">스토어 Stores</span></td>
@@ -567,17 +579,17 @@
         <span class="v-row"><span class="v-tag e">실행</span>스토어 게시 상태, 리프레시 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>스토어 방문 · 스토어 경유 매출 <span class="loc">스토어 › 인사이트</span></span>
         <span class="v-row"><span class="v-tag j">평가</span>개편 전후 스토어 경유 매출 비교, SB 랜딩을 상세페이지로 했을 때와의 성과 차이 (스토어가 이겨야 유지 가치)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">SB 광고의 랜딩이자 경쟁 광고 없는 유일한 지면이다. 보조 지면이라 방치만 안 하면 된다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">트리 설계와 카피를 AI가 만들어 주고, 빌더는 템플릿 방식이라 구축과 리프레시 모두 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.3</span><span class="aname">이미지 · 영상 자산 관리</span><span class="loc">카탈로그</span> <span class="loc">브랜드 › 영상</span></td>
-      <td class="what">메인 이미지(규정 준수 + 썸네일에서 이기는 구도), 보조 이미지(인포그래픽 · 사용 장면 · 사이즈 안내), 상세페이지 영상을 만들고 배치한다. 검색 CTR의 대부분은 메인 이미지와 가격이 정한다.</td>
+      <td class="what">메인 이미지(규정 준수 + 썸네일에서 이기는 구도), 보조 이미지(인포그래픽 · 사용 장면 · 사이즈 안내), 상세페이지 영상을 만들고 배치한다. 검색 CTR은 메인 이미지 · 가격 · 별점이 함께 정한다.</td>
       <td class="steps-td"><ol class="steps"><li>메인 이미지 규정 점검 (흰 배경, 프레임 점유)</li><li>보조 이미지 7장 구성 (장벽 해소 순서)</li><li>상품 영상 업로드</li><li>교체는 한 번에 하나, 기록과 함께</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>전 주력 ASIN에 이미지 세트 · 영상 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>검색 CTR (SQP), 영상 시청 후 전환 기여는 CVR 추세로 간접 확인</span>
         <span class="v-row"><span class="v-tag j">평가</span>메인 이미지 교체는 반드시 전후 CTR 비교 또는 4.5 실험으로 판정. 감으로 교체를 반복하면 무엇이 이겼는지 영영 모른다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">검색 타일의 클릭은 메인 이미지 · 가격 · 별점이 함께 정한다. 그중 셀러가 만들어 미는 대로 움직이는 첫 번째 자산이 메인 이미지다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">기획 · 규정 점검 · 인포그래픽 초안은 AI가 해 주지만, 실물 촬영과 썸네일에서 이기는 한 장을 고르는 감각 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.4</span><span class="aname">검색 최적화 (아마존 SEO)</span><span class="loc">브랜드 › 검색 분석</span></td>
@@ -587,7 +599,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>타깃 쿼리가 텍스트에 반영되고 인덱싱됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>타깃 쿼리 노출 순위 · 노출 점유율(SQP), 오가닉 세션 추세</span>
         <span class="v-row"><span class="v-tag j">평가</span>반영 후 2~4주 안에 타깃 쿼리 순위 상승, 그리고 그 쿼리에서의 구매 점유율이 노출 점유율을 따라오는가 (안 따라오면 키워드와 상품의 미스매치)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">오가닉 순위가 아마존 매출의 본체다. 검색 수요에 리스팅을 맞추는 일이 그 절반을 만든다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">쿼리 선정부터 반영 · 순위 추적까지 데이터가 다 있어서, AI 보조로 사실상 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.5</span><span class="aname">리스팅 실험 (A/B 테스트)</span><span class="loc">브랜드 › 실험 관리</span></td>
@@ -597,17 +609,17 @@
         <span class="v-row"><span class="v-tag e">실행</span>실험이 조기 종료 없이 완주됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>버전 간 전환율 차이와 유의성, 연간 실험 횟수</span>
         <span class="v-row"><span class="v-tag j">평가</span>승자 적용 후 실제 CVR이 실험 예측과 일치하는가. 실험 없이 고친 변경과 실험으로 고친 변경의 성공률 비교가 이 도구의 존재 증명이다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">감 대신 유의성으로 리스팅을 고치게 해 주는 확정 도구다. 개선의 품질을 보조한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">가설 설계와 유의성 해석은 AI의 강점이고, 남는 규율은 조기 종료 금지뿐이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">4.6</span><span class="aname">고객 질문 신호 관리</span><span class="loc">메시지 · VoC</span> <span class="loc">상세페이지</span></td>
-      <td class="what">상세페이지의 공개 Q&amp;A는 사실상 폐지됐다(열람형 게시판과 셀러 답변 기능 제거, 2024~). 이제 질문은 구매자 메시지 · 리뷰 · 반품 사유로 들어오고, 답은 AI 쇼핑 어시스턴트(Rufus, 2026년 Alexa 쇼핑으로 개편)가 리스팅 텍스트에서 뽑아 대신한다. 그래서 이 액션의 실체는 질문 신호를 모아 리스팅이 스스로 답하게 만드는 것이다: 반복 질문을 불릿 · A+ · 이미지로 승격해 질문 자체를 없앤다.</td>
+      <td class="what">상세페이지의 공개 Q&amp;A는 사실상 폐지됐다(열람형 게시판과 셀러 답변 기능이 2023~2024에 걸쳐 제거). 이제 질문은 구매자 메시지 · 리뷰 · 반품 사유로 들어오고, 답은 AI 쇼핑 어시스턴트(Rufus, 2026년 Alexa 쇼핑으로 개편)가 리스팅 텍스트에서 뽑아 대신한다. 그래서 이 액션의 실체는 질문 신호를 모아 리스팅이 스스로 답하게 만드는 것이다: 반복 질문을 불릿 · A+ · 이미지로 승격해 질문 자체를 없앤다.</td>
       <td class="steps-td"><ol class="steps"><li>질문 신호 수집 (메시지 · 리뷰 · VoC · 반품 사유)</li><li>반복 질문 Top 5 선정</li><li>리스팅 반영 (1.7) 후 같은 질문 재발 추적</li></ol></td>
       <td class="verify">
         <span class="v-row"><span class="v-tag e">실행</span>질문 신호 수집 루틴 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>같은 질문의 재발 빈도 (리스팅 반영 전후)</span>
         <span class="v-row"><span class="v-tag j">평가</span>반복 질문이 리스팅 개선으로 소멸되는 흐름 존재. 같은 질문이 계속 메시지로 온다는 것은 리스팅이 아직 답을 못 하고 있다는 뜻이다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">반복 질문을 리스팅으로 승격해 전환 장벽을 지운다. 보조 루틴이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">메시지 · 리뷰 · 반품 사유에서 질문 신호를 모으고 분류하는 것은 AI가 가장 잘하는 작업이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -618,7 +630,7 @@
   <p class="intro">아마존 밖의 트래픽(소셜 광고, 크리에이터, 자사 채널)을 아마존 매출로 잇는 일. 틱톡샵과 달리 아마존의 크리에이터 제도는 판매의 주 엔진이 아니라 보조 엔진이지만, 외부 트래픽에는 아마존 고유의 삼중 보상이 있다: 직접 매출 + 판매 속도가 밀어 올리는 검색 순위 후광 + 외부 유입 매출의 수수료 일부 환급(Brand Referral Bonus). 대신 어트리뷰션이 약해서, 계측 준비 없이 태우는 외부 트래픽은 평가 불능이 된다: 이 도메인의 첫 액션이 계측인 이유다.</p>
   <p class="keyq"><b>핵심 질문</b> 밖에서 데려온 사람이 얼마를 샀는지 셀 수 있는가. 그리고 그 유입이 검색 순위까지 밀었는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">5.1</span><span class="aname">외부 계측 준비</span><span class="loc">광고 콘솔 › Attribution</span> <span class="loc">브랜드</span></td>
@@ -628,7 +640,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>외부 링크의 태그 부착률 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>Attribution 집계 매출, 환급 수령액</span>
         <span class="v-row"><span class="v-tag j">평가</span>태그 없이 나간 외부 캠페인 0. 환급 신청 누락으로 흘린 돈 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">태그와 환급 등록이 없으면 외부 트래픽 전체가 평가 불능이 되고 환급 돈을 흘린다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">태그 체계 설계와 링크 관리표까지 AI가 만들어 주는 준비 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.2</span><span class="aname">Creator Connections 캠페인</span><span class="loc">광고 콘솔</span></td>
@@ -638,7 +650,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>캠페인 활성, 참여 크리에이터 수</span>
         <span class="v-row"><span class="v-tag m">지표</span>크리에이터 경유 매출, 커미션 비용률, 게시 콘텐츠 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>커미션을 다 내고도 SKU가 흑자인가. 참여가 0이면 커미션이 낮아서인지 상품 매력이 없어서인지를 커미션 인상 실험으로 가른다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">공식 매칭 프로그램으로 보조 매출과 콘텐츠를 산다. 아마존에서 크리에이터는 보조 엔진이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">브리프 작성과 성과 분석은 AI가 해 주지만, 커미션율 설정과 크리에이터 선별의 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.3</span><span class="aname">인플루언서 시딩</span><span class="loc">외부 채널</span> <span class="loc">상세페이지</span></td>
@@ -648,7 +660,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>발송 대비 게시율</span>
         <span class="v-row"><span class="v-tag m">지표</span>게시 콘텐츠 수, 상세페이지 영상 노출 확보 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>샘플 원가 총액 대비 회수 (직접 매출은 Attribution · 크리에이터 리포트, 간접은 상세페이지 영상 자산). 게시율이 낮으면 발굴 기준을 조정</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">상세페이지 영상 자산과 보조 매출을 제품 원가만으로 얻는 교환이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">후보 발굴과 제안문까지 AI가 만들어 주지만, 회신을 만들어 내는 제안 품질과 재협업 관계는 사람의 일이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.4</span><span class="aname">외부 유료 광고</span><span class="loc">외부 채널</span> <span class="loc">Attribution</span></td>
@@ -658,7 +670,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전 캠페인이 태그 링크로 집행됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>채널별 Attribution 매출 · ROAS(환급 반영), 클릭 단가</span>
         <span class="v-row"><span class="v-tag j">평가</span>환급과 후광(5.6)까지 반영한 증분 ROAS가 손익분기 이상인가. Attribution은 과소 집계 경향이 있으므로 채널 리포트와 병렬로 읽되 아마존 쪽 숫자를 보수적 하한으로 삼는다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">외부 트래픽은 직접 매출에 순위 후광과 수수료 환급이 얹히는 보조 화력이다. 본체는 여전히 검색이다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">소재와 오디언스 설계는 AI가 다 해 주지만, 아마존 상세로 보내는 순간 전환 픽셀을 심을 수 없어 광고 플랫폼의 자동 최적화가 반쪽이 되고, 채널 · 예산 배분은 손익을 거는 결정으로 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.5</span><span class="aname">자사 채널 · CRM 유입</span><span class="loc">외부 채널</span></td>
@@ -668,7 +680,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>링크 정상 동작 · 태그 부착</span>
         <span class="v-row"><span class="v-tag m">지표</span>자사 채널발 Attribution 매출, 발송 대비 클릭</span>
         <span class="v-row"><span class="v-tag j">평가</span>자사 트래픽을 쓴 론칭과 안 쓴 론칭의 초기 순위 도달 속도 비교. 인서트 사유 경고 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">공짜 트래픽을 순위가 필요한 순간에 몰아 쓰는 보조 화력이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">발송 타이밍 설계와 규정 점검까지 AI가 해 주는 실행 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.6</span><span class="aname">랭킹 후광 평가</span><span class="loc">브랜드 › 검색 분석</span> <span class="loc">자체 시트</span></td>
@@ -678,7 +690,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기준선 없는 외부 캠페인 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>타깃 키워드 순위 변화, 오가닉 매출의 기준선 대비 증분</span>
         <span class="v-row"><span class="v-tag j">평가</span>후광을 0으로 놓아도 흑자인 캠페인이 늘고 있는가. 후광을 넣어야만 흑자인 캠페인은 축소 대상으로 분류</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">외부 캠페인의 진짜 성과를 정하는 평가 액션이다. 결정의 품질을 보조한다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">기준선 비교와 차트는 AI가 다 만들어 주고 보수 계상 원칙도 정해져 있지만, 후광이 실재인지 계절 잡음인지 가르는 해석이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">5.7</span><span class="aname">콘텐츠 · 표기 모니터링</span><span class="loc">외부 채널</span></td>
@@ -688,7 +700,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>검수 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>위반 발견 → 조치 리드타임</span>
         <span class="v-row"><span class="v-tag j">평가</span>플랫폼 · 규제 기관에 먼저 적발당한 건 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">위반을 조기에 잡는 위생 작업이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">협업 콘텐츠의 표기 · 클레임 스캔은 AI가 대신할 수 있는 검수 루틴이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -700,7 +712,7 @@
   <p class="keyq"><b>핵심 질문</b> 광고비가 신규 수요를 사고 있는가, 어차피 올 손님에게 통행세를 내고 있는가.</p>
   <div class="note"><b>브랜드 키워드 착시 주의.</b> 자기 브랜드명 검색어 광고는 ROAS가 극단적으로 좋게 보이지만 대부분 어차피 살 사람이다. 캠페인을 브랜드 · 논브랜드로 분리해 두지 않으면 계정 평균 ACOS가 실력처럼 보이는 착시가 생긴다. 평가는 반드시 분리된 숫자와 6.8의 증분 보정을 거친다.</div>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">6.1</span><span class="aname">광고 구조 설계</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -710,7 +722,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>전 캠페인이 컨벤션을 따름, 손익분기 ACOS 문서 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>구조 밖 캠페인 수 (0이어야 함)</span>
         <span class="v-row"><span class="v-tag j">평가</span>임의의 SKU에 대해 "어느 캠페인에서 얼마 쓰고 얼마 버는가"를 5분 안에 답할 수 있는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">구조와 손익분기 목표선이 이후 모든 광고 지출의 평가 가능성을 정한다. 구조 없는 계정은 새는 곳을 못 찾는다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">구조안과 손익분기 계산은 AI가 다 만들어 주지만, 목표 ACOS와 예산 규모를 정하는 것은 돈이 걸린 결정이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.2</span><span class="aname">SP 자동 캠페인 (리서치)</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -720,7 +732,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>수확 루틴 주기 준수 (리포트 확인 기록)</span>
         <span class="v-row"><span class="v-tag m">지표</span>주간 신규 수확 검색어 수, 자동 캠페인 ACOS</span>
         <span class="v-row"><span class="v-tag j">평가</span>수확 → 이관 → 네거티브의 순환이 실제로 돌고 있는가. 자동 ACOS는 손익분기보다 다소 높아도 리서치 비용으로 용인하되, 상한은 정해 둔다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">돈 내고 검색어를 배우는 리서치 캠페인이다. 수동 캠페인의 원료를 보조한다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">수확 → 이관 → 네거티브 순환은 정확히 AI가 루틴으로 돌릴 수 있는 반복 작업이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.3</span><span class="aname">SP 수동 캠페인 (수확)</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -730,7 +742,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>편성 규칙 준수, 네거티브 목록 최신</span>
         <span class="v-row"><span class="v-tag m">지표</span>캠페인별 ACOS vs 손익분기, 타깃 검색어의 오가닉 순위 동반 상승</span>
         <span class="v-row"><span class="v-tag j">평가</span>손익분기 초과 캠페인이 식별되고 2주기 안에 조치(입찰 인하 · 중단)되는가. 광고로 순위를 산 검색어에서 오가닉 순위가 따라 올라오면 이 캠페인은 자산을 만든 것이다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">광고 지출과 수익의 본체다. 여기의 편성 품질이 광고 손익을 직접 가른다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">수확 검색어 편성과 네거티브 관리는 AI가 루틴으로 돌리지만, 어느 검색어와 경쟁 상대에 얼마를 걸지의 우선순위는 마진을 거는 판단이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.4</span><span class="aname">Sponsored Brands</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -740,7 +752,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>캠페인 활성, 소재 심사 통과</span>
         <span class="v-row"><span class="v-tag m">지표</span>NTB 매출 비중, SB ACOS, 브랜드 검색량 추세</span>
         <span class="v-row"><span class="v-tag j">평가</span>SP와 같은 ACOS 잣대로 재지 않는다: NTB 비중과 브랜드 검색량 성장까지 넣은 평가. 그 보정으로도 못 남기면 축소</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">신규 수요 개척의 보조 광고다. NTB로만 정당화된다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">편성과 카피는 AI가 해 주지만, 영상 소재의 품질과 NTB 보정 평가의 판단이 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.5</span><span class="aname">Sponsored Display · DSP</span><span class="loc">광고 › 캠페인 매니저</span> <span class="loc">광고 콘솔</span></td>
@@ -750,7 +762,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>캠페인 활성</span>
         <span class="v-row"><span class="v-tag m">지표</span>리타겟팅 ACOS, 노출 후 전환 창별 성과</span>
         <span class="v-row"><span class="v-tag j">평가</span>리타겟팅은 잠식 성격이 있으므로 (어차피 돌아왔을 고객) SP보다 엄격한 손익 기준을 적용. 미달 시 가장 먼저 끄는 예산</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">리타겟팅은 잠식 성격이 커서 가장 먼저 끄는 보조 예산이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">리타겟팅부터 시작해 미달 시 끈다는 규칙이 정해져 있어, AI 보조로 규칙 운영이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.6</span><span class="aname">입찰 · 예산 운영 조정</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -760,7 +772,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>루틴 주기 준수, 변경 로그 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>조정 후 ACOS 변동, 예산 소진율 (하루 중 조기 소진 여부)</span>
         <span class="v-row"><span class="v-tag j">평가</span>조정 사유와 결과가 짝으로 기록되어 다음 조정의 근거가 되는가. 예산이 이른 시간에 마르는 수익 캠페인을 방치하면 이 액션의 실패</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">입찰과 예산의 상시 조타가 광고 효율을 정한다. 수익 캠페인의 예산이 마르게 두는 것 자체가 매출 손실이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">조정안 계산과 변경 로그는 AI가 다 해 주지만, 예산 규모와 목표선을 바꾸는 결정은 결과가 갈리는 돈 판단이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.7</span><span class="aname">브랜드 방어</span><span class="loc">광고 › 캠페인 매니저</span></td>
@@ -770,7 +782,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>브랜드 SERP 점검 기록</span>
         <span class="v-row"><span class="v-tag m">지표</span>브랜드 검색어 점유 (자사 오가닉+광고 vs 경쟁), 방어비</span>
         <span class="v-row"><span class="v-tag j">평가</span>침탈 없는데 돌아가는 방어 캠페인 0 (그건 통행세다). 침탈 기간의 브랜드 검색어 이탈률이 방어로 실제로 줄었는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">침탈당한 첫 화면을 되찾는 조건부 방어 지출이다. 지키는 돈이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">SERP 감시와 켜고 끄는 조건이 정의되어 있어 AI 모니터링 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">6.8</span><span class="aname">증분 평가와 손익 보정</span><span class="loc">보고서</span> <span class="loc">자체 시트</span></td>
@@ -780,7 +792,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>보정 계산이 주기적으로 수행됨</span>
         <span class="v-row"><span class="v-tag m">지표</span>TACOS 추세, 논브랜드 ACOS, 광고 매출 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>성장기의 정상 패턴은 "TACOS 유지 · 하락 + 전체 매출 성장"이다. TACOS가 오르며 매출이 정체하면 2주기 안에 축소 실험으로 증분을 재검증한다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">TACOS와 증분 보정 없이는 통행세를 실력으로 착각한다. 광고 전체의 진짜 성적표다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">분리 집계와 TACOS 추적은 AI가 다 계산해 주지만, 광고가 오가닉을 대체하는지 가르는 증분 해석과 축소 실험 결정은 고난도 판단으로 남는다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -791,7 +803,7 @@
   <p class="intro">문의 응대, 리뷰, 클레임 처리. 매출을 직접 만들지는 않지만 별점은 검색에서 상세까지 모든 지면의 전환 재료이고, 응대 · 클레임 지표는 ODR로 계정에 직결된다. 아마존 특유의 제약: 리뷰를 늘리는 합법 수단이 손에 꼽게 적어서, 리뷰는 만드는 것이 아니라 새지 않게 하는 것에 가깝다.</p>
   <p class="keyq"><b>핵심 질문</b> 산 사람의 경험이 다음 사람의 구매 이유가 되고 있는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">7.1</span><span class="aname">구매자 메시지 응대</span><span class="loc">주문 › 메시지</span></td>
@@ -801,7 +813,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>미응답 잔여 0으로 일 마감</span>
         <span class="v-row"><span class="v-tag m">지표</span>24시간 내 응답률, 평균 응답 시간</span>
         <span class="v-row"><span class="v-tag j">평가</span>응답 지연발 부정 피드백 0, 같은 질문의 재발이 줄고 있는가 (리스팅 개선으로 이어짐)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">24시간 응답이 지표와 부정 피드백 전이를 막는다. 지키는 루틴이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">분류와 답변 초안은 AI가 다 만들어 주고, FBA 배송 · 환불 문의는 아마존 CS로 넘기는 규칙까지 정해져 있다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.2</span><span class="aname">리뷰 확보</span><span class="loc">주문</span> <span class="loc">브랜드 › Vine</span></td>
@@ -811,7 +823,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>대상 주문 리뷰 요청 커버리지</span>
         <span class="v-row"><span class="v-tag m">지표</span>주문 대비 리뷰 작성률, 신제품 첫 리뷰 도달 일수</span>
         <span class="v-row"><span class="v-tag j">평가</span>리뷰 작성률이 계정 평균 대비 유지 이상, 리뷰 정책 경고 0. 작성률을 올리겠다고 회색 지대에 들어가는 순간 이 액션은 실패다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">별점은 검색부터 상세까지 모든 지면의 전환 재료다. 리뷰 없는 신제품은 팔리지 않는다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">합법 수단이 요청 버튼 · Vine · 제품력 셋뿐이라, AI 보조로 요청 커버리지와 Vine 등록을 챙기는 루틴이 전부다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.3</span><span class="aname">리뷰 · 피드백 관리</span><span class="loc">브랜드 › 고객 리뷰</span> <span class="loc">퍼포먼스 › 피드백</span></td>
@@ -821,7 +833,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>부정 리뷰 미확인 방치 0, 제거 요청 처리율</span>
         <span class="v-row"><span class="v-tag m">지표</span>평점 추이(4.3 이상 사수, 4.5 권장), 부정 사유 분포, NCX율</span>
         <span class="v-row"><span class="v-tag j">평가</span>같은 사유의 부정 리뷰가 개선 조치 이후 감소하는가. 표본이 적을 때는 결론 유보(흔한 실수 ③ 표본 부족)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">평점을 지키고 부정 사유를 개선 신호로 회수하는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">리뷰 분류 · 위반 판별 · 신고문 작성은 AI가 대신할 수 있는 반복 작업이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.4</span><span class="aname">A-to-Z 클레임 · 지불 거절 대응</span><span class="loc">퍼포먼스 › A-to-Z</span></td>
@@ -831,7 +843,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기한 초과 무응답 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>클레임률(주문 대비), 셀러 승률, ODR 기여분</span>
         <span class="v-row"><span class="v-tag j">평가</span>클레임 유형별 근본 원인이 D1 · D2 개선으로 이어져 클레임률 자체가 하락</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">패소 클레임은 ODR에 박힌다. 계정을 지키는 다툼이다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">증빙 정리와 소명문 작성은 AI가 해 주지만, 쟁점을 고르고 사실 관계를 구성하는 소명의 품질은 판단으로 남는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">7.5</span><span class="aname">재구매 · 팔로워 관리</span><span class="loc">광고 › 타깃 프로모션</span></td>
@@ -841,7 +853,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>타깃 프로모션 집행 확인</span>
         <span class="v-row"><span class="v-tag m">지표</span>타깃 쿠폰 사용률 · 귀속 매출, 브랜드 재구매율 <span class="loc">브랜드 분석</span></span>
         <span class="v-row"><span class="v-tag j">평가</span>재구매를 만드는 비용이 신규 고객 획득 비용(광고)보다 낮게 유지되는가. 소모품인데 재구매율이 카테고리 평균 미만이면 상품 · 구독 설계부터 재점검</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">한 번 산 고객을 다시 사게 만드는 보조 매출이다. 연락처 없는 아마존에서 공식 도구가 전부다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">오디언스별 쿠폰 설계와 재구매 주기 분석은 AI가 해 주는 루틴이고, 할인폭의 무게는 3.3이 소유한다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -852,7 +864,7 @@
   <p class="intro">숫자를 읽고 돈을 확인하는 일. 확인 자체도 액션이다: 보는 주기를 지켰는가, 이상을 얼마나 빨리 알아챘는가로 검증한다. 정산은 "플랫폼이 준 대로 받기"가 아니라 "내 계산과 대사하기"다. 아마존은 수수료 항목이 많고 개정이 잦아, 대사 없는 계정은 새는 곳을 모른 채 돈다.</p>
   <p class="keyq"><b>핵심 질문</b> 매출 급락을 몇 시간 만에 알아챌 수 있고, 입금액이 맞는지 검산하고 있는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">8.1</span><span class="aname">핵심 지표 정기 확인</span><span class="loc">보고서 › 비즈니스 리포트</span></td>
@@ -862,7 +874,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>확인 주기 준수율</span>
         <span class="v-row"><span class="v-tag m">지표</span>이상 감지 리드타임 (급락 · 급등을 인지하기까지 걸린 시간)</span>
         <span class="v-row"><span class="v-tag j">평가</span>매출 이상을 24시간 안에 인지하고 원인 가설까지 세웠는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">이상을 빨리 알아채는 것이 손실을 막는다. 지키는 감시다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">일일 지표 확인과 이상 감지는 AI가 가장 잘 대신하는 작업이다. 경쟁가 · Buy Box 변동 같은 외부 요인 추적만 데이터 연결이 한 번 필요하다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.2</span><span class="aname">상품 퍼널 분석</span><span class="loc">보고서</span> <span class="loc">브랜드 › 검색 분석</span></td>
@@ -872,7 +884,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주력 SKU 전수 진단 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>병목 단계의 지표 (조치 전후)</span>
         <span class="v-row"><span class="v-tag j">평가</span>진단 → 조치 → 재측정이 끝까지 이어지는가 (진단만 하고 끝나면 0점)</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">병목의 위치가 다음 액션을 정해 준다. 결정을 보조하는 진단이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">퍼널 분해와 병목 진단 규칙이 문서화되어 있어 AI가 루틴으로 돌린다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.3</span><span class="aname">브랜드 분석 활용</span><span class="loc">브랜드 › Brand Analytics</span></td>
@@ -882,7 +894,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주기별 리뷰 산출물 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>분석발 액션 수 (이 리포트가 실제로 바꾼 결정)</span>
         <span class="v-row"><span class="v-tag j">평가</span>분석에서 나온 가설의 적중률 기록. 보고서를 열어만 보고 결정이 안 바뀌면 이 액션은 0점이다</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">키워드 · 번들 · 신제품 결정의 원료 창고다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">리포트 해석과 후보 추출은 AI의 데이터 작업이고, 결정 자체는 소유 도메인이 한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.4</span><span class="aname">정산 확인과 인출</span><span class="loc">재무 Payments</span></td>
@@ -892,7 +904,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>정산 주기별 대사 수행</span>
         <span class="v-row"><span class="v-tag m">지표</span>예상 정산액 vs 실입금 오차, 이상 수수료 적발 · 회수 건수</span>
         <span class="v-row"><span class="v-tag j">평가</span>오차 0 또는 전건 소명. FBA 치수 재측정 요청 같은 회수 수단을 아는가가 여기서 갈린다. 대사 없이 입금액을 그대로 믿는 상태가 실패 상태</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">대사 없는 계정은 새는 수수료를 모른 채 돈다. 치수 오측정 같은 회수 수단이 여기서 갈린다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">명세 대사와 이의 제기 문안은 스크립트성 작업이라 AI가 사실상 대신한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.5</span><span class="aname">단위 경제 관리</span><span class="loc">자체 시트</span> <span class="loc">보고서 › SKU 손익</span></td>
@@ -902,7 +914,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>월별 산출 존재, 비용 누락 항목 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>SKU별 기여 마진, 적자 SKU의 매출 비중</span>
         <span class="v-row"><span class="v-tag j">평가</span>적자 SKU가 식별되고 다음 달 처방이 실행됐는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">매출이 커도 적자인 SKU가 흔한 구조라, SKU 손익이 진짜 성적표다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">비용 전수 집계와 마진 계산은 AI가 다 해 주지만, 적자 SKU에 가격 · 광고 · 단종 중 무엇을 처방할지는 결과가 갈리는 결정이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">8.6</span><span class="aname">운전자금 조달</span><span class="loc">재무 › Lending</span></td>
@@ -912,7 +924,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>조달 조건이 기록되고 상환 계획 존재</span>
         <span class="v-row"><span class="v-tag m">지표</span>자금 비용률, 현금 전환 주기 단축 일수</span>
         <span class="v-row"><span class="v-tag j">평가</span>자금 비용 &lt; 그 돈으로 돌린 재고 · 광고의 증분 마진. 매출 정체기에 빚으로 광고를 늘리는 용도면 실패</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">성장기의 현금 흐름 갭을 메우는 조건부 도구다.</span></td><td class="dif"><span class="g dif-m">중</span><span class="dwhy">이율 비교와 현금 흐름 모델은 AI가 다 계산해 주지만, 빚을 낼지의 결정은 재무 리스크를 지는 판단이다.</span></td>
     </tr>
     </tbody>
   </table>
@@ -923,7 +935,7 @@
   <p class="intro">계정이 죽으면 전부 죽는다. 아마존은 지표와 정책 위반을 점수로 종합해 계정을 제재하는 플랫폼이고, 정지 계정의 재고와 정산금은 볼모로 잡힌다. 점수 · 위반 · 보안 · 정책 변화를 관리하는 방어 도메인이자, 카테고리와 시장을 넓히는 확장의 관문이다.</p>
   <p class="keyq"><b>핵심 질문</b> 오늘 팔 자격이 내일도 유지되는가.</p>
   <table class="actions">
-    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th></tr></thead>
+    <thead><tr><th>액션</th><th>무엇을 하는 일인가</th><th>세부 단계</th><th>성과 검증</th><th>중요도</th><th>기술적 난이도</th></tr></thead>
     <tbody>
     <tr>
       <td class="act"><span class="aid">9.1</span><span class="aname">계정 건강 모니터링</span><span class="loc">퍼포먼스 › 계정 건강</span></td>
@@ -933,7 +945,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>확인 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>AHR 점수 추이, 경고 상태 지표 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>전 지표 정상 구간 유지, 경고 → 정상 복귀 리드타임</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">제재 임계선과의 거리를 아는 것이 계정을 지킨다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">지표 감시는 AI의 기본기이고, 공식 Seller Assistant까지 상시 감시를 돕는다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.2</span><span class="aname">위반 대응과 소명</span><span class="loc">퍼포먼스 › 계정 건강</span></td>
@@ -943,7 +955,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>기한 내 대응률 100%</span>
         <span class="v-row"><span class="v-tag m">지표</span>미해소 위반 잔수, 소명 승률</span>
         <span class="v-row"><span class="v-tag j">평가</span>동일 유형 위반 재발 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-h">상</span><span class="dwhy">계정 정지는 매출 0에 재고 · 정산금 볼모까지 얹힌다. 소명 품질이 생사를 가른다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">소명 초안은 AI가 금방 써 주지만, 진짜 원인 진단과 어떤 증거가 심사를 통과할지의 판단, 반려 뒤의 전략 재설계는 AI가 대신 못 한다. 첫 반려가 다음 소명을 더 어렵게 만드는 구조라, 건당 수백에서 수천 달러의 소명 대행 시장이 설 만큼 실전 판단의 일이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.3</span><span class="aname">지식재산 보호</span><span class="loc">Brand Registry 포털</span></td>
@@ -953,7 +965,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>모니터링 주기 준수</span>
         <span class="v-row"><span class="v-tag m">지표</span>신고 → 제거 리드타임, 잔존 침해 오퍼 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>침해 오퍼의 체류 기간이 짧아지는 추세, 하이재커가 FO를 가져간 일수 0</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">하이재커가 FO를 가져가면 매출이 그대로 샌다. 지키는 일이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">감시 · 증거 정리 · 신고 제출은 Brand Registry 도구 위의 루틴이다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.4</span><span class="aname">정책 · 수수료 변경 추적</span><span class="loc">공지 News</span></td>
@@ -963,7 +975,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>주요 공지 인지 누락 0</span>
         <span class="v-row"><span class="v-tag m">지표</span>정책 발효일 대비 대응 완료일</span>
         <span class="v-row"><span class="v-tag j">평가</span>정책 변화로 인한 소급 손실 (수수료 오인, 규정 미준수) 0건</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">수수료 개정 하나가 가격과 단위 경제의 전제를 바꾼다. 놓치면 소급 손실이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">공지 요약과 영향 평가 초안은 AI가 해 주고, 재설정 실행은 해당 도메인이 소유한다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.5</span><span class="aname">계정 보안과 접근 관리</span><span class="loc">설정 › 사용자 권한</span></td>
@@ -973,7 +985,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>분기 점검 체크리스트 완료</span>
         <span class="v-row"><span class="v-tag m">지표</span>비활성 계정 · 불필요 연동 잔존 수</span>
         <span class="v-row"><span class="v-tag j">평가</span>탈취 · 잠금 사고 0, 사고 시 복구 절차가 문서로 존재</span>
-      </td>
+      </td><td class="imp"><span class="g imp-l">하</span><span class="dwhy">탈취만 막으면 되는 보안 위생이다.</span></td><td class="dif"><span class="g dif-l">하</span><span class="dwhy">권한 점검 체크리스트와 피싱 판별은 AI 보조로 루틴이 된다.</span></td>
     </tr>
     <tr>
       <td class="act"><span class="aid">9.6</span><span class="aname">확장</span><span class="loc">설정</span> <span class="loc">재고 › 글로벌</span></td>
@@ -983,7 +995,7 @@
         <span class="v-row"><span class="v-tag e">실행</span>신규 시장 · 카테고리 활성 여부</span>
         <span class="v-row"><span class="v-tag m">지표</span>신규 영역의 자체 손익 (기존과 분리)</span>
         <span class="v-row"><span class="v-tag j">평가</span>확장이 기존 계정의 배송 · 응대 지표를 무너뜨리지 않았는가</span>
-      </td>
+      </td><td class="imp"><span class="g imp-m">중</span><span class="dwhy">새 시장은 새 매출원이지만, 기존 계정의 건강과 흑자가 전제인 후순위 확장이다.</span></td><td class="dif"><span class="g dif-h">상</span><span class="dwhy">요건 조사와 손익 시뮬레이션은 AI가 다 해 주지만, 시장마다 세금 · 인증 · 재고를 거는 진입 구조 결정을 다시 하는 일이라 고위험 판단이 남는다. 북미 원격 판매만은 통관을 아마존이 대행하는 저마찰 예외다.</span></td>
     </tr>
     </tbody>
   </table>
