@@ -1045,6 +1045,10 @@
 .page.cost table.m th,.page.sol table.m th,.page.mkt table.m th{padding-top:2.4mm}
 /* ── owner 2026-09-08: 현재/단기 rows align to the tinted 최종 row (same 3mm inset) ── */
 .page.bm table.x td,.page.bm table.x th{padding-left:3mm}
+/* ── owner 2026-09-08: page 5 tinted column cells keep their left inset (the .right td rule was overriding it) ── */
+.page.mkt .right table.m td.tt{padding-left:3.5mm}
+/* ── owner 2026-09-08: roadmap bars get room around their text ── */
+.page.road .bar{height:5.8mm;margin-top:-2.9mm;padding-left:3mm}
 </style>
 <style>
 /* presentation mode: one A4 page at a time, scaled to the viewport; print keeps the A4 flow */
