@@ -18,6 +18,11 @@ h2{font-family:"Noto Serif KR","Apple Myungjo",serif;font-size:20px;margin:44px 
 .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:700;white-space:nowrap} .tag.warn{background:#f7ead0;color:#7a4b00} .tag.ok{background:#dcefdc;color:#1f5e1f} .tag.done{background:var(--tint);color:var(--ink)}
 .tw{overflow-x:auto;margin:8px 0 6px} table{border-collapse:collapse;background:var(--paper);width:100%;font-variant-numeric:tabular-nums} th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top} th{background:var(--th);font-weight:700;white-space:nowrap}
 td.code{white-space:nowrap;font-weight:700} td.ttl{white-space:nowrap} td.ttl a{font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)} td.ttl a:hover{color:var(--leaf);border-color:var(--leaf)} td.ver{white-space:nowrap;color:var(--mute)} td.note,.note{color:var(--mute);font-size:12.5px} ol,ul{margin:4px 0 10px 18px;padding:0} li{margin:4px 0}
+.steps{list-style:none;margin:8px 0 12px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px} .steps li{background:var(--paper);border:1px solid var(--line);padding:12px 14px;margin:0;font-size:13px} .steps li b{display:block;margin-bottom:4px} .steps .who{font-size:11.5px;letter-spacing:.06em;color:var(--soil);font-weight:700}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.guide{background:var(--paper);border:1px solid var(--line);padding:14px 18px;margin:14px 0 6px;font-size:13px} .guide ul{margin:4px 0 0 16px}
+code{background:var(--tint);padding:1px 5px;border-radius:3px;font-size:12.5px}
+.tag.fix{background:#f8dcdc;color:#8a1f1f}
 a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute)}
 @media (max-width:820px){.kpi{grid-template-columns:1fr 1fr} .meta{grid-template-columns:1fr} h1{font-size:24px}}
 @media print{.toc{display:none} .verdict{break-inside:avoid}}
@@ -28,7 +33,7 @@ a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid 
 <p class="sub">린클 Meta 계정의 소재 근거, 테스트 기획안, 판정 결과와 확정된 규칙을 이 페이지 한곳에서 갱신합니다. 각 테스트의 기획안 전문은 본문에서 엽니다.</p>
 <dl class="meta"><dt>수신</dt><dd>린클(Reencle Inc.) 방진휘 대표님 · 박성호 과장님</dd><dt>작성</dt><dd>cobble 강신영 (mikeykang@cobblehq.com)</dd><dt>갱신</dt><dd>2026-09-14</dd><dt>근거</dt><dd>린클 Meta 계정 이미지 소재 148건(지출 $1,000 이상, 2025-01~2026-09-10 실제 ROAS) · 경쟁·인접 브랜드 22개의 Ad Library 롱런 이미지 소재 120장 · 자사몰 리뷰 989건과 광고 댓글</dd></dl>
 </header>
-<nav class="toc"><a href="#s0">요약</a><a href="#s1">1 테스트</a><a href="#s2">2 계정에서 확인된 것</a><a href="#s3">3 확정된 규칙</a></nav>
+<nav class="toc"><a href="#s0">요약</a><a href="#s1">1 테스트</a><a href="#s2">2 계정에서 확인된 것</a><a href="#s3">3 확정된 규칙</a><a href="#s4">4 테스트 공통 규칙</a><a href="#s5">5 공통 확인 사항</a><a href="#s6">6 근거와 읽는 법</a></nav>
 <div class="verdict" id="s0"><h2>요약</h2><ol>
 <li>2025-01부터 2026-09-10까지 지출 $1,000 이상 이미지 소재 148건을 실제 ROAS로 다시 읽었습니다. 평균 2.90x, 대행사 기간 2.99x, 자체 운영 기간 2.47x입니다.</li>
 <li>테스트 현황: 확인 대기 2건(CB01, CB02), 진행 중 0건, 판정 완료 0건. 테스트 하나에 기획안 한 편이며 설계, 판정 규칙, 확인 항목은 기획안 전문에 있습니다.</li>
@@ -41,7 +46,7 @@ a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid 
 </div>
 <h2 id="s1">1. 테스트</h2>
 <p>상태는 확인 대기(린클 확인 항목 남음), 진행 중(광고 집행 중), 판정 완료(결과와 다음 행동을 기획안에 추가) 셋 중 하나입니다.</p>
-<div class="tw"><table><thead><tr><th>코드</th><th>테스트</th><th>상태</th><th>검증하는 것</th><th>방법</th><th>결과</th><th>기획안</th></tr></thead><tbody><tr><td class="code">CB01</td><td class="ttl"><a href="cb01.html">퇴비 주인공 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>완성된 퇴비를 화면의 주인공으로 두면 제품 주인공보다 성과가 떨어지는가</td><td>같은 촬영 세트의 두 컷으로 이미지 주인공만 바꾼 A/B 테스트. 소재당 $5,000과 $10,000 시점에 판정, 총 상한 $20,000</td><td><a href="cb01.html#s8">린클 확인 항목 7건</a>. 정리되면 집행 시작</td><td class="ver">v2 · 2026-09-11</td></tr><tr><td class="code">CB02</td><td class="ttl"><a href="cb02.html">헤드라인 유형 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>헤드라인을 혜택 약속형으로 쓰면 제품 사실형보다 성과가 떨어지는가</td><td>CB01의 제품 소재에 헤드라인 문장만 바꾼 A/B 테스트. 소재당 $7,000과 $14,000 시점에 판정, 총 상한 $28,000</td><td><a href="cb02.html#s6">린클 확인 항목 5건</a>. CB01 종료 뒤 시작</td><td class="ver">v1 · 2026-09-14</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>코드</th><th>테스트</th><th>상태</th><th>검증하는 것</th><th>방법</th><th>결과</th><th>기획안</th></tr></thead><tbody><tr><td class="code">CB01</td><td class="ttl"><a href="cb01.html">퇴비 주인공 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>완성된 퇴비를 화면의 주인공으로 두면 제품 주인공보다 성과가 떨어지는가</td><td>같은 촬영 세트의 두 컷으로 이미지 주인공만 바꾼 A/B 테스트. 소재당 $5,000과 $10,000 시점에 판정, 총 상한 $20,000</td><td><a href="cb01.html#s8">이 테스트 확인 항목 2건</a>. 공통 항목은 5장. 정리되면 집행 시작</td><td class="ver">v2 · 2026-09-11</td></tr><tr><td class="code">CB02</td><td class="ttl"><a href="cb02.html">헤드라인 유형 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>헤드라인을 혜택 약속형으로 쓰면 제품 사실형보다 성과가 떨어지는가</td><td>CB01의 제품 소재에 헤드라인 문장만 바꾼 A/B 테스트. 소재당 $7,000과 $14,000 시점에 판정, 총 상한 $28,000</td><td><a href="cb02.html#s5">이 테스트 확인 항목 3건</a>. 공통 항목은 5장. CB01 종료 뒤 시작</td><td class="ver">v1 · 2026-09-14</td></tr></tbody></table></div>
 <h2 id="s2">2. 계정에서 확인된 것</h2>
 <p>아직 테스트하지 않은, 계정 데이터에서 보이는 경향입니다. 소재를 요소별로 나누어 그 요소가 있는 소재와 없는 소재의 지출액 가중 ROAS를 비교했습니다. 아직 검증된 규칙이 아니며, 격차가 크고 두 기간에서 방향이 같은 항목부터 테스트합니다. 요소별 전체 표는 <a href="cb01.html#s5">CB01 5장</a>에 있습니다.</p>
 <div class="tw"><table><thead><tr><th>요소</th><th>있을 때</th><th>없을 때</th><th>상위 / 하위 37건 중</th><th>기간별</th></tr></thead><tbody><tr><td>기사형 소재(매체 리뷰 형식)</td><td>31건 · 3.27x</td><td>2.71x</td><td>13 / 4</td><td class="note">대행사 기간 3.31x(29건), 자체 운영 2.05x(2건, 제품 페이지로 연결)</td></tr><tr><td>혜택형 헤드라인</td><td>21건 · 1.87x</td><td>2.97x</td><td>1 / 12</td><td class="note">대행사 기간 2.12x 대 3.03x, 자체 운영 1.54x 대 2.63x. 두 기간 같은 방향</td></tr><tr><td>완성 퇴비가 주인공</td><td>5건 · 1.67x</td><td>2.91x</td><td>0 / 3</td><td class="note">자체 운영 기간에만 5건. CB01에서 검증</td></tr><tr><td>숫자 배지(24H, 100% 등)</td><td>24건 · 2.55x</td><td>2.99x</td><td>3 / 13</td><td class="note">대행사 기간 2.64x 대 3.08x, 자체 운영 2.20x 대 2.55x. 두 기간 같은 방향</td></tr><tr><td>오퍼 헤드라인(할인·증정)</td><td>41건 · 3.19x</td><td>2.79x</td><td>15 / 6</td><td class="note">대행사 기간 3.39x, 자체 운영 2.82x. 프로모션 시기와 겹쳐 헤드라인만의 효과는 아님</td></tr></tbody></table></div>
@@ -49,5 +54,64 @@ a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid 
 <h2 id="s3">3. 확정된 규칙</h2>
 <p>테스트에서 판정이 난 규칙만 올립니다. 이후 제작하는 모든 소재에 적용합니다.</p>
 <div class="tw"><table><thead><tr><th>규칙</th><th>근거 테스트</th><th>판정일</th></tr></thead><tbody><tr><td colspan="3" class="note">아직 없습니다. 첫 판정은 CB01에서 나옵니다.</td></tr></tbody></table></div>
+<h2 id="s4">4. 테스트 공통 규칙</h2>
+<p>모든 테스트에 같은 방식과 같은 판정 원칙을 씁니다. 각 기획안에는 그 테스트에서만 다른 것(무엇을 바꾸는가, 예산, 판정 숫자)만 적습니다.</p>
+<h3>4-1. 테스트 방식</h3>
+<div class="tw"><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>방식</td><td>Meta 광고 관리자의 A/B 테스트(실험) 기능. 변수는 크리에이티브 하나이고, 광고세트 2개로 타겟을 겹치지 않게 나눠 예산을 균등 배분합니다. 광고세트를 먼저 만든 뒤 실험에서 A/B 테스트로 묶습니다. 같은 광고세트에 두 광고를 넣는 방식은 쓰지 않습니다(Meta가 초반 성과로 한쪽에 예산을 몰아줘 비교가 되지 않음)</td></tr>
+<tr><td>한 번에 하나</td><td>테스트마다 바꾸는 것은 하나뿐입니다. 나머지 요소는 두 소재에 동일하게 고정하고, 테스트 중에는 소재·예산·타겟을 수정하지 않습니다. 테스트끼리도 겹치지 않게 순서대로 진행합니다</td></tr>
+<tr><td>판정 원칙</td><td>판정 규칙과 판정 시점을 시작 전에 정하고 중간에 바꾸지 않습니다. 판정은 소재당 구매 수로 하고(지출이 같으므로 CPA 비교와 같음), 기준은 z = (많은 쪽 구매 − 적은 쪽 구매) ÷ √(두 소재 구매 합)입니다. 1차 판정 2.3 이상, 2차 판정 1.8 이상. 구매 수 비율로 보므로 실제 CPA가 예상과 달라도 규칙은 그대로 씁니다</td></tr>
+<tr><td>보조 지표</td><td>링크 CTR(주목), 구매/링크 클릭(전환), ROAS(객단가가 섞여 참고용). CTR만 낮으면 주목 문제, 전환만 낮으면 기대와 실물의 차이 문제로 읽습니다</td></tr>
+<tr><td>광고명</td><td><code>ABO | Prime | STATIC-4x5 | CB0N-이름 | v1 | YYMMDD(집행 시작일)</code>. 1x1은 STATIC-1x1. CB 표시는 코블 기획 소재를 구분하는 표기입니다(계약 제7조 후속 협의 때 집계 기준)</td></tr>
+<tr><td>린클 중단 기준과의 관계</td><td>광고당 $150·구매 3·3일 기준은 테스트 소재에 적용하지 않습니다(표본이 차기 전에 끝나는 것을 막기 위해). 안전장치: 소재당 상한의 약 5분의 1 시점에 한쪽 CPA가 다른 쪽의 3배를 넘으면 중단을 협의합니다</td></tr>
+<tr><td>성과 기준(별도)</td><td>가설 검증과 별개로, 코블 소재 중 높은 쪽의 ROAS가 같은 캠페인 동일 기간 평균의 1.3배 이상이면 성과 기준 통과로 봅니다. 기준 숫자는 집행 시작일에 확정합니다(참고: ABO 최근 30일 2.63x, 프로모션 종료 후 9/8~10 1.66x)</td></tr>
+</tbody></table></div>
+<h3>4-2. 소재 공통 사양</h3>
+<p>이미지와 헤드라인은 테스트마다 다르지만, 아래는 모든 테스트에서 같습니다.</p>
+<ul>
+<li>본문: Citrus, dairy and cooked leftovers go in. Sealed and low odor on the counter. Ready in 30 days.</li>
+<li>리뷰 인용(원문 그대로): "So much less trash, planning to feed my garden" · verified buyer review, reencle.co, 2025-09-17</li>
+<li>푸터: 2-year warranty. 60-day risk-free. (헤드라인이 아니라 마지막 줄)</li>
+<li>랜딩: Prime 제품 페이지 · 형식: 소재마다 4x5 + 1x1 · 캠페인: <code>[ABO] Prospecting Test -- Sales</code>(피드·탐색 탭, 스토리·릴스 제외) · Advantage+ 크리에이티브 자동 보정 끔</li>
+<li>쓰지 않는 것: real compost 주장, dehydrated 비교, 고기·생선, 350,000+ units, 24 countries, 24시간 계열 수치, 얼굴, 숫자 배지</li>
+</ul>
+<div class="tw"><table><thead><tr><th>문구</th><th>02-4 표현 규정</th><th>결론</th></tr></thead><tbody>
+<tr><td>2-year warranty · 60-day risk-free (푸터)</td><td>A 허용 수치. 헤드라인이 아니라 마지막 줄. 라이브 헬프센터와 대조</td><td><span class="tag ok">통과</span></td></tr>
+<tr><td>Ready in 30 days (본문)</td><td>A 허용, 24시간 계열 금지</td><td><span class="tag ok">통과</span></td></tr>
+<tr><td>low odor</td><td>A 허용, odor-free 금지</td><td><span class="tag ok">통과</span></td></tr>
+<tr><td>Citrus, dairy and cooked leftovers go in</td><td>투입 가능 품목 정본. bones 없음, 고기·생선은 제외</td><td><span class="tag ok">통과</span></td></tr>
+<tr><td>리뷰 원문 인용</td><td>E: 실제 리뷰에서만, 변형 금지</td><td><span class="tag ok">통과</span></td></tr>
+<tr><td>Sealed (본문)</td><td>02-4에 항목 없음. 밀폐 뚜껑은 제품 사실이고 린클 03 문서도 고기 언급 시 sealed를 같이 쓰라고 함</td><td><span class="tag warn">확인 요청</span></td></tr>
+<tr><td>Free shipping</td><td>02-4 허용 목록에 없음. 9/11 제품 페이지 표기는 Free shipping in the continental U.S.라 조건 없이 쓰면 부정확</td><td><span class="tag fix">제외</span></td></tr>
+</tbody></table></div>
+<h3>4-3. 진행 순서</h3>
+<ol class="steps">
+<li><span class="who">린클</span><b>확정 사항 회신</b>해당 기획안의 확인 항목과 5장의 공통 항목</li>
+<li><span class="who">COBBLE</span><b>최종본과 세팅 순서 전달</b>회신 다음 영업일에 두 소재 × 4x5·1x1 최종본, 카피, 세팅 순서</li>
+<li><span class="who">린클</span><b>세팅·시작</b>ABO 캠페인에 광고세트 2개 신설 후 실험에서 A/B 테스트로 묶기. 시작 전 최종본을 코블이 대조하고, 시작일을 알려 주시면 성과 기준 숫자를 확정</li>
+<li><span class="who">공동</span><b>중간 판정</b>정해진 두 시점에 규칙대로 판정</li>
+<li><span class="who">COBBLE</span><b>규칙 문서화</b>결과와 제작 규칙을 기획안과 이 페이지 3장에 추가, 다음 테스트 착수</li>
+</ol>
+
+<h2 id="s5">5. 린클에 공통으로 확인이 필요한 것</h2>
+<p>테스트 하나가 아니라 앞으로의 소재 전체에 걸리는 항목입니다. 각 기획안에는 그 테스트에서만 필요한 항목을 따로 적었습니다.</p>
+<div class="tw"><table><thead><tr><th>항목</th><th>이유</th><th>요청</th></tr></thead><tbody>
+<tr><td>실험 세팅 주체</td><td>9/14 회신에 따라 린클이 ABO 캠페인에 신규 광고세트를 만들어 직접 세팅합니다. 코블이 세팅하는 경우 계약 제10조 ②에 따라 설정 변경은 승인 하에 진행합니다</td><td>변경 시에만 알려 주시면 됩니다</td></tr>
+<tr><td>실제 증정 오퍼(Compost Starter·Carbon Filter)</td><td>근거가 있는 유일한 헤드라인 유형입니다(할인 헤드라인 26건 3.16x, 증정 헤드라인 3건 3.79x, 증정이 이미지에 보이는 17건 3.03x). 오퍼는 반드시 이미지 안에 넣습니다. 광고명만 증정이고 이미지에 안 보인 4건은 1.62x였습니다. 테스트 시작 뒤에는 바꾸지 않으므로 시작 전에 확정합니다</td><td>증정 품목·기간·재고, 없으면 기한 있는 오퍼 여부</td></tr>
+<tr><td>Sealed 표현</td><td>02-4 허용 목록에 없는 사실 표현(본문 Sealed and low odor). 린클 03 문서는 고기 언급 시 sealed를 같이 쓰라고 함</td><td>광고 문구로 써도 되는지 확인. 아니면 본문에서 뺌</td></tr>
+<tr><td>Odyssey 리뷰형 페이지 사용권</td><td>기사형 퍼널 재개의 전제입니다. 기사형 31건은 3.27x로 계정에서 가장 성과가 높은 구조인데 2026-03 이후 지출이 없습니다</td><td>계약 종료 후 링크 사용 가능 여부</td></tr>
+<tr><td>Prime 제품 페이지 문구</td><td>9/11 확인: reencle.co/products/reencle-food-waste-composter에 300K+ homes · 90% Gone in 24hrs · 2x faster than traditional composting가 있고 셋 다 02-4 BLOCK/D 항목입니다. 광고는 30 days로 갑니다. 홈페이지 하단은 1 Year Warranty, 제품 페이지는 2-year warranty로 표기가 엇갈립니다</td><td>수정 일정, 보증 기간 표기 통일</td></tr>
+<tr><td>촬영 원본 접근(급하지 않음)</td><td>다음 테스트용 컷이 필요합니다. 식물 테스트용은 같은 세팅에서 식물·꽃을 뺀 진회색 Prime 컷, 전후 비교용은 같은 색상 유닛의 투입 컷과 결과 컷</td><td>촬영 원본 폴더 접근 또는 추가 촬영 가능 여부</td></tr>
+</tbody></table></div>
+
+<h2 id="s6">6. 근거와 읽는 법</h2>
+<div class="guide"><ul>
+<li>ROAS는 Meta 광고 관리자와 같은 값(Meta 기여 기준)이라 절대치가 아니라 상대 비교용입니다. 평균은 지출액을 반영한 가중 평균입니다.</li>
+<li>계정 수치는 모두 상관관계입니다. 소재가 무작위로 나뉜 게 아니라 캠페인·예산·프로모션이 섞여 있습니다. 그래서 대행사 기간과 자체 운영 기간으로 나눠 방향이 유지되는 요소만 테스트 후보로 올립니다.</li>
+<li>A/B 테스트는 하나만 바꾸고 나머지를 고정한 무작위 분할이라 인과를 말할 수 있는 유일한 자료입니다. 대신 판정 규칙을 시작 전에 정하고 중간에 바꾸지 않아야 유효합니다.</li>
+<li>이미지 분류는 항목별 기준표(구조 6종, 헤드라인 7종, 훅 7종, 식물·퇴비·스크랩·숫자 배지·매체 로고·인용·사람·배경·글자량·CTA·긴급·오퍼·고기·보증)에 따라 코블이 148건을 직접 했고, 같은 이미지는 한 번만 분류했습니다.</li>
+<li>외부 브랜드 자료는 성과가 아니라 유지 기간의 대리지표입니다. SKU와 가격 변동, 랜딩 페이지 차이는 분리하지 않았습니다.</li>
+</ul></div>
+<p class="note">근거 자료 전체와 요소별 표는 <a href="cb01.html#s1">CB01 문서 1~5장</a>에 있습니다.</p>
 <div class="foot">cobble · 린클 Meta 광고 소재 기획 용역 · 이 페이지의 계정 수치는 린클의 성과 자료이므로 외부에 공유하지 마십시오. 문의 mikeykang@cobblehq.com</div>
 </div></body></html>
