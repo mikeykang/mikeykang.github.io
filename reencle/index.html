@@ -22,19 +22,21 @@ td.code{white-space:nowrap;font-weight:700} td.ttl{white-space:nowrap} td.ttl a{
 @media (max-width:820px){.steps{grid-template-columns:1fr}}
 .guide{background:var(--paper);border:1px solid var(--line);padding:14px 18px;margin:14px 0 6px;font-size:13px} .guide ul{margin:4px 0 0 16px}
 code{background:var(--tint);padding:1px 5px;border-radius:3px;font-size:12.5px}
-.jump{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 4px}
-.jump a{display:block;background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--leaf);padding:15px 18px;text-decoration:none;color:var(--ink)}
-.jump a:hover{border-color:var(--leaf);background:#fbfaf4}
-.jump b{font-family:"Noto Serif KR","Apple Myungjo",serif;font-size:17px}
-.jump .arw{float:right;color:var(--leaf);font-weight:700;font-size:16px}
-.jump span{display:block;font-size:12.5px;color:var(--mute);margin-top:4px}
-@media (max-width:820px){.jump{grid-template-columns:1fr}}
-.toc a.go{border:1px solid var(--leaf);border-radius:13px;padding:2px 12px;background:#e6efe6;color:var(--leaf);font-weight:700}
-.toc a.go:hover{background:var(--leaf);color:#fff}
 .tag.fix{background:#f8dcdc;color:#8a1f1f} td.who2{white-space:nowrap;font-weight:700;color:var(--soil)}
 a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute)}
 @media (max-width:820px){.kpi{grid-template-columns:1fr 1fr} .meta{grid-template-columns:1fr} h1{font-size:24px}}
 @media print{.toc{display:none} .verdict{break-inside:avoid}}
+
+.docs{display:flex;margin:18px 0 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.docs a{flex:1;padding:13px 18px;text-decoration:none;color:var(--ink);border-left:1px solid var(--line)}
+.docs a:first-child{border-left:0;padding-left:0}
+.docs a b{display:block;font-family:"Noto Serif KR","Apple Myungjo",serif;font-size:15px;font-weight:700}
+.docs a i{display:block;font-style:normal;font-size:12px;color:var(--mute);margin-top:3px}
+.docs a:hover b{color:var(--leaf)}
+.docs a.on{cursor:default;box-shadow:inset 0 -3px 0 var(--leaf)}
+.docs a.on b{color:var(--leaf)}
+.docs a.on:hover b{color:var(--leaf)}
+@media (max-width:820px){.docs{display:block}.docs a{display:block;border-left:0;border-top:1px solid var(--line);padding-left:0}.docs a:first-child{border-top:0}}
 </style></head><body><div class="wrap">
 <header class="hd">
 <div class="eyebrow">COBBLE → REENCLE · META 광고 소재</div>
@@ -42,50 +44,35 @@ a{color:var(--ink)} .foot{margin-top:48px;padding-top:14px;border-top:1px solid 
 <p class="sub">린클 Meta 계정에서 확인된 것, 진행 중인 테스트, 판정이 난 규칙을 이 페이지에서 갱신합니다.</p>
 <dl class="meta"><dt>수신</dt><dd>린클(Reencle Inc.) 방진휘 대표님 · 박성호 과장님</dd><dt>작성</dt><dd>cobble 강신영 (mikeykang@cobblehq.com)</dd><dt>갱신</dt><dd>2026-09-15</dd><dt>근거</dt><dd>린클 Meta 계정 이미지 소재 148건(지출 $1,000 이상, 2025-01~2026-09-10 실제 ROAS) · 경쟁·인접 브랜드 22개의 Ad Library 롱런 이미지 소재 120장 · 자사몰 리뷰 989건과 광고 댓글</dd></dl>
 </header>
-<nav class="toc"><a href="#s0">요약</a><a href="#s1">1 테스트</a><a href="#s2">2 계정에서 확인된 것</a><a href="#s3">3 확정된 규칙</a><a href="#s4">4 근거와 읽는 법</a><a class="go" href="evidence.html">근거 문서 →</a><a class="go" href="library.html">소재 라이브러리 →</a></nav>
+<nav class="docs"><a class="on" href="./"><b>리포트</b><i>확인된 것과 테스트</i></a><a href="evidence.html"><b>근거 문서</b><i>계정 148건 · 외부 120장 · 리뷰 989건</i></a><a href="library.html"><b>소재 라이브러리</b><i>소재 148건을 한 장씩</i></a></nav>
 <div class="verdict" id="s0"><h2>요약</h2><ol>
-<li>2025-01부터 2026-09-10까지 지출 $1,000 이상 이미지 소재 148건을 실제 ROAS로 다시 읽고, 소재마다 <b>같은 달 같은 캠페인에서 함께 돌던 소재</b>와 비교해 시기 효과를 걷어냈습니다(2장). 계정 평균은 2.90x이고 월별로는 1.71x에서 3.83x까지 움직입니다.</li>
-<li>보정 후 방향이 분명한 것은 넷입니다. 오퍼 헤드라인 +29%, 긴급 문구 +26%, 증정 +24%, 식물·꽃 +23%이 좋고, 혜택 약속 헤드라인 -37%과 리뷰 문장 인용 -22%이 나쁩니다. 숫자 배지와 스크랩은 보정하면 차이가 없어집니다.</li>
-<li>확정된 규칙 0건. 첫 판정은 CB01에서 나옵니다.</li></ol></div>
+<li>2025-01부터 2026-09-10까지 지출 $1,000 이상 이미지 소재 148건입니다. 소재마다 같은 달 같은 캠페인에서 함께 돌던 소재와 비교해 시기 효과를 뺐습니다(2장). 계정 평균 2.90x, 월별로는 1.71x에서 3.83x입니다.</li>
+<li>보정 후 높은 것은 오퍼 헤드라인 +29%, 긴급 문구 +26%, 증정 +24%, 식물·꽃 +23%입니다. 낮은 것은 혜택 약속 헤드라인 -37%, 리뷰 문장 인용 -22%입니다. 숫자 배지와 스크랩은 보정하면 차이가 없습니다.</li>
+<li>확정된 규칙은 아직 없습니다. 첫 판정은 CB01에서 나옵니다.</li></ol></div>
+
 <div class="kpi">
 <div><b>148건</b><span>분석한 이미지 소재 (지출 $1,000 이상)</span></div>
 <div><b>$708,107</b><span>해당 소재 지출 합계 (2025-01 ~ 2026-09-10)</span></div>
 <div><b>2.90x</b><span>지출액 가중 평균 ROAS · 구매당 비용 $166</span></div>
 <div><b>2.47x</b><span>자체 운영 기간(37건) · 대행사 기간 2.99x(111건)</span></div>
 </div>
-<div class="jump">
-<a href="evidence.html"><span class="arw">→</span><b>근거 문서</b><span>계정 148건의 요소별 실제 성과, 외부 브랜드 롱런 소재 120장, 자사몰 리뷰 989건</span></a>
-<a href="library.html"><span class="arw">→</span><b>소재 라이브러리</b><span>소재 148건을 하나씩. 정렬과 필터를 걸면 그 묶음의 수치가 다시 계산됩니다</span></a>
-</div>
-
 <h2 id="s1">1. 테스트</h2>
 <div class="tw"><table><thead><tr><th>코드</th><th>테스트</th><th>상태</th><th>검증하는 것</th><th>바꾸는 것</th><th>기획안</th></tr></thead><tbody><tr><td class="code">CB01</td><td class="ttl"><a href="cb01.html">퇴비 주인공 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>완성된 퇴비를 화면의 주인공으로 두면 제품 주인공보다 성과가 떨어지는가</td><td>같은 촬영 세트의 두 컷으로 이미지의 주인공만 바꿉니다</td><td class="ver">v3 · 2026-09-15</td></tr><tr><td class="code">CB02</td><td class="ttl"><a href="cb02.html">헤드라인 유형 검증</a></td><td><span class="tag warn">확인 대기</span></td><td>헤드라인을 혜택 약속형으로 쓰면 제품 사실형보다 성과가 떨어지는가. 기간 보정 후에도 그대로 남은 유일한 항목입니다</td><td>CB01의 제품 소재에 헤드라인 문장만 바꿉니다</td><td class="ver">v1 · 2026-09-14</td></tr></tbody></table></div>
 <h2 id="s2">2. 계정에서 확인된 것</h2>
-<p>월별 ROAS가 1.71배에서 3.83배까지 움직여, 소재 차이보다 시기 차이가 큽니다. 그래서 각 소재를 <b>같은 달, 같은 캠페인에서 함께 돌던 다른 소재</b>와만 비교했습니다. 시즌, 프로모션, 가격, 경매 단가, 타겟이 한꺼번에 상쇄됩니다.</p>
+<p>월별 ROAS가 1.71배에서 3.83배까지 움직입니다. 소재 차이보다 시기 차이가 큽니다. 그래서 각 소재를 같은 달, 같은 캠페인에서 함께 돌던 소재와만 비교했습니다. 시즌, 프로모션, 가격, 경매 단가, 타겟이 상쇄됩니다. 계산 방법은 <a href="evidence.html#s6">근거 문서 6장</a>에 있습니다.</p>
 <div class="tw"><table><thead><tr><th>요소</th><th>있을 때</th><th>보정 전</th><th>보정 후</th><th>90% 구간</th><th>판정</th><th>참고</th><th>소재</th></tr></thead><tbody><tr><td>오퍼 헤드라인(할인·증정)</td><td>41건 · 3.19x</td><td>+14%</td><td><b>+29%</b></td><td class="note">+14% ~ +41%</td><td><span class="tag ok">좋음</span></td><td class="note">긴급 문구와 71% 겹칩니다</td><td><a href="library.html#hl=offer">소재</a></td></tr><tr><td>긴급 문구(기한·수량)</td><td>47건 · 2.94x</td><td>+2%</td><td><b>+26%</b></td><td class="note">+13% ~ +37%</td><td><span class="tag ok">좋음</span></td><td class="note">오퍼 헤드라인과 62% 겹칩니다</td><td><a href="library.html#flag=urgency">소재</a></td></tr><tr><td>증정 오퍼</td><td>17건 · 3.03x</td><td>+5%</td><td><b>+24%</b></td><td class="note">+7% ~ +44%</td><td><span class="tag ok">좋음</span></td><td class="note"></td><td><a href="library.html#offer=gift">소재</a></td></tr><tr><td>식물·꽃이 있음</td><td>23건 · 3.50x</td><td>+25%</td><td><b>+23%</b></td><td class="note">+6% ~ +43%</td><td><span class="tag ok">좋음</span></td><td class="note">기사형을 빼면 +37%로 커집니다</td><td><a href="library.html#plants=A">소재</a></td></tr><tr><td>주방 생활 장면</td><td>44건 · 2.93x</td><td>+1%</td><td><b>+13%</b></td><td class="note">+1% ~ +25%</td><td><span class="tag ok">좋음</span></td><td class="note"></td><td><a href="library.html#st=lifestyle">소재</a></td></tr><tr><td>혜택 약속 헤드라인</td><td>21건 · 1.87x</td><td>-37%</td><td><b>-37%</b></td><td class="note">-48% ~ -26%</td><td><span class="tag fix">나쁨</span></td><td class="note"></td><td><a href="library.html#hl=benefit">소재</a></td></tr><tr><td>리뷰 문장 인용</td><td>8건 · 2.15x</td><td>-26%</td><td><b>-22%</b></td><td class="note">-27% ~ -14%</td><td><span class="tag fix">나쁨</span></td><td class="note"></td><td><a href="library.html#flag=quote">소재</a></td></tr><tr><td>기사형 소재(매체 리뷰 형식)</td><td>31건 · 3.27x</td><td>+21%</td><td><b>+11%</b></td><td class="note">-2% ~ +27%</td><td><span class="tag warn">확인 안 됨</span></td><td class="note">기사형끼리 같은 캠페인에 몰려 있어 분리가 어렵습니다</td><td><a href="library.html#st=editorial">소재</a></td></tr><tr><td>완성 퇴비가 주인공</td><td>5건 · 1.67x</td><td>-43%</td><td><b>-4%</b></td><td class="note">-44% ~ +34%</td><td><span class="tag warn">표본 부족</span></td><td class="note">비교 가능한 셀이 3개뿐입니다</td><td><a href="library.html#compost=hero">소재</a></td></tr><tr><td>숫자 배지(24H, 100% 등)</td><td>24건 · 2.55x</td><td>-15%</td><td><b>-1%</b></td><td class="note">-13% ~ +13%</td><td><span class="tag warn">확인 안 됨</span></td><td class="note"></td><td><a href="library.html#flag=badge">소재</a></td></tr><tr><td>음식물 스크랩 보임</td><td>40건 · 2.62x</td><td>-13%</td><td><b>-4%</b></td><td class="note">-17% ~ +17%</td><td><span class="tag warn">확인 안 됨</span></td><td class="note"></td><td><a href="library.html#flag=scraps">소재</a></td></tr><tr><td>제품 사실·비교 헤드라인</td><td>42건 · 3.02x</td><td>+7%</td><td><b>+10%</b></td><td class="note">-3% ~ +26%</td><td><span class="tag warn">확인 안 됨</span></td><td class="note"></td><td><a href="library.html#hl=comparison">소재</a></td></tr></tbody></table></div>
 <p class="note">보정 전 = 실제 ROAS 차이. 보정 후 = 같은 달·같은 캠페인 안에서만 비교한 차이. 90% 구간이 0%를 지나지 않으면 방향이 분명한 것으로 봅니다.</p>
 <div class="guide"><b>보정으로 결론이 바뀐 것</b><ul>
-<li>사라진 항목: 숫자 배지는 실제 ROAS로는 -15%였지만 보정하면 -1%입니다. 배지가 나쁜 것이 아니라 배지를 쓴 소재가 성과가 낮았던 달에 몰려 있었습니다. 스크랩 보임도 같습니다.</li>
-<li>약해진 항목: 완성 퇴비 주인공은 -43%에서 -4%로 줄었고, 같은 조건에서 비교할 수 있는 구간이 3개뿐입니다. 기사형도 +21%에서 +11%로 줄었습니다.</li>
-<li>강해진 항목: 오퍼 헤드라인(+29%), 긴급 문구(+26%), 증정(+24%)은 보정 후 더 커졌습니다. 이 소재들은 프로모션 기간에 몰려 있어서, 시기를 맞추기 전에는 효과가 가려져 있었습니다.</li>
-<li>그대로인 항목: 혜택 약속 헤드라인은 보정 전후 모두 -37%입니다. 계정에서 가장 분명한 결론입니다.</li>
+<li>숫자 배지는 실제 ROAS로 -15%였지만 보정하면 -1%입니다. 배지를 쓴 소재가 성과 낮은 달에 몰려 있었습니다. 스크랩 보임도 같습니다.</li>
+<li>완성 퇴비 주인공은 -43%에서 -4%로 줄었습니다. 같은 조건에서 비교할 수 있는 구간이 3개뿐입니다. 기사형은 +21%에서 +11%로 줄었습니다.</li>
+<li>오퍼 헤드라인, 긴급 문구, 증정은 보정 후 커졌습니다. 프로모션 기간에 몰려 있어 시기를 맞추기 전에는 효과가 가려져 있었습니다.</li>
+<li>혜택 약속 헤드라인은 보정 전후 모두 -37%입니다.</li>
 </ul></div>
 <h3>월별 계정 성과</h3>
 <div class="tw"><table><thead><tr><th>월</th><th>ROAS</th><th>지출</th><th>객단가</th></tr></thead><tbody><tr><td>2025-01</td><td>2.43x</td><td>$64,567</td><td>$467</td></tr><tr><td>2025-02</td><td>3.36x</td><td>$61,991</td><td>$469</td></tr><tr><td>2025-03</td><td>3.83x</td><td>$70,253</td><td>$503</td></tr><tr><td>2025-04</td><td>3.23x</td><td>$93,422</td><td>$461</td></tr><tr><td>2025-05</td><td>2.90x</td><td>$74,817</td><td>$474</td></tr><tr><td>2025-06</td><td>2.61x</td><td>$66,236</td><td>$495</td></tr><tr><td>2025-07</td><td>2.09x</td><td>$64,621</td><td>$488</td></tr><tr><td>2025-08</td><td>2.80x</td><td>$78,367</td><td>$492</td></tr><tr><td>2025-09</td><td>1.80x</td><td>$73,126</td><td>$483</td></tr><tr><td>2025-10</td><td>1.75x</td><td>$77,807</td><td>$486</td></tr><tr><td>2025-11</td><td>3.10x</td><td>$179,394</td><td>$475</td></tr><tr><td>2025-12</td><td>1.95x</td><td>$233,515</td><td>$452</td></tr><tr><td>2026-01</td><td>2.54x</td><td>$103,575</td><td>$498</td></tr><tr><td>2026-02</td><td>3.19x</td><td>$107,492</td><td>$492</td></tr><tr><td>2026-03</td><td>2.83x</td><td>$117,008</td><td>$467</td></tr><tr><td>2026-04</td><td>2.33x</td><td>$149,622</td><td>$475</td></tr><tr><td>2026-05</td><td>2.18x</td><td>$132,005</td><td>$468</td></tr><tr><td>2026-06</td><td>1.71x</td><td>$102,807</td><td>$480</td></tr><tr><td>2026-07</td><td>1.86x</td><td>$93,040</td><td>$452</td></tr><tr><td>2026-08</td><td>2.04x</td><td>$116,356</td><td>$467</td></tr><tr><td>2026-09</td><td>2.80x</td><td>$40,931</td><td>$439</td></tr></tbody></table></div>
-<p class="note">객단가는 $439에서 $503 사이로 안정적입니다. 가격 변화는 객단가가 아니라 구매 전환에서 나타납니다. 2025-11은 3.10배로 높지만 2025-12는 지출이 가장 많았는데도 1.95배입니다. 11월과 12월을 한 묶음으로 보면 안 됩니다.</p>
+<p class="note">객단가는 $439에서 $503 사이입니다. 가격 변동은 객단가에 거의 나타나지 않고 구매 수로 갑니다. 2025-11은 3.10배, 2025-12는 지출이 가장 많은 달인데 1.95배입니다.</p>
 
 <h2 id="s3">3. 확정된 규칙</h2>
 <div class="tw"><table><thead><tr><th>규칙</th><th>근거 테스트</th><th>판정일</th></tr></thead><tbody><tr><td colspan="3" class="note">아직 없습니다. 첫 판정은 CB01에서 나옵니다.</td></tr></tbody></table></div>
-<h2 id="s4">4. 근거와 읽는 법</h2>
-<div class="guide"><ul>
-<li>ROAS는 Meta 광고 관리자와 같은 값(Meta 기여 기준)이라 절대치가 아니라 상대 비교용입니다. 평균은 지출액을 반영한 가중 평균입니다.</li>
-<li>기간 보정은 이렇게 합니다. 소재가 지출한 달마다 같은 캠페인에서 함께 돌던 다른 소재의 1달러당 매출을 구해 기대 매출을 만들고, 실제 매출을 그 기대치와 비교합니다. 요소별 수치는 같은 구간 안에서 요소가 있는 소재와 없는 소재를 직접 비교한 뒤 구간 단위로 묶은 값이고, 90% 구간은 구간을 다시 뽑아 계산했습니다. 비교 상대가 될 소재가 없는 구간은 계산에서 빠집니다.</li>
-<li>남은 오차는 둘입니다. 하나는 월 단위라 월 중간에 시작한 세일이 섞이는 것이고, 다른 하나는 요소가 캠페인과 거의 같이 움직일 때입니다. 기사형이 그 경우로, 기사형 광고의 비교 상대 절반이 또 기사형이라 통계로는 분리되지 않습니다.</li>
-<li>21개월 전체 구매가 4,271건입니다. 아무리 잘 나눠도 요소 하나당 10~20%p 폭의 불확실성은 남습니다. 그래서 이 보정은 테스트 후보를 고르는 도구이고, 확정은 A/B에서 납니다.</li>
-<li>계정 수치는 모두 상관관계입니다. 소재가 무작위로 나뉜 게 아니라 캠페인·예산·프로모션이 섞여 있습니다. 그래서 대행사 기간과 자체 운영 기간으로 나눠 방향이 유지되는 요소만 테스트 후보로 올립니다.</li>
-<li>A/B 테스트는 하나만 바꾸고 나머지를 고정한 무작위 분할이라 인과를 말할 수 있는 유일한 자료입니다. 대신 판정 규칙을 시작 전에 정하고 중간에 바꾸지 않아야 유효합니다.</li>
-<li>이미지 분류는 항목별 기준표(구조 6종, 헤드라인 7종, 훅 7종, 식물·퇴비·스크랩·숫자 배지·매체 로고·인용·사람·배경·글자량·CTA·긴급·오퍼·고기·보증)에 따라 코블이 148건을 직접 했고, 같은 이미지는 한 번만 분류했습니다.</li>
-<li>외부 브랜드 자료는 성과가 아니라 유지 기간의 대리지표입니다. SKU와 가격 변동, 랜딩 페이지 차이는 분리하지 않았습니다.</li>
-</ul></div>
 <div class="foot">cobble · 린클 Meta 광고 소재 기획 용역 · 이 페이지의 계정 수치는 린클의 성과 자료이므로 외부에 공유하지 마십시오. 문의 mikeykang@cobblehq.com</div>
 </div></body></html>
