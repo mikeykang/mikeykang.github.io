@@ -31,25 +31,47 @@ table{border-collapse:collapse;width:100%;background:var(--paper);font-variant-n
 th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
 thead th{background:var(--th);font-weight:700;white-space:nowrap}
 .num{text-align:right;white-space:nowrap}
-/* 판정 */
-.jt tr.g td{background:var(--tint);padding:10px 12px}
-.jt tr.g b{font-family:"Noto Serif KR",serif;font-size:15px}
-.jt tr.g .n{color:var(--mute);margin-left:6px}
-.jt tr.j-0 td{background:#dcefdc}.jt tr.j-1 td{background:#f7ead0}.jt tr.j-2 td{background:#f3dcd4}
-.jt td.ad{display:flex;gap:12px;align-items:flex-start;min-width:300px}
-.jt .th{flex:0 0 52px;width:52px;height:52px;border:1px solid var(--line);background:#fff center/cover no-repeat}
+/* 판정 · 테스트 순서: list tables, hairlines only */
+.lt{background:none}
+.lt th,.lt td{border:0;border-bottom:1px solid var(--line);padding:12px;vertical-align:middle}
+.lt thead th{background:none;color:var(--mute);font-size:12.5px;font-weight:500;padding:8px 12px;border-bottom:1px solid var(--ink)}
+.lt th:first-child,.lt td:first-child{padding-left:0}
+.lt th:last-child,.lt td:last-child{padding-right:0}
+.jt tr.g th{padding:30px 0 8px;border-bottom:2px solid var(--ink);font-weight:400;white-space:normal}
+.jt tbody:first-of-type tr.g th{padding-top:16px}
+.jt .v{font:700 17px/1.3 "Noto Serif KR",serif}
+.jt .n{font-weight:700;color:var(--mute);margin-left:7px}
+.jt .r{font-size:12.5px;color:var(--mute);margin-left:14px}
+.jt .j-0 tr.g th{border-color:var(--leaf)}.jt .j-0 .v{color:var(--leaf)}
+.jt .j-1 tr.g th{border-color:var(--soil)}.jt .j-1 .v{color:var(--soil)}
+.jt .j-2 tr.g th{border-color:var(--red)}.jt .j-2 .v{color:var(--red)}
+.jt .j-4 tr.g th{border-color:var(--line)}.jt .j-4 .v{color:var(--mute)}
+.jt .adc{display:flex;align-items:center;gap:14px}
+.jt .th{flex:0 0 56px;height:56px;border:1px solid var(--line);background:#fff center/cover no-repeat}
 .jt .tx{display:flex;flex-direction:column;min-width:0}
-.jt .tx b{font-size:14px}
-.jt .k{color:var(--mute);font-size:12px;line-height:1.45}
-.rh{font-family:"Noto Serif KR",serif;font-size:17px;margin:30px 0 8px}
-.rt th{background:var(--th);width:92px;white-space:nowrap;font-size:13px;padding:10px 14px}
-.rt td{padding:10px 14px}
-/* 테스트 순서 */
+.jt .tx b{font-size:14.5px;line-height:1.4}
+.jt .k{font-size:12px;line-height:1.5;color:var(--mute);max-width:520px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jt td.ro{font-weight:700}
+.jt .c-d{width:64px}.jt .c-s{width:120px}.jt .c-p{width:64px}.jt .c-r{width:72px}.jt .c-w{width:116px}
 .ot td.hl{min-width:260px}
-.ot .ch{display:inline-block;font-size:12px;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;margin:0 4px 4px 0;white-space:nowrap}
+.ot .ch{display:inline-block;font-size:12px;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;margin:2px 4px 2px 0;white-space:nowrap}
 .ot .ch.up{background:#dcefdc;color:#1f5e1f}.ot .ch.dn{background:#f3dcd4;color:var(--red)}
 .ot .none{color:var(--mute);font-size:12.5px}
 .ot td.note{color:var(--mute);font-size:12.5px;min-width:120px}
+@media (max-width:760px){
+.lt thead{display:none}
+.lt,.lt tbody,.lt tr,.lt th,.lt td{display:block}
+.lt td{border:0;padding:0}
+.jt tr:not(.g){display:grid;grid-template-columns:1.25fr 1.3fr .8fr .9fr 1fr;gap:10px 8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.jt td.ad{grid-column:1/-1}
+.jt td.num{text-align:left}
+.jt td.num::before{content:attr(data-l);display:block;font-size:11px;font-weight:400;color:var(--mute)}
+.jt .r{display:block;margin:2px 0 0}
+.jt .k{max-width:none;white-space:normal}
+.ot tr{display:grid;grid-template-columns:24px 1fr;gap:6px 10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ot td{grid-column:2}.ot td.num{grid-column:1;grid-row:1/span 4;text-align:left}
+.ot td.hl,.ot td.note{min-width:0}.ot td.note:empty{display:none}
+}
 /* 기획안 */
 .dates{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
 .dates a{font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 14px}
@@ -81,7 +103,7 @@ h2{font-family:"Noto Serif KR","Apple Myungjo",serif;font-size:20px;margin:40px 
 .ct th{background:var(--th)}.ct tbody th{background:var(--tint);font-weight:600;white-space:nowrap}
 p.note{color:var(--mute);font-size:12.5px;margin:6px 0 0}
 footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--line);color:var(--mute);font-size:12px}
-@media (max-width:760px){.wrap{padding:28px 16px 60px}h1{font-size:25px}.item{grid-template-columns:1fr;gap:16px}.ref{max-width:300px}.jt td.ad{min-width:240px}}
+@media (max-width:760px){.wrap{padding:28px 16px 60px}h1{font-size:25px}.item{grid-template-columns:1fr;gap:16px}.ref{max-width:300px}}
 </style></head><body><div class="wrap"><header class="hd"><h1>판정 기준</h1><dl class="meta"><dt>수신</dt><dd>린클(Reencle Inc.) 방진휘 대표님 · 박성호 이사님</dd>
 <dt>작성</dt><dd>cobble 강신영 (mikeykang@cobblehq.com)</dd><dt>갱신</dt><dd>2026-09-28</dd><dt>근거</dt><dd>린클 Meta 계정 광고별 일별 자료(2025-01-01 ~ 2026-09-27) · 2025년 1월 이후 시작해 광고비 $1,000 이상 쓴 광고 373개</dd></dl></header>
 <nav class="docs"><a href="./"><b>리포트</b><i>판정 · 테스트 순서 · 기획안</i></a><a class="on" href="criteria.html"><b>판정 기준</b><i>광고 373개 · 소재 45개</i></a><a href="../reencle/evidence.html"><b>근거 문서</b><i>계정 148건 · 외부 116장 · 리뷰 989건</i></a><a href="../reencle/library.html"><b>소재 라이브러리</b><i>소재 148건을 한 장씩</i></a></nav>
