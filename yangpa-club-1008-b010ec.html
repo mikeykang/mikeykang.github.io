@@ -67,7 +67,7 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- 뽀짝 body without arms or face -->
+    <!-- Base body without arms or face -->
     <symbol id="base" viewBox="0 0 200 200">
       <path d="M100 58 Q96 36 80 24" style="stroke:var(--s1)" stroke-width="8" stroke-linecap="round" fill="none"/>
       <path d="M100 58 Q106 32 124 22" style="stroke:var(--s2)" stroke-width="8" stroke-linecap="round" fill="none"/>
@@ -81,7 +81,7 @@
       <ellipse cx="128" cy="146" rx="9" ry="5.5" fill="#F4A3C0" opacity=".85"/>
     </symbol>
 
-    <!-- 뽀짝 -->
+    <!-- Waving -->
     <symbol id="ppojjak" viewBox="0 0 200 200">
       <path d="M152 122 Q168 116 172 98" style="stroke:var(--p)" stroke-width="11" stroke-linecap="round" fill="none"/>
       <path d="M47 142 Q34 150 34 162" style="stroke:var(--p)" stroke-width="11" stroke-linecap="round" fill="none"/>
@@ -91,7 +91,7 @@
       <path d="M93 144 Q100 152 107 144" stroke="#171713" stroke-width="4" stroke-linecap="round" fill="none"/>
     </symbol>
 
-    <!-- 몰입 -->
+    <!-- Headphones + MacBook -->
     <symbol id="molip" viewBox="0 0 200 212">
       <use href="#base" width="200" height="200"/>
       <path d="M74 118.5 L91 120.5 M126 118.5 L109 120.5" stroke="#171713" stroke-width="4" stroke-linecap="round"/>
@@ -108,7 +108,7 @@
       <rect x="63" y="204.4" width="74" height="4.2" rx="2.1" fill="url(#aluDeck)" stroke="#9A9DA2" stroke-width=".8"/>
     </symbol>
 
-    <!-- 빼꼼 favicon -->
+    <!-- Favicon -->
     <linearGradient id="alu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2E3E6"/><stop offset="1" stop-color="#C7C9CD"/></linearGradient>
     <linearGradient id="aluDeck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3D6DA"/><stop offset="1" stop-color="#A7AAAF"/></linearGradient>
     <clipPath id="sq"><rect width="32" height="32" rx="7"/></clipPath>
@@ -129,7 +129,7 @@
 </svg>
 
 <header class="wrap">
-  <h1><b>Yangpa Club</b>뽀짝 · 몰입 · 빼꼼</h1>
+  <h1><b>Yangpa Club</b>캐릭터 · 파비콘</h1>
 </header>
 
 <main class="wrap" id="rows"></main>
@@ -160,9 +160,9 @@
       <div class="swatch"><strong>${n}</strong><div class="chips">${Object.entries(hex).map(([label, h]) =>
         `<span><i style="background:${h}"></i>${label} ${h}</span>`).join('')}</div></div>`).join('')}
     </section>
-    <section class="row"><h2>뽀짝<small>캐릭터</small></h2>${cells(stage('ppojjak'))}</section>
-    <section class="row"><h2>몰입<small>캐릭터</small></h2>${cells(stage('molip'))}</section>
-    <section class="row"><h2>빼꼼<small>파비콘</small></h2>${cells(fav)}</section>`;
+    <section class="row"><h2>캐릭터</h2>${cells(stage('ppojjak'))}</section>
+    <section class="row"><h2></h2>${cells(stage('molip'))}</section>
+    <section class="row"><h2>파비콘</h2>${cells(fav)}</section>`;
 </script>
 </body>
 </html>
