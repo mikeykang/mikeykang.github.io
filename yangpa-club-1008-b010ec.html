@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>양파클럽 캐릭터 · 파비콘</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap&text=Yangp%20Club">
+<style>
+  :root {
+    --paper: #ffffe7; --paper-2: #f6f5d8; --ink: #171713; --muted: #545449; --line: #bdbdae;
+    --p: #A47864; --pd: #7A5444; --pl: #C9A493; --s1: #6E9A5B; --s2: #9CC08A;
+  }
+  .pal-mocha { --p: #A47864; --pd: #7A5444; --pl: #C9A493; --s1: #6E9A5B; --s2: #9CC08A; }
+  .pal-sage  { --p: #9BB59A; --pd: #6C8A6B; --pl: #C6D6C3; --s1: #4D7A4C; --s2: #76A06F; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Pretendard Variable", Pretendard, sans-serif; word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 56px 0 36px; }
+  h1 { margin: 0; font-size: clamp(36px, 5.4vw, 64px); font-weight: 900; line-height: 1.1; letter-spacing: -.05em; }
+  h1 b { font: italic 400 .62em "DM Serif Display", serif; letter-spacing: -.02em; display: block; margin-bottom: 8px; color: var(--pd); }
+
+  .row { display: grid; grid-template-columns: 150px 1fr 1fr; gap: 24px; padding: 28px 0; border-top: 1.5px solid var(--ink); }
+  .row:last-of-type { border-bottom: 1.5px solid var(--ink); }
+  .row > h2 { margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -1.3px; }
+  .row > h2 small { display: block; margin-top: 6px; font: 700 12px Arial, sans-serif; letter-spacing: 1.2px; color: var(--muted); }
+
+  .head { padding-bottom: 0; border-top: 0; }
+  .swatch { display: grid; gap: 10px; }
+  .swatch strong { font-size: 20px; font-weight: 900; letter-spacing: -.8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips span { display: flex; align-items: center; gap: 6px; padding: 4px 9px 4px 4px; border: 1px solid var(--line); border-radius: 999px; font: 600 11px ui-monospace, Menlo, monospace; color: var(--muted); }
+  .chips i { width: 16px; height: 16px; border-radius: 50%; }
+
+  .stage { background: var(--paper-2); border-radius: 18px; aspect-ratio: 1; display: grid; place-items: center; }
+  .stage svg { width: 80%; height: 80%; }
+
+  .fav { display: grid; gap: 16px; align-content: start; }
+  .sizes { display: flex; align-items: flex-end; gap: 16px; }
+  .sizes figure { margin: 0; display: grid; justify-items: center; gap: 6px; font: 600 11px Arial, sans-serif; color: var(--muted); }
+  .sizes svg { display: block; }
+  .tabs { display: grid; gap: 6px; }
+  .tabs .t { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 8px 8px 0 0; font-size: 12.5px; white-space: nowrap; overflow: hidden; }
+  .tabs .light { background: #fff; color: #3C4043; box-shadow: 0 0 0 1px #DEE1E6 inset; }
+  .tabs .dark { background: #35363A; color: #E8EAED; }
+  .tabs svg, .lockup svg { flex: none; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lockup { display: flex; align-items: center; gap: 9px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; }
+  .lockup.dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .lockup .w { font-size: 20px; font-weight: 900; letter-spacing: -1.3px; line-height: 1; }
+  .lockup .w span { display: block; font: 700 6px Arial, sans-serif; letter-spacing: 1px; margin-top: 4px; }
+
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .row > h2 { grid-column: 1 / -1; }
+    .head > :first-child { display: none; }
+  }
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 1fr; }
+    .head { display: none; }
+    .cell::before { content: attr(data-name); display: block; margin-bottom: 8px; font: 700 12px Arial, sans-serif; letter-spacing: 1.2px; color: var(--muted); }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 뽀짝 body without arms or face -->
+    <symbol id="base" viewBox="0 0 200 200">
+      <path d="M100 58 Q96 36 80 24" style="stroke:var(--s1)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M100 58 Q106 32 124 22" style="stroke:var(--s2)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <ellipse cx="82" cy="181" rx="13" ry="7" style="fill:var(--pd)"/>
+      <ellipse cx="118" cy="181" rx="13" ry="7" style="fill:var(--pd)"/>
+      <path d="M100 52 C112 78 160 92 160 134 C160 165 133 180 100 180 C67 180 40 165 40 134 C40 92 88 78 100 52 Z" style="fill:var(--p)"/>
+      <path d="M98 62 C72 90 56 124 64 166" style="stroke:var(--pl)" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M102 62 C128 90 144 124 136 166" style="stroke:var(--pl)" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M58 118 C60 104 68 95 78 89" stroke="#ffffe7" stroke-width="6" stroke-linecap="round" fill="none" opacity=".45"/>
+      <ellipse cx="72" cy="146" rx="9" ry="5.5" fill="#F4A3C0" opacity=".85"/>
+      <ellipse cx="128" cy="146" rx="9" ry="5.5" fill="#F4A3C0" opacity=".85"/>
+    </symbol>
+
+    <!-- 뽀짝 -->
+    <symbol id="ppojjak" viewBox="0 0 200 200">
+      <path d="M152 122 Q168 116 172 98" style="stroke:var(--p)" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <path d="M47 142 Q34 150 34 162" style="stroke:var(--p)" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <use href="#base" width="200" height="200"/>
+      <circle cx="83" cy="130" r="7.5" fill="#171713"/><circle cx="85.6" cy="127.4" r="2.5" fill="#fff"/>
+      <circle cx="117" cy="130" r="7.5" fill="#171713"/><circle cx="119.6" cy="127.4" r="2.5" fill="#fff"/>
+      <path d="M93 144 Q100 152 107 144" stroke="#171713" stroke-width="4" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <!-- 몰입 -->
+    <symbol id="molip" viewBox="0 0 200 212">
+      <use href="#base" width="200" height="200"/>
+      <path d="M74 118.5 L91 120.5 M126 118.5 L109 120.5" stroke="#171713" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="83" cy="132" r="7" fill="#171713"/><circle cx="85.4" cy="129.6" r="2.3" fill="#fff"/>
+      <circle cx="117" cy="132" r="7" fill="#171713"/><circle cx="119.4" cy="129.6" r="2.3" fill="#fff"/>
+      <path d="M95 147 Q100 150 105 147" stroke="#171713" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <path d="M42 126 C42 60 158 60 158 126" stroke="#171713" stroke-width="7" fill="none"/>
+      <rect x="28" y="112" width="22" height="36" rx="10" fill="#171713"/>
+      <rect x="150" y="112" width="22" height="36" rx="10" fill="#171713"/>
+      <!-- MacBook from behind (ref: MacBook Air M2 / Pro 14 photos): lid 1.45:1, logo 21% of lid height at 46% from top, dark hinge, thin deck edge -->
+      <rect x="63" y="153" width="74" height="49" rx="3.5" fill="url(#alu)" stroke="#A3A6AB" stroke-width="1"/>
+      <path transform="translate(100 175.8) scale(.43) translate(-12 -12)" fill="#2A2A2D" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+      <rect x="66" y="201.2" width="68" height="3.4" fill="#2B2C2F"/>
+      <rect x="63" y="204.4" width="74" height="4.2" rx="2.1" fill="url(#aluDeck)" stroke="#9A9DA2" stroke-width=".8"/>
+    </symbol>
+
+    <!-- 빼꼼 favicon -->
+    <linearGradient id="alu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2E3E6"/><stop offset="1" stop-color="#C7C9CD"/></linearGradient>
+    <linearGradient id="aluDeck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3D6DA"/><stop offset="1" stop-color="#A7AAAF"/></linearGradient>
+    <clipPath id="sq"><rect width="32" height="32" rx="7"/></clipPath>
+    <symbol id="ppaekkom" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="7" fill="#ffffe7"/>
+      <g clip-path="url(#sq)">
+        <path d="M16 12 Q15.2 7.8 11.4 5.4" style="stroke:var(--s1)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+        <path d="M16 12 Q17.2 7 21.2 4.8" style="stroke:var(--s2)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+        <path d="M16 11 C19 16.5 31 18 31 27 L31 33 L1 33 L1 27 C1 18 13 16.5 16 11 Z" style="fill:var(--p)"/>
+        <circle cx="11.5" cy="24.5" r="2.2" fill="#171713"/><circle cx="20.5" cy="24.5" r="2.2" fill="#171713"/>
+        <circle cx="12.2" cy="23.7" r=".75" fill="#fff"/><circle cx="21.2" cy="23.7" r=".75" fill="#fff"/>
+        <circle cx="5.5" cy="31" r="2.6" style="fill:var(--p);stroke:var(--pd)" stroke-width="1"/>
+        <circle cx="26.5" cy="31" r="2.6" style="fill:var(--p);stroke:var(--pd)" stroke-width="1"/>
+      </g>
+      <rect x=".5" y=".5" width="31" height="31" rx="6.5" fill="none" stroke="#bdbdae"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="wrap">
+  <h1><b>Yangpa Club</b>뽀짝 · 몰입 · 빼꼼</h1>
+</header>
+
+<main class="wrap" id="rows"></main>
+<div style="height:64px"></div>
+
+<script>
+  const COLORS = [
+    ['mocha', '모카', { 몸: '#A47864', 진하게: '#7A5444', 결: '#C9A493', 새싹: '#6E9A5B' }],
+    ['sage', '세이지', { 몸: '#9BB59A', 진하게: '#6C8A6B', 결: '#C6D6C3', 새싹: '#4D7A4C' }],
+  ];
+  const use = (id, s) => `<svg width="${s}" height="${s}"><use href="#${id}"/></svg>`;
+  const cells = render => COLORS.map(([k, n]) => `<div class="cell pal-${k}" data-name="${n}">${render()}</div>`).join('');
+  const stage = id => () => `<div class="stage"><svg viewBox="0 0 200 200"><use href="#${id}"/></svg></div>`;
+  const fav = () => `<div class="fav">
+      <div class="sizes">${[120, 64, 32, 16].map(s => `<figure>${use('ppaekkom', s)}<figcaption>${s}</figcaption></figure>`).join('')}</div>
+      <div class="tabs">
+        <div class="t light">${use('ppaekkom', 16)}양파클럽 | 양재 파운더스 클럽</div>
+        <div class="t dark">${use('ppaekkom', 16)}양파클럽 | 양재 파운더스 클럽</div>
+      </div>
+      <div class="pair">
+        <div class="lockup">${use('ppaekkom', 28)}<div class="w">양파클럽<span>YANGJAE FOUNDERS CLUB</span></div></div>
+        <div class="lockup dark">${use('ppaekkom', 28)}<div class="w">양파클럽<span>YANGJAE FOUNDERS CLUB</span></div></div>
+      </div>
+    </div>`;
+
+  document.getElementById('rows').innerHTML = `
+    <section class="row head"><div></div>${COLORS.map(([k, n, hex]) => `
+      <div class="swatch"><strong>${n}</strong><div class="chips">${Object.entries(hex).map(([label, h]) =>
+        `<span><i style="background:${h}"></i>${label} ${h}</span>`).join('')}</div></div>`).join('')}
+    </section>
+    <section class="row"><h2>뽀짝<small>캐릭터</small></h2>${cells(stage('ppojjak'))}</section>
+    <section class="row"><h2>몰입<small>캐릭터</small></h2>${cells(stage('molip'))}</section>
+    <section class="row"><h2>빼꼼<small>파비콘</small></h2>${cells(fav)}</section>`;
+</script>
+</body>
+</html>
